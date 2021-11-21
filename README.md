@@ -3,5 +3,5 @@
 
 
 # Useful Resources
- Using the display / drawing complex shapes: https://projectf.io/about/
+ Using the display / drawing complex shapes (Warning: Uses SystemVerilog): https://projectf.io/about/
  
