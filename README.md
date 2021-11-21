@@ -3,5 +3,6 @@
 
 
 # Useful Resources
- Using the display / drawing complex shapes (Warning: Uses SystemVerilog): https://projectf.io/about/
+ How to draw 2D shapes and creating animations on the display (Warning: Uses SystemVerilog): https://projectf.io/about/
+ How to use the display with the de-10 lite board: https://www.ece.ucdavis.edu/~bbaas/180/tutorials/vga/
  
