@@ -6,7 +6,7 @@ module ClockDivider(cin,cout);
 // The clock divider toggles cout every 25 million cycles of the input clock
 
 
-//Taken from Allison's Slides, with a minor modification (Changed D's value from 25 to 50) given that the input clock is 50mhz
+//Taken from Allison's Slides and Lab04 code
 
 input cin;
 output reg cout;

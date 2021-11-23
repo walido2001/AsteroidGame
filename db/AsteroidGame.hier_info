@@ -1,19 +1,19 @@
 |VGAControl
 clk => clk.IN1
-HSync << HSync.DB_MAX_OUTPUT_PORT_TYPE
-VSync << VSync.DB_MAX_OUTPUT_PORT_TYPE
-Red[0] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Red[1] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Red[2] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Red[3] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Green[0] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Green[1] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Green[2] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Green[3] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Blue[0] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Blue[1] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Blue[2] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Blue[3] << Red.DB_MAX_OUTPUT_PORT_TYPE
+HSync <= HSync.DB_MAX_OUTPUT_PORT_TYPE
+VSync <= VSync.DB_MAX_OUTPUT_PORT_TYPE
+Red[0] <= Red.DB_MAX_OUTPUT_PORT_TYPE
+Red[1] <= Red.DB_MAX_OUTPUT_PORT_TYPE
+Red[2] <= Red.DB_MAX_OUTPUT_PORT_TYPE
+Red[3] <= Red.DB_MAX_OUTPUT_PORT_TYPE
+Green[0] <= Red.DB_MAX_OUTPUT_PORT_TYPE
+Green[1] <= Red.DB_MAX_OUTPUT_PORT_TYPE
+Green[2] <= Red.DB_MAX_OUTPUT_PORT_TYPE
+Green[3] <= Red.DB_MAX_OUTPUT_PORT_TYPE
+Blue[0] <= Red.DB_MAX_OUTPUT_PORT_TYPE
+Blue[1] <= Red.DB_MAX_OUTPUT_PORT_TYPE
+Blue[2] <= Red.DB_MAX_OUTPUT_PORT_TYPE
+Blue[3] <= Red.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |VGAControl|ClockDivider:comb_3
@@ -64,12 +64,6 @@ normalCLK => VControl[6]~reg0.CLK
 normalCLK => VControl[7]~reg0.CLK
 normalCLK => VControl[8]~reg0.CLK
 normalCLK => VControl[9]~reg0.CLK
-normalCLK => VControl[10]~reg0.CLK
-normalCLK => VControl[11]~reg0.CLK
-normalCLK => VControl[12]~reg0.CLK
-normalCLK => VControl[13]~reg0.CLK
-normalCLK => VControl[14]~reg0.CLK
-normalCLK => VControl[15]~reg0.CLK
 normalCLK => HControl[0]~reg0.CLK
 normalCLK => HControl[1]~reg0.CLK
 normalCLK => HControl[2]~reg0.CLK
@@ -80,12 +74,6 @@ normalCLK => HControl[6]~reg0.CLK
 normalCLK => HControl[7]~reg0.CLK
 normalCLK => HControl[8]~reg0.CLK
 normalCLK => HControl[9]~reg0.CLK
-normalCLK => HControl[10]~reg0.CLK
-normalCLK => HControl[11]~reg0.CLK
-normalCLK => HControl[12]~reg0.CLK
-normalCLK => HControl[13]~reg0.CLK
-normalCLK => HControl[14]~reg0.CLK
-normalCLK => HControl[15]~reg0.CLK
 HControl[0] <= HControl[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 HControl[1] <= HControl[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 HControl[2] <= HControl[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -96,12 +84,6 @@ HControl[6] <= HControl[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 HControl[7] <= HControl[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 HControl[8] <= HControl[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 HControl[9] <= HControl[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HControl[10] <= HControl[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HControl[11] <= HControl[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HControl[12] <= HControl[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HControl[13] <= HControl[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HControl[14] <= HControl[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-HControl[15] <= HControl[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VControl[0] <= VControl[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VControl[1] <= VControl[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VControl[2] <= VControl[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -112,11 +94,5 @@ VControl[6] <= VControl[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VControl[7] <= VControl[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VControl[8] <= VControl[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VControl[9] <= VControl[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-VControl[10] <= VControl[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-VControl[11] <= VControl[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-VControl[12] <= VControl[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-VControl[13] <= VControl[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-VControl[14] <= VControl[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-VControl[15] <= VControl[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

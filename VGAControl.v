@@ -32,9 +32,10 @@ module VGAControl(
 	
 	//CLK -> PIN_P11
 	
-	wire [15:0] HCounter;
-	wire [15:0] VCounter;
+	wire [9:0] HCounter;
+	wire [9:0] VCounter;
 	wire clkOut;
+
 	
 	ClockDivider(clk, clkOut);
 	HorizentalVerticalControl(clkOut, HCounter, VCounter);
@@ -42,8 +43,8 @@ module VGAControl(
 	assign HSync = (HCounter < 96 && HCounter >= 0) ? 1 : 0;
 	assign VSync = (VCounter < 2 && VCounter >= 0) ? 1 : 0;
 	
-	assign Red = (HCounter < 784 && HCounter > 143 && VCounter < 515 && VCounter > 35) ? 4'hF : 4'h0;
-	assign Green = (HCounter < 784 && HCounter > 143 && VCounter < 515 && VCounter > 35) ? 4'hF : 4'h0;
-	assign Blue = (HCounter < 784 && HCounter > 143 && VCounter < 515 && VCounter > 35) ? 4'hF : 4'h0;
+	assign Red = (HCounter < 784 && HCounter > 144 && VCounter < 515 && VCounter > 35) ? 4'hF : 4'h0;
+	assign Green = (HCounter < 784 && HCounter > 144 && VCounter < 515 && VCounter > 35) ? 4'hF : 4'h0;
+	assign Blue = (HCounter < 784 && HCounter > 144 && VCounter < 515 && VCounter > 35) ? 4'hF : 4'h0;
 	
 endmodule
