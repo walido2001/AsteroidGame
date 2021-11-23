@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AsteroidGame
-Sat Nov 20 22:10:02 2021
+Tue Nov 23 00:39:55 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,14 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: ClockDivider:comb_3
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -37,22 +44,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sat Nov 20 22:10:02 2021           ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 23 00:39:55 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; AsteroidGame                                ;
-; Top-level Entity Name              ; main                                        ;
+; Top-level Entity Name              ; VGAControl                                  ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
-; UFM blocks                         ; N/A until Partition Merge                   ;
-; ADC blocks                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 100                                         ;
+;     Total combinational functions  ; 100                                         ;
+;     Dedicated logic registers      ; 65                                          ;
+; Total registers                    ; 65                                          ;
+; Total pins                         ; 15                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -62,7 +69,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C6GES   ;                    ;
-; Top-level entity name                                            ; main               ; AsteroidGame       ;
+; Top-level entity name                                            ; VGAControl         ; AsteroidGame       ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -151,11 +158,124 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; HorizentalVerticalControl.v      ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v ;         ;
+; VGAControl.v                     ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v                ;         ;
+; ClockDivider.v                   ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/Repos/AsteroidGame/ClockDivider.v              ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                    ;
++---------------------------------------------+----------------------------------+
+; Resource                                    ; Usage                            ;
++---------------------------------------------+----------------------------------+
+; Estimated Total logic elements              ; 100                              ;
+;                                             ;                                  ;
+; Total combinational functions               ; 100                              ;
+; Logic element usage by number of LUT inputs ;                                  ;
+;     -- 4 input functions                    ; 28                               ;
+;     -- 3 input functions                    ; 5                                ;
+;     -- <=2 input functions                  ; 67                               ;
+;                                             ;                                  ;
+; Logic elements by mode                      ;                                  ;
+;     -- normal mode                          ; 39                               ;
+;     -- arithmetic mode                      ; 61                               ;
+;                                             ;                                  ;
+; Total registers                             ; 65                               ;
+;     -- Dedicated logic registers            ; 65                               ;
+;     -- I/O registers                        ; 0                                ;
+;                                             ;                                  ;
+; I/O pins                                    ; 15                               ;
+;                                             ;                                  ;
+; Embedded Multiplier 9-bit elements          ; 0                                ;
+;                                             ;                                  ;
+; Maximum fan-out node                        ; ClockDivider:comb_3|LessThan0~10 ;
+; Maximum fan-out                             ; 33                               ;
+; Total fan-out                               ; 481                              ;
+; Average fan-out                             ; 2.47                             ;
++---------------------------------------------+----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                  ;
++---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                          ; Entity Name               ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+---------------------------+--------------+
+; |VGAControl                           ; 100 (12)            ; 65 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |VGAControl                                  ; VGAControl                ; work         ;
+;    |ClockDivider:comb_3|              ; 43 (43)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|ClockDivider:comb_3              ; ClockDivider              ; work         ;
+;    |HorizentalVerticalControl:comb_4| ; 45 (45)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|HorizentalVerticalControl:comb_4 ; HorizentalVerticalControl ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+---------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 65    ;
+; Number of registers using Synchronous Clear  ; 64    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClockDivider:comb_3    ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; D              ; 00000001011111010111100001000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 15                          ;
+; cycloneiii_ff         ; 65                          ;
+;     SCLR              ; 64                          ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 101                         ;
+;     arith             ; 61                          ;
+;         2 data inputs ; 61                          ;
+;     normal            ; 40                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 28                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.02                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -164,21 +284,38 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Nov 20 22:09:53 2021
+    Info: Processing started: Tue Nov 23 00:39:45 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AsteroidGame -c AsteroidGame
-Info (125068): Revision "AsteroidGame" was previously opened in Quartus Prime software version 16.1.0 Lite Edition. Created Quartus Prime Default Settings File C:/Users/walid/Desktop/Repos/AsteroidGame/AsteroidGame_assignment_defaults.qdf, which contains the default assignment setting information from Quartus Prime software version 16.1.0 Lite Edition.
-Info (125069): Default assignment values were changed in the current version of the Quartus Prime software -- changes to default assignments values are contained in file c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file main.v
     Info (12023): Found entity 1: main File: C:/Users/walid/Desktop/Repos/AsteroidGame/main.v Line: 1
-Info (12127): Elaborating entity "main" for the top level hierarchy
-Warning (12158): Entity "main" contains only dangling pins
-Error (12061): Can't synthesize current design -- Top partition does not contain any logic
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 2 warnings
-    Error: Peak virtual memory: 4696 megabytes
-    Error: Processing ended: Sat Nov 20 22:10:02 2021
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:21
+Info (12021): Found 1 design units, including 1 entities, in source file horizentalverticalcontrol.v
+    Info (12023): Found entity 1: HorizentalVerticalControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file vgacontrol.v
+    Info (12023): Found entity 1: VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file clockdivider.v
+    Info (12023): Found entity 1: ClockDivider File: C:/Users/walid/Desktop/Repos/AsteroidGame/ClockDivider.v Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at VGAControl.v(39): instance has no name File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 39
+Critical Warning (10846): Verilog HDL Instantiation warning at VGAControl.v(40): instance has no name File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 40
+Info (12127): Elaborating entity "VGAControl" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at VGAControl.v(42): truncated value with size 32 to match size of target (1) File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 42
+Warning (10230): Verilog HDL assignment warning at VGAControl.v(43): truncated value with size 32 to match size of target (1) File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 43
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:comb_3" File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 39
+Info (12128): Elaborating entity "HorizentalVerticalControl" for hierarchy "HorizentalVerticalControl:comb_4" File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 40
+Warning (10230): Verilog HDL assignment warning at HorizentalVerticalControl.v(18): truncated value with size 32 to match size of target (16) File: C:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v Line: 18
+Warning (10230): Verilog HDL assignment warning at HorizentalVerticalControl.v(34): truncated value with size 32 to match size of target (16) File: C:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v Line: 34
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 116 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 101 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Tue Nov 23 00:39:55 2021
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
 
 

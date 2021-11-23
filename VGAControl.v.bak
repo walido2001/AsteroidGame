@@ -1,0 +1,10 @@
+module VGAControl(
+
+	input standardCLK; 
+	
+	output [3:0] Red;
+	output [3:0] Green;
+	output [3:0] Blue;
+);
+
+endmodule

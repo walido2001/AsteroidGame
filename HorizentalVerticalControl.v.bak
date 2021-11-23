@@ -1,0 +1,9 @@
+module HorizentalVerticalControl (
+	input normalCLK;
+	
+	output reg [15:0] HControl;
+	output reg [15:0] VControl;
+	
+);
+
+endmodule

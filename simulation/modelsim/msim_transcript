@@ -1,0 +1,64 @@
+# Reading pref.tcl
+# do AsteroidGame_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/Repos/AsteroidGame {C:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:57:52 on Nov 22,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame" C:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v 
+# -- Compiling module HorizentalVerticalControl
+# 
+# Top level modules:
+# 	HorizentalVerticalControl
+# End time: 23:57:53 on Nov 22,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/Repos/AsteroidGame {C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:57:53 on Nov 22,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame" C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v 
+# -- Compiling module VGAControl
+# 
+# Top level modules:
+# 	VGAControl
+# End time: 23:57:53 on Nov 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/Repos/AsteroidGame {C:/Users/walid/Desktop/Repos/AsteroidGame/ClockDivider.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:57:53 on Nov 22,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame" C:/Users/walid/Desktop/Repos/AsteroidGame/ClockDivider.v 
+# -- Compiling module ClockDivider
+# 
+# Top level modules:
+# 	ClockDivider
+# End time: 23:57:53 on Nov 22,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim -gui -l msim_transcript work.HorizentalVerticalControl -L altera_ver
+# vsim -gui -l msim_transcript work.HorizentalVerticalControl -L altera_ver 
+# Start time: 23:58:31 on Nov 22,2021
+# Loading work.HorizentalVerticalControl
+add wave -position insertpoint  \
+sim:/HorizentalVerticalControl/normalCLK
+add wave -position insertpoint  \
+sim:/HorizentalVerticalControl/HControl
+add wave -position insertpoint  \
+sim:/HorizentalVerticalControl/VControl
+force -freeze sim:/HorizentalVerticalControl/normalCLK 1 0, 0 {50 ps} -r 100
+force -freeze sim:/HorizentalVerticalControl/HControl xxxxxxxxxxxxxxxx 0
+run
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 00:30:19 on Nov 23,2021, Elapsed time: 0:31:48
+# Errors: 0, Warnings: 0
