@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AsteroidGame
-Tue Nov 23 16:34:01 2021
+Tue Nov 23 16:47:00 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
 
 
@@ -45,13 +45,13 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 23 16:34:01 2021                     ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 23 16:47:00 2021                     ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition ;
 ; Revision Name                      ; AsteroidGame                                              ;
 ; Top-level Entity Name              ; VGAControl                                                ;
 ; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 42                                                        ;
-;     Total combinational functions  ; 42                                                        ;
+; Total logic elements               ; 39                                                        ;
+;     Total combinational functions  ; 39                                                        ;
 ;     Dedicated logic registers      ; 21                                                        ;
 ; Total registers                    ; 21                                                        ;
 ; Total pins                         ; 15                                                        ;
@@ -183,16 +183,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 42                       ;
+; Estimated Total logic elements              ; 39                       ;
 ;                                             ;                          ;
-; Total combinational functions               ; 42                       ;
+; Total combinational functions               ; 39                       ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 17                       ;
-;     -- 3 input functions                    ; 2                        ;
+;     -- 4 input functions                    ; 15                       ;
+;     -- 3 input functions                    ; 1                        ;
 ;     -- <=2 input functions                  ; 23                       ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 24                       ;
+;     -- normal mode                          ; 21                       ;
 ;     -- arithmetic mode                      ; 18                       ;
 ;                                             ;                          ;
 ; Total registers                             ; 21                       ;
@@ -205,8 +205,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; ClockDivider:clkDiv|cout ;
 ; Maximum fan-out                             ; 21                       ;
-; Total fan-out                               ; 218                      ;
-; Average fan-out                             ; 2.34                     ;
+; Total fan-out                               ; 207                      ;
+; Average fan-out                             ; 2.30                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -215,9 +215,9 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                             ; Entity Name               ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------------+--------------+
-; |VGAControl                              ; 42 (13)             ; 21 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |VGAControl                                     ; VGAControl                ; work         ;
+; |VGAControl                              ; 39 (14)             ; 21 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |VGAControl                                     ; VGAControl                ; work         ;
 ;    |ClockDivider:clkDiv|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|ClockDivider:clkDiv                 ; ClockDivider              ; work         ;
-;    |HorizentalVerticalControl:HVControl| ; 28 (28)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|HorizentalVerticalControl:HVControl ; HorizentalVerticalControl ; work         ;
+;    |HorizentalVerticalControl:HVControl| ; 24 (24)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|HorizentalVerticalControl:HVControl ; HorizentalVerticalControl ; work         ;
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -267,14 +267,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 44                          ;
+; cycloneiii_lcell_comb ; 41                          ;
 ;     arith             ; 18                          ;
 ;         2 data inputs ; 18                          ;
-;     normal            ; 26                          ;
+;     normal            ; 23                          ;
 ;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 2                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 17                          ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 15                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
 ; Average LUT depth     ; 2.25                        ;
@@ -296,7 +296,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
-    Info: Processing started: Tue Nov 23 16:33:50 2021
+    Info: Processing started: Tue Nov 23 16:46:49 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AsteroidGame -c AsteroidGame
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -312,18 +312,18 @@ Warning (10230): Verilog HDL assignment warning at VGAControl.v(43): truncated v
 Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:clkDiv" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 39
 Info (12128): Elaborating entity "HorizentalVerticalControl" for hierarchy "HorizentalVerticalControl:HVControl" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 40
 Warning (10230): Verilog HDL assignment warning at HorizentalVerticalControl.v(17): truncated value with size 32 to match size of target (10) File: C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v Line: 17
-Warning (10230): Verilog HDL assignment warning at HorizentalVerticalControl.v(30): truncated value with size 32 to match size of target (10) File: C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v Line: 30
+Warning (10230): Verilog HDL assignment warning at HorizentalVerticalControl.v(26): truncated value with size 32 to match size of target (10) File: C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v Line: 26
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 57 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 42 logic cells
+    Info (21061): Implemented 39 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4764 megabytes
-    Info: Processing ended: Tue Nov 23 16:34:01 2021
+    Info: Peak virtual memory: 4763 megabytes
+    Info: Processing ended: Tue Nov 23 16:47:00 2021
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Total CPU time (on all processors): 00:00:25
 
 
