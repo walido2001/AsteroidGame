@@ -2,76 +2,76 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'ClockDivider:clkDiv|cout'
+Slack : -1.453
+TNS   : -26.397
+
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -2.772
-TNS   : -82.989
+Slack : -0.534
+TNS   : -0.534
 
-Type  : Slow 1200mV 85C Model Setup 'ClockDivider:comb_3|cout'
-Slack : -2.149
-TNS   : -62.948
-
-Type  : Slow 1200mV 85C Model Hold 'ClockDivider:comb_3|cout'
-Slack : 0.390
+Type  : Slow 1200mV 85C Model Hold 'ClockDivider:clkDiv|cout'
+Slack : 0.350
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.391
+Slack : 0.516
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -43.326
+TNS   : -4.222
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ClockDivider:comb_3|cout'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ClockDivider:clkDiv|cout'
 Slack : -1.222
-TNS   : -39.104
+TNS   : -24.440
+
+Type  : Slow 1200mV 0C Model Setup 'ClockDivider:clkDiv|cout'
+Slack : -1.232
+TNS   : -22.511
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -2.450
-TNS   : -73.047
+Slack : -0.357
+TNS   : -0.357
 
-Type  : Slow 1200mV 0C Model Setup 'ClockDivider:comb_3|cout'
-Slack : -1.871
-TNS   : -54.938
-
-Type  : Slow 1200mV 0C Model Hold 'ClockDivider:comb_3|cout'
-Slack : 0.353
+Type  : Slow 1200mV 0C Model Hold 'ClockDivider:clkDiv|cout'
+Slack : 0.325
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.361
+Slack : 0.367
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -43.326
+TNS   : -4.222
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ClockDivider:comb_3|cout'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ClockDivider:clkDiv|cout'
 Slack : -1.222
-TNS   : -39.104
+TNS   : -24.440
+
+Type  : Fast 1200mV 0C Model Setup 'ClockDivider:clkDiv|cout'
+Slack : -0.165
+TNS   : -1.835
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.795
-TNS   : -22.030
+Slack : -0.086
+TNS   : -0.086
 
-Type  : Fast 1200mV 0C Model Setup 'ClockDivider:comb_3|cout'
-Slack : -0.484
-TNS   : -12.538
-
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.179
+Type  : Fast 1200mV 0C Model Hold 'ClockDivider:clkDiv|cout'
+Slack : 0.159
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'ClockDivider:comb_3|cout'
-Slack : 0.183
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.327
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -37.119
+TNS   : -4.082
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ClockDivider:comb_3|cout'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ClockDivider:clkDiv|cout'
 Slack : -1.000
-TNS   : -32.000
+TNS   : -20.000
 
 ------------------------------------------------------------

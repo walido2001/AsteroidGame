@@ -5,8 +5,8 @@
 module HorizentalVerticalControl (
 	input normalCLK,
 	
-	output reg [15:0] HControl = 0,
-	output reg [15:0] VControl = 0
+	output reg [9:0] HControl = 0,
+	output reg [9:0] VControl = 0
 	
 );
 	always @ (posedge normalCLK)
@@ -14,9 +14,7 @@ module HorizentalVerticalControl (
 		
 			if (HControl < 799) 
 				begin 
-				
-					HControl <= HControl + 1;
-					
+					HControl <= HControl + 1;	
 				end
 			else 
 				begin 
@@ -27,18 +25,14 @@ module HorizentalVerticalControl (
 		
 	always @ (posedge normalCLK)
 		begin 
-
-			if (HControl == 799 && VControl < 524) 
-				begin 
-					
+			if (HControl == 799) begin 
+				if(VControl < 525) begin
 						VControl <= VControl + 1;
-						
 				end
-				
-			else 
-				begin 
-						VControl <= 0;
+				else begin
+					VControl <= 0;
 				end
+			end
 					
 		end
 

@@ -8,52 +8,52 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/walid/Desktop/Repos/AsteroidGame/simulation/modelsim
+Z0 dC:/MyProjects/AsteroidGame/simulation/modelsim
 vClockDivider
-Z1 !s110 1637643473
+Z1 !s110 1637703531
 !i10b 1
-!s100 6egoCGC?bhB:92m45ZG^e3
+!s100 64T_UzoVB0UL87_?>fiQ@3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I2`>ac3nkfOSM]mbSfO]RK0
+I]3i<=c@Fahad:Lk9_=JZO0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1637638461
-8C:/Users/walid/Desktop/Repos/AsteroidGame/ClockDivider.v
-FC:/Users/walid/Desktop/Repos/AsteroidGame/ClockDivider.v
+w1637702880
+8C:/MyProjects/AsteroidGame/ClockDivider.v
+FC:/MyProjects/AsteroidGame/ClockDivider.v
 !i122 2
-L0 1 30
+L0 1 26
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1637643473.000000
-!s107 C:/Users/walid/Desktop/Repos/AsteroidGame/ClockDivider.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame|C:/Users/walid/Desktop/Repos/AsteroidGame/ClockDivider.v|
+Z5 !s108 1637703531.000000
+!s107 C:/MyProjects/AsteroidGame/ClockDivider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/ClockDivider.v|
 !i113 1
 Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work +incdir+C:/Users/walid/Desktop/Repos/AsteroidGame
+Z7 !s92 -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame
 Z8 tCvgOpt 0
 n@clock@divider
 vHorizentalVerticalControl
 R1
 !i10b 1
-!s100 D73zLgQWVK4:iziTFf51_2
+!s100 aMdeQ2kkUc>iG]8d<dfWg3
 R2
-IcO6M[SbXzdhX127LB9_9S2
+IQP7Q^`LQfMC<V257PF3zZ1
 R3
 R0
-w1637641027
-8C:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v
-FC:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v
+w1637703191
+8C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v
+FC:/MyProjects/AsteroidGame/HorizentalVerticalControl.v
 !i122 0
-L0 5 41
+L0 5 35
 R4
 r1
 !s85 0
 31
-!s108 1637643472.000000
-!s107 C:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame|C:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v|
+R5
+!s107 C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v|
 !i113 1
 R6
 R7
@@ -62,14 +62,14 @@ n@horizental@vertical@control
 vVGAControl
 R1
 !i10b 1
-!s100 M9KfaLa]nZ7bJFP8n4`D;1
+!s100 6;SNGaNo=f>8RAF3K40hX0
 R2
-IEzl0W;eb:=Ya[A;;z6khY0
+I2Lo2QoA;;8dHZmz8?240o1
 R3
 R0
-w1637641123
-8C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v
-FC:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v
+w1637703217
+8C:/MyProjects/AsteroidGame/VGAControl.v
+FC:/MyProjects/AsteroidGame/VGAControl.v
 !i122 1
 L0 4 46
 R4
@@ -77,8 +77,8 @@ r1
 !s85 0
 31
 R5
-!s107 C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame|C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v|
+!s107 C:/MyProjects/AsteroidGame/VGAControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/VGAControl.v|
 !i113 1
 R6
 R7

@@ -9,22 +9,18 @@ module ClockDivider(cin,cout);
 //Taken from Allison's Slides, with a minor modification (Changed D's value from 25 to 50) given that the input clock is 50mhz
 
 input cin;
-output reg cout;
+output reg cout = 0;
 
-reg[31:0] count; 
-parameter D = 32'd25000000;
+reg[31:0] count = 32'd0;
+parameter D = 32'd1;
 
 always @(posedge cin)
 begin
    count <= count + 32'd1;
       if (count >= (D-1)) begin
-         cout <= 1;
+         cout <= ~cout;
          count <= 32'd0;
       end
-        else begin
-            cout <= 0;
-        end
 end
-
 
 endmodule

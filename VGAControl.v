@@ -32,18 +32,18 @@ module VGAControl(
 	
 	//CLK -> PIN_P11
 	
-	wire [15:0] HCounter;
-	wire [15:0] VCounter;
+	wire [9:0] HCounter;
+	wire [9:0] VCounter;
 	wire clkOut;
 	
-	ClockDivider(clk, clkOut);
-	HorizentalVerticalControl(clkOut, HCounter, VCounter);
+	ClockDivider clkDiv (clk, clkOut);
+	HorizentalVerticalControl 	HVControl (clkOut, HCounter, VCounter);
 	
-	assign HSync = (HCounter < 96 && HCounter >= 0) ? 1 : 0;
-	assign VSync = (VCounter < 2 && VCounter >= 0) ? 1 : 0;
+	assign HSync = (HCounter <= 95 && HCounter >= 0) ? 1 : 0;
+	assign VSync = (VCounter <= 1 && VCounter >= 0) ? 1 : 0;
 	
-	assign Red = (HCounter < 784 && HCounter > 143 && VCounter < 515 && VCounter > 35) ? 4'hF : 4'h0;
-	assign Green = (HCounter < 784 && HCounter > 143 && VCounter < 515 && VCounter > 35) ? 4'hF : 4'h0;
-	assign Blue = (HCounter < 784 && HCounter > 143 && VCounter < 515 && VCounter > 35) ? 4'hF : 4'h0;
+	assign Red = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
+	assign Green = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
+	assign Blue = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
 	
 endmodule
