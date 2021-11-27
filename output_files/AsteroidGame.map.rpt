@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AsteroidGame
-Tue Nov 23 16:47:00 2021
+Thu Nov 25 23:48:41 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
 
 
@@ -15,10 +15,11 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: ClockDivider:clkDiv
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 10. Inverted Register Statistics
+ 11. Parameter Settings for User Entity Instance: ClockDivider:clkDiv
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -45,15 +46,15 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                                   ;
 +------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 23 16:47:00 2021                     ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 25 23:48:41 2021                     ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition ;
 ; Revision Name                      ; AsteroidGame                                              ;
 ; Top-level Entity Name              ; VGAControl                                                ;
 ; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 39                                                        ;
-;     Total combinational functions  ; 39                                                        ;
-;     Dedicated logic registers      ; 21                                                        ;
-; Total registers                    ; 21                                                        ;
+; Total logic elements               ; 122                                                       ;
+;     Total combinational functions  ; 122                                                       ;
+;     Dedicated logic registers      ; 41                                                        ;
+; Total registers                    ; 41                                                        ;
 ; Total pins                         ; 15                                                        ;
 ; Total virtual pins                 ; 0                                                         ;
 ; Total memory bits                  ; 0                                                         ;
@@ -175,39 +176,41 @@ https://fpgasoftware.intel.com/eula.
 ; HorizentalVerticalControl.v      ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v ;         ;
 ; VGAControl.v                     ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/VGAControl.v                ;         ;
 ; ClockDivider.v                   ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/ClockDivider.v              ;         ;
+; DrawPlanet.v                     ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/DrawPlanet.v                ;         ;
+; DrawDefense.v                    ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/DrawDefense.v               ;         ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 39                       ;
-;                                             ;                          ;
-; Total combinational functions               ; 39                       ;
-; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 15                       ;
-;     -- 3 input functions                    ; 1                        ;
-;     -- <=2 input functions                  ; 23                       ;
-;                                             ;                          ;
-; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 21                       ;
-;     -- arithmetic mode                      ; 18                       ;
-;                                             ;                          ;
-; Total registers                             ; 21                       ;
-;     -- Dedicated logic registers            ; 21                       ;
-;     -- I/O registers                        ; 0                        ;
-;                                             ;                          ;
-; I/O pins                                    ; 15                       ;
-;                                             ;                          ;
-; Embedded Multiplier 9-bit elements          ; 0                        ;
-;                                             ;                          ;
-; Maximum fan-out node                        ; ClockDivider:clkDiv|cout ;
-; Maximum fan-out                             ; 21                       ;
-; Total fan-out                               ; 207                      ;
-; Average fan-out                             ; 2.30                     ;
-+---------------------------------------------+--------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                   ;
++---------------------------------------------+-------------------------------------------------+
+; Resource                                    ; Usage                                           ;
++---------------------------------------------+-------------------------------------------------+
+; Estimated Total logic elements              ; 122                                             ;
+;                                             ;                                                 ;
+; Total combinational functions               ; 122                                             ;
+; Logic element usage by number of LUT inputs ;                                                 ;
+;     -- 4 input functions                    ; 21                                              ;
+;     -- 3 input functions                    ; 33                                              ;
+;     -- <=2 input functions                  ; 68                                              ;
+;                                             ;                                                 ;
+; Logic elements by mode                      ;                                                 ;
+;     -- normal mode                          ; 56                                              ;
+;     -- arithmetic mode                      ; 66                                              ;
+;                                             ;                                                 ;
+; Total registers                             ; 41                                              ;
+;     -- Dedicated logic registers            ; 41                                              ;
+;     -- I/O registers                        ; 0                                               ;
+;                                             ;                                                 ;
+; I/O pins                                    ; 15                                              ;
+;                                             ;                                                 ;
+; Embedded Multiplier 9-bit elements          ; 0                                               ;
+;                                             ;                                                 ;
+; Maximum fan-out node                        ; HorizentalVerticalControl:HVControl|VControl[0] ;
+; Maximum fan-out                             ; 24                                              ;
+; Total fan-out                               ; 454                                             ;
+; Average fan-out                             ; 2.35                                            ;
++---------------------------------------------+-------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -215,9 +218,11 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                             ; Entity Name               ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------------+--------------+
-; |VGAControl                              ; 39 (14)             ; 21 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |VGAControl                                     ; VGAControl                ; work         ;
+; |VGAControl                              ; 122 (3)             ; 41 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |VGAControl                                     ; VGAControl                ; work         ;
 ;    |ClockDivider:clkDiv|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|ClockDivider:clkDiv                 ; ClockDivider              ; work         ;
-;    |HorizentalVerticalControl:HVControl| ; 24 (24)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|HorizentalVerticalControl:HVControl ; HorizentalVerticalControl ; work         ;
+;    |DrawDefense:dDefense|                ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DrawDefense:dDefense                ; DrawDefense               ; work         ;
+;    |DrawPlanet:dPlanet|                  ; 78 (78)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DrawPlanet:dPlanet                  ; DrawPlanet                ; work         ;
+;    |HorizentalVerticalControl:HVControl| ; 25 (25)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|HorizentalVerticalControl:HVControl ; HorizentalVerticalControl ; work         ;
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -237,7 +242,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
+; Total registers                              ; 41    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -245,6 +250,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; DrawPlanet:dPlanet|midSpan[5]          ; 3       ;
+; DrawPlanet:dPlanet|midSpan[3]          ; 3       ;
+; DrawPlanet:dPlanet|midSpan[2]          ; 3       ;
+; DrawPlanet:dPlanet|increment[5]        ; 2       ;
+; DrawPlanet:dPlanet|increment[0]        ; 2       ;
+; Total number of inverted registers = 5 ;         ;
++----------------------------------------+---------+
 
 
 +---------------------------------------------------------------------+
@@ -263,21 +282,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 15                          ;
-; cycloneiii_ff         ; 21                          ;
+; cycloneiii_ff         ; 41                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 41                          ;
-;     arith             ; 18                          ;
-;         2 data inputs ; 18                          ;
-;     normal            ; 23                          ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 15                          ;
+;     plain             ; 21                          ;
+; cycloneiii_lcell_comb ; 124                         ;
+;     arith             ; 66                          ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 29                          ;
+;     normal            ; 58                          ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 21                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.25                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.27                        ;
 +-----------------------+-----------------------------+
 
 
@@ -296,7 +316,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
-    Info: Processing started: Tue Nov 23 16:46:49 2021
+    Info: Processing started: Thu Nov 25 23:48:30 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AsteroidGame -c AsteroidGame
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -306,24 +326,33 @@ Info (12021): Found 1 design units, including 1 entities, in source file vgacont
     Info (12023): Found entity 1: VGAControl File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file clockdivider.v
     Info (12023): Found entity 1: ClockDivider File: C:/MyProjects/AsteroidGame/ClockDivider.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file drawplanet.v
+    Info (12023): Found entity 1: DrawPlanet File: C:/MyProjects/AsteroidGame/DrawPlanet.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file drawdefense.v
+    Info (12023): Found entity 1: DrawDefense File: C:/MyProjects/AsteroidGame/DrawDefense.v Line: 1
 Info (12127): Elaborating entity "VGAControl" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at VGAControl.v(42): truncated value with size 32 to match size of target (1) File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 42
-Warning (10230): Verilog HDL assignment warning at VGAControl.v(43): truncated value with size 32 to match size of target (1) File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 43
-Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:clkDiv" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 39
-Info (12128): Elaborating entity "HorizentalVerticalControl" for hierarchy "HorizentalVerticalControl:HVControl" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 40
+Warning (10230): Verilog HDL assignment warning at VGAControl.v(48): truncated value with size 32 to match size of target (1) File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 48
+Warning (10230): Verilog HDL assignment warning at VGAControl.v(49): truncated value with size 32 to match size of target (1) File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 49
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:clkDiv" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 45
+Info (12128): Elaborating entity "HorizentalVerticalControl" for hierarchy "HorizentalVerticalControl:HVControl" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 46
 Warning (10230): Verilog HDL assignment warning at HorizentalVerticalControl.v(17): truncated value with size 32 to match size of target (10) File: C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v Line: 17
 Warning (10230): Verilog HDL assignment warning at HorizentalVerticalControl.v(26): truncated value with size 32 to match size of target (10) File: C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v Line: 26
+Info (12128): Elaborating entity "DrawDefense" for hierarchy "DrawDefense:dDefense" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 51
+Info (12128): Elaborating entity "DrawPlanet" for hierarchy "DrawPlanet:dPlanet" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 52
+Warning (10036): Verilog HDL or VHDL warning at DrawPlanet.v(11): object "diff" assigned a value but never read File: C:/MyProjects/AsteroidGame/DrawPlanet.v Line: 11
+Warning (10235): Verilog HDL Always Construct warning at DrawPlanet.v(15): variable "midSpan" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/DrawPlanet.v Line: 15
+Warning (10646): Verilog HDL Event Control warning at DrawPlanet.v(25): posedge or negedge of vector "VCounter" depends solely on its least-significant bit File: C:/MyProjects/AsteroidGame/DrawPlanet.v Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 137 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 39 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4763 megabytes
-    Info: Processing ended: Tue Nov 23 16:47:00 2021
+    Info (21061): Implemented 122 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 4766 megabytes
+    Info: Processing ended: Thu Nov 25 23:48:41 2021
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Total CPU time (on all processors): 00:00:26
 
 

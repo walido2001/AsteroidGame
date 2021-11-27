@@ -3,19 +3,27 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'ClockDivider:clkDiv|cout'
-Slack : -1.171
-TNS   : -21.150
+Slack : -2.574
+TNS   : -37.091
+
+Type  : Slow 1200mV 85C Model Setup 'HorizentalVerticalControl:HVControl|VControl[0]'
+Slack : -1.933
+TNS   : -28.064
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -0.679
-TNS   : -0.679
+Slack : -0.446
+TNS   : -0.446
 
 Type  : Slow 1200mV 85C Model Hold 'ClockDivider:clkDiv|cout'
-Slack : 0.397
+Slack : 0.381
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.547
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'HorizentalVerticalControl:HVControl|VControl[0]'
+Slack : 0.743
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -26,20 +34,32 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ClockDivider:clkDiv|cout'
 Slack : -1.222
 TNS   : -24.440
 
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'HorizentalVerticalControl:HVControl|VControl[0]'
+Slack : -1.222
+TNS   : -24.440
+
 Type  : Slow 1200mV 0C Model Setup 'ClockDivider:clkDiv|cout'
-Slack : -0.998
-TNS   : -17.930
+Slack : -2.282
+TNS   : -32.336
+
+Type  : Slow 1200mV 0C Model Setup 'HorizentalVerticalControl:HVControl|VControl[0]'
+Slack : -1.648
+TNS   : -23.723
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -0.532
-TNS   : -0.532
-
-Type  : Slow 1200mV 0C Model Hold 'ClockDivider:clkDiv|cout'
-Slack : 0.366
-TNS   : 0.000
+Slack : -0.280
+TNS   : -0.280
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.465
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ClockDivider:clkDiv|cout'
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'HorizentalVerticalControl:HVControl|VControl[0]'
+Slack : 0.668
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -50,27 +70,43 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ClockDivider:clkDiv|cout'
 Slack : -1.222
 TNS   : -24.440
 
-Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.036
-TNS   : -0.036
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'HorizentalVerticalControl:HVControl|VControl[0]'
+Slack : -1.222
+TNS   : -24.440
 
 Type  : Fast 1200mV 0C Model Setup 'ClockDivider:clkDiv|cout'
-Slack : -0.024
-TNS   : -0.240
+Slack : -1.026
+TNS   : -8.241
+
+Type  : Fast 1200mV 0C Model Setup 'HorizentalVerticalControl:HVControl|VControl[0]'
+Slack : -0.405
+TNS   : -3.022
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.077
+TNS   : -0.077
 
 Type  : Fast 1200mV 0C Model Hold 'ClockDivider:clkDiv|cout'
-Slack : 0.181
+Slack : 0.174
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'HorizentalVerticalControl:HVControl|VControl[0]'
+Slack : 0.253
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.219
+Slack : 0.303
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -4.010
+TNS   : -4.082
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ClockDivider:clkDiv|cout'
+Slack : -1.000
+TNS   : -20.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'HorizentalVerticalControl:HVControl|VControl[0]'
 Slack : -1.000
 TNS   : -20.000
 
