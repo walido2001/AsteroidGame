@@ -35,6 +35,9 @@ module VGAControl(
 	wire [9:0] HCounter;
 	wire [9:0] VCounter;
 	wire clkOut;
+	wire clk50;
+	wire result1;
+	wire result2; 
 	wire drawDefenseRed;
 	wire drawDefenseGreen;
 	wire drawDefenseBlue;
@@ -50,9 +53,14 @@ module VGAControl(
 	
 	DrawDefense dDefense (HCounter, VCounter, drawDefenseRed, drawDefenseGreen, drawDefenseBlue);
 	DrawPlanet dPlanet (HCounter, VCounter, drawPlanetRed, drawPlanetGreen, drawPlanetBlue);
+	groundTarget planet(HCounter, VCounter, clk50, result2);
+	movingSquare squareMoving(HCounter, VCounter, clk50, switch, result1);
 	
-	assign Red = (drawDefenseRed || drawPlanetRed) ? 4'hF : 4'h0;
-	assign Green = (drawDefenseGreen || drawPlanetGreen) ? 4'hF : 4'h0;
-	assign Blue = (drawDefenseBlue || drawPlanetBlue) ? 4'hF : 4'h0;
+	assign Red = (drawDefenseRed || drawPlanetRed || result2) ? 4'hF : 4'h0;
+	assign Green = (drawDefenseGreen || drawPlanetGreen || result2 || result1) ? 4'hF : 4'h0;
+	assign Blue = (drawDefenseBlue || drawPlanetBlue || result2 || result1) ? 4'hF : 4'h0;
 	
+	//	assign Red = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
+//	assign Green = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
+//	assign Blue = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
 endmodule
