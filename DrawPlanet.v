@@ -11,7 +11,7 @@ reg [9:0] increment = 10'd33;
 reg [9:0] diff = 10'd0;
 
 always @ (VCounter or HCounter) begin
-	if(VCounter >= 10'd456 && VCounter <= 10'd513) begin
+	if(VCounter >= 10'd456 && VCounter <= 10'd515) begin
 		if(HCounter >= (10'd464 - midSpan) && HCounter <= (10'd464 + midSpan)) begin
 			dR <= 0; dG <= 1; dB <= 1;
 		end else begin
@@ -23,7 +23,7 @@ always @ (VCounter or HCounter) begin
 end
 
 always @ (posedge VCounter) begin
-	if(VCounter >= 10'd456 && VCounter <= 10'd513) begin
+	if(VCounter >= 10'd456 && VCounter <= 10'd515) begin
 	//increasing span everytime VCounter changes
 		midSpan <= midSpan + increment;
 		increment <= increment - 10'd1;

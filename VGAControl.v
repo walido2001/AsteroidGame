@@ -3,6 +3,10 @@
 
 module VGAControl(
 	input clk,
+	input clk2,
+	
+	input switch,
+	
 	output HSync,
 	output VSync,
 	
@@ -31,13 +35,16 @@ module VGAControl(
 	//VSync -> PIN_N1
 	
 	//CLK -> PIN_P11
+	//CLK2 -> PIN_N14
+	
+	//SWITCH -> 
 	
 	wire [9:0] HCounter;
 	wire [9:0] VCounter;
 	wire clkOut;
 	wire clk50;
-	wire result1;
-	wire result2; 
+	wire drawSquare;
+	//wire result2; 
 	wire drawDefenseRed;
 	wire drawDefenseGreen;
 	wire drawDefenseBlue;
@@ -46,6 +53,7 @@ module VGAControl(
 	wire drawPlanetBlue;
 	
 	ClockDivider clkDiv (clk, clkOut);
+	ClockDividerSixty clockTwo(clk2, clk50);
 	HorizentalVerticalControl 	HVControl (clkOut, HCounter, VCounter);
 	
 	assign HSync = (HCounter <= 95 && HCounter >= 0) ? 1 : 0;
@@ -53,12 +61,12 @@ module VGAControl(
 	
 	DrawDefense dDefense (HCounter, VCounter, drawDefenseRed, drawDefenseGreen, drawDefenseBlue);
 	DrawPlanet dPlanet (HCounter, VCounter, drawPlanetRed, drawPlanetGreen, drawPlanetBlue);
-	groundTarget planet(HCounter, VCounter, clk50, result2);
-	movingSquare squareMoving(HCounter, VCounter, clk50, switch, result1);
+	//groundTarget planet(HCounter, VCounter, clk50, result2);
+	movingSquare squareMoving(HCounter, VCounter, clk50, switch, drawSquare);
 	
-	assign Red = (drawDefenseRed || drawPlanetRed || result2) ? 4'hF : 4'h0;
-	assign Green = (drawDefenseGreen || drawPlanetGreen || result2 || result1) ? 4'hF : 4'h0;
-	assign Blue = (drawDefenseBlue || drawPlanetBlue || result2 || result1) ? 4'hF : 4'h0;
+	assign Red = (drawDefenseRed || drawPlanetRed || drawSquare) ? 4'hF : 4'h0;
+	assign Green = (drawDefenseGreen || drawPlanetGreen || drawSquare) ? 4'hF : 4'h0;
+	assign Blue = (drawDefenseBlue || drawPlanetBlue || drawSquare) ? 4'hF : 4'h0;
 	
 	//	assign Red = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
 //	assign Green = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
