@@ -3,6 +3,8 @@
 
 module VGAControl(
 	input clk,
+	input clk2,
+	input switch,
 	output HSync,
 	output VSync,
 	
@@ -35,15 +37,28 @@ module VGAControl(
 	wire [9:0] HCounter;
 	wire [9:0] VCounter;
 	wire clkOut;
+	wire clk50;
+	wire result1;
+	wire result2; 
 	
-	ClockDivider clkDiv (clk, clkOut);
-	HorizentalVerticalControl 	HVControl (clkOut, HCounter, VCounter);
+	ClockDivider clockOne(clk, clkOut);
+	ClockDividerSixty clockTwo(clk2, clk50);
 	
-	assign HSync = (HCounter <= 95 && HCounter >= 0) ? 1 : 0;
-	assign VSync = (VCounter <= 1 && VCounter >= 0) ? 1 : 0;
+	HorizentalVerticalControl(clkOut, HCounter, VCounter);
 	
-	assign Red = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
-	assign Green = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
-	assign Blue = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
+	assign HSync = (HCounter < 96 && HCounter >= 0) ? 1 : 0;
+	assign VSync = (VCounter < 2 && VCounter >= 0) ? 1 : 0;
+	
+	groundTarget planet(HCounter, VCounter, clk50, result2);
+	movingSquare squareMoving(HCounter, VCounter, clk50, switch, result1);
+	
+	
+	assign Red = (result2) ? 4'hF : 4'h0;
+	assign Green = (result2 || result1) ? 4'hF : 4'h0;
+	assign Blue = (result2 || result1) ? 4'hF : 4'h0;
+
+//	assign Red = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
+//	assign Green = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
+//	assign Blue = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
 	
 endmodule

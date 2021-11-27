@@ -1,10 +1,10 @@
-/* Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition */
+/* Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484ES) Path("C:/MyProjects/AsteroidGame/output_files/") File("AsteroidGame.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484ES) Path("C:/Users/walid/Desktop/Repos/AsteroidGame/output_files/") File("AsteroidGame.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

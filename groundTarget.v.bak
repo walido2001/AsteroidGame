@@ -1,0 +1,8 @@
+module groundTarget (
+	input [9:0] HCounter,
+	input [9:0] VCounter,
+	input HSync,
+	input clk,
+	
+	output reg result
+);

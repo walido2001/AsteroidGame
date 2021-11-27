@@ -1,22 +1,24 @@
 |VGAControl
 clk => clk.IN1
+clk2 => clk2.IN1
+switch => switch.IN1
 HSync << HSync.DB_MAX_OUTPUT_PORT_TYPE
 VSync << VSync.DB_MAX_OUTPUT_PORT_TYPE
-Red[0] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Red[1] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Red[2] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Red[3] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Green[0] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Green[1] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Green[2] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Green[3] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Blue[0] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Blue[1] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Blue[2] << Red.DB_MAX_OUTPUT_PORT_TYPE
-Blue[3] << Red.DB_MAX_OUTPUT_PORT_TYPE
+Red[0] << groundTarget:planet.port3
+Red[1] << groundTarget:planet.port3
+Red[2] << groundTarget:planet.port3
+Red[3] << groundTarget:planet.port3
+Green[0] << Green.DB_MAX_OUTPUT_PORT_TYPE
+Green[1] << Green.DB_MAX_OUTPUT_PORT_TYPE
+Green[2] << Green.DB_MAX_OUTPUT_PORT_TYPE
+Green[3] << Green.DB_MAX_OUTPUT_PORT_TYPE
+Blue[0] << Green.DB_MAX_OUTPUT_PORT_TYPE
+Blue[1] << Green.DB_MAX_OUTPUT_PORT_TYPE
+Blue[2] << Green.DB_MAX_OUTPUT_PORT_TYPE
+Blue[3] << Green.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|VGAControl|ClockDivider:clkDiv
+|VGAControl|ClockDivider:clockOne
 cin => cout~reg0.CLK
 cin => count[0].CLK
 cin => count[1].CLK
@@ -53,7 +55,44 @@ cin => count[31].CLK
 cout <= cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|VGAControl|HorizentalVerticalControl:HVControl
+|VGAControl|ClockDividerSixty:clockTwo
+cin => cout~reg0.CLK
+cin => count[0].CLK
+cin => count[1].CLK
+cin => count[2].CLK
+cin => count[3].CLK
+cin => count[4].CLK
+cin => count[5].CLK
+cin => count[6].CLK
+cin => count[7].CLK
+cin => count[8].CLK
+cin => count[9].CLK
+cin => count[10].CLK
+cin => count[11].CLK
+cin => count[12].CLK
+cin => count[13].CLK
+cin => count[14].CLK
+cin => count[15].CLK
+cin => count[16].CLK
+cin => count[17].CLK
+cin => count[18].CLK
+cin => count[19].CLK
+cin => count[20].CLK
+cin => count[21].CLK
+cin => count[22].CLK
+cin => count[23].CLK
+cin => count[24].CLK
+cin => count[25].CLK
+cin => count[26].CLK
+cin => count[27].CLK
+cin => count[28].CLK
+cin => count[29].CLK
+cin => count[30].CLK
+cin => count[31].CLK
+cout <= cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VGAControl|HorizentalVerticalControl:comb_3
 normalCLK => VControl[0]~reg0.CLK
 normalCLK => VControl[1]~reg0.CLK
 normalCLK => VControl[2]~reg0.CLK
@@ -94,5 +133,151 @@ VControl[6] <= VControl[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VControl[7] <= VControl[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VControl[8] <= VControl[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 VControl[9] <= VControl[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VGAControl|groundTarget:planet
+HCounter[0] => ~NO_FANOUT~
+HCounter[1] => ~NO_FANOUT~
+HCounter[2] => ~NO_FANOUT~
+HCounter[3] => ~NO_FANOUT~
+HCounter[4] => ~NO_FANOUT~
+HCounter[5] => ~NO_FANOUT~
+HCounter[6] => ~NO_FANOUT~
+HCounter[7] => ~NO_FANOUT~
+HCounter[8] => ~NO_FANOUT~
+HCounter[9] => ~NO_FANOUT~
+VCounter[0] => LessThan0.IN66
+VCounter[0] => LessThan1.IN66
+VCounter[1] => LessThan0.IN65
+VCounter[1] => LessThan1.IN65
+VCounter[2] => LessThan0.IN64
+VCounter[2] => LessThan1.IN64
+VCounter[3] => LessThan0.IN63
+VCounter[3] => LessThan1.IN63
+VCounter[4] => LessThan0.IN62
+VCounter[4] => LessThan1.IN62
+VCounter[5] => LessThan0.IN61
+VCounter[5] => LessThan1.IN61
+VCounter[6] => LessThan0.IN60
+VCounter[6] => LessThan1.IN60
+VCounter[7] => LessThan0.IN59
+VCounter[7] => LessThan1.IN59
+VCounter[8] => LessThan0.IN58
+VCounter[8] => LessThan1.IN58
+VCounter[9] => LessThan0.IN57
+VCounter[9] => LessThan1.IN57
+clk => ~NO_FANOUT~
+result <= always0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VGAControl|movingSquare:squareMoving
+HCounter[0] => LessThan2.IN66
+HCounter[0] => LessThan3.IN66
+HCounter[1] => LessThan2.IN65
+HCounter[1] => LessThan3.IN65
+HCounter[2] => LessThan2.IN64
+HCounter[2] => LessThan3.IN64
+HCounter[3] => LessThan2.IN63
+HCounter[3] => LessThan3.IN63
+HCounter[4] => LessThan2.IN62
+HCounter[4] => LessThan3.IN62
+HCounter[5] => LessThan2.IN61
+HCounter[5] => LessThan3.IN61
+HCounter[6] => LessThan2.IN60
+HCounter[6] => LessThan3.IN60
+HCounter[7] => LessThan2.IN59
+HCounter[7] => LessThan3.IN59
+HCounter[8] => LessThan2.IN58
+HCounter[8] => LessThan3.IN58
+HCounter[9] => LessThan2.IN57
+HCounter[9] => LessThan3.IN57
+VCounter[0] => LessThan4.IN33
+VCounter[0] => LessThan5.IN33
+VCounter[1] => LessThan4.IN32
+VCounter[1] => LessThan5.IN32
+VCounter[2] => LessThan4.IN31
+VCounter[2] => LessThan5.IN31
+VCounter[3] => LessThan4.IN30
+VCounter[3] => LessThan5.IN30
+VCounter[4] => LessThan4.IN29
+VCounter[4] => LessThan5.IN29
+VCounter[5] => LessThan4.IN28
+VCounter[5] => LessThan5.IN28
+VCounter[6] => LessThan4.IN27
+VCounter[6] => LessThan5.IN27
+VCounter[7] => LessThan4.IN26
+VCounter[7] => LessThan5.IN26
+VCounter[8] => LessThan4.IN25
+VCounter[8] => LessThan5.IN25
+VCounter[9] => LessThan4.IN24
+VCounter[9] => LessThan5.IN24
+clk => bottom[0].CLK
+clk => bottom[1].CLK
+clk => bottom[2].CLK
+clk => bottom[3].CLK
+clk => bottom[4].CLK
+clk => bottom[5].CLK
+clk => bottom[6].CLK
+clk => bottom[7].CLK
+clk => bottom[8].CLK
+clk => bottom[9].CLK
+clk => bottom[10].CLK
+clk => bottom[11].CLK
+clk => bottom[12].CLK
+clk => bottom[13].CLK
+clk => bottom[14].CLK
+clk => bottom[15].CLK
+clk => bottom[16].CLK
+clk => bottom[17].CLK
+clk => bottom[18].CLK
+clk => bottom[19].CLK
+clk => bottom[20].CLK
+clk => bottom[21].CLK
+clk => bottom[22].CLK
+clk => bottom[23].CLK
+clk => bottom[24].CLK
+clk => bottom[25].CLK
+clk => bottom[26].CLK
+clk => bottom[27].CLK
+clk => bottom[28].CLK
+clk => bottom[29].CLK
+clk => bottom[30].CLK
+clk => bottom[31].CLK
+clk => bottom[32].CLK
+clk => top[0].CLK
+clk => top[1].CLK
+clk => top[2].CLK
+clk => top[3].CLK
+clk => top[4].CLK
+clk => top[5].CLK
+clk => top[6].CLK
+clk => top[7].CLK
+clk => top[8].CLK
+clk => top[9].CLK
+clk => top[10].CLK
+clk => top[11].CLK
+clk => top[12].CLK
+clk => top[13].CLK
+clk => top[14].CLK
+clk => top[15].CLK
+clk => top[16].CLK
+clk => top[17].CLK
+clk => top[18].CLK
+clk => top[19].CLK
+clk => top[20].CLK
+clk => top[21].CLK
+clk => top[22].CLK
+clk => top[23].CLK
+clk => top[24].CLK
+clk => top[25].CLK
+clk => top[26].CLK
+clk => top[27].CLK
+clk => top[28].CLK
+clk => top[29].CLK
+clk => top[30].CLK
+clk => top[31].CLK
+clk => top[32].CLK
+switch => ~NO_FANOUT~
+result <= always0.DB_MAX_OUTPUT_PORT_TYPE
 
 

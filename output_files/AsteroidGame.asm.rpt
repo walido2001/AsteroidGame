@@ -1,6 +1,6 @@
 Assembler report for AsteroidGame
-Tue Nov 23 16:47:17 2021
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
+Thu Nov 25 23:45:02 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -10,7 +10,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/MyProjects/AsteroidGame/output_files/AsteroidGame.sof
+  5. Assembler Device Options: C:/Users/walid/Desktop/Repos/AsteroidGame/output_files/AsteroidGame.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Nov 23 16:47:17 2021 ;
+; Assembler Status      ; Successful - Thu Nov 25 23:45:02 2021 ;
 ; Revision Name         ; AsteroidGame                          ;
 ; Top-level Entity Name ; VGAControl                            ;
 ; Family                ; MAX 10                                ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+----------------------------------------------------------+
-; Assembler Generated Files                                ;
-+----------------------------------------------------------+
-; File Name                                                ;
-+----------------------------------------------------------+
-; C:/MyProjects/AsteroidGame/output_files/AsteroidGame.sof ;
-+----------------------------------------------------------+
++-------------------------------------------------------------------------+
+; Assembler Generated Files                                               ;
++-------------------------------------------------------------------------+
+; File Name                                                               ;
++-------------------------------------------------------------------------+
+; C:/Users/walid/Desktop/Repos/AsteroidGame/output_files/AsteroidGame.sof ;
++-------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/MyProjects/AsteroidGame/output_files/AsteroidGame.sof ;
-+----------------+-------------------------------------------------------------------+
-; Option         ; Setting                                                           ;
-+----------------+-------------------------------------------------------------------+
-; JTAG usercode  ; 0x00275C4A                                                        ;
-; Checksum       ; 0x00275C4A                                                        ;
-+----------------+-------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/walid/Desktop/Repos/AsteroidGame/output_files/AsteroidGame.sof ;
++----------------+----------------------------------------------------------------------------------+
+; Option         ; Setting                                                                          ;
++----------------+----------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x002894E2                                                                       ;
+; Checksum       ; 0x002894E2                                                                       ;
++----------------+----------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,16 +77,16 @@ https://fpgasoftware.intel.com/eula.
 +--------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
-    Info: Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
-    Info: Processing started: Tue Nov 23 16:47:14 2021
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Nov 25 23:44:58 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off AsteroidGame -c AsteroidGame
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4689 megabytes
-    Info: Processing ended: Tue Nov 23 16:47:17 2021
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4688 megabytes
+    Info: Processing ended: Thu Nov 25 23:45:02 2021
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

@@ -10,58 +10,214 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/Repos/AsteroidGame {C:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:38:51 on Nov 23,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/MyProjects/AsteroidGame" C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v 
+# Start time: 22:31:52 on Nov 25,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame" C:/Users/walid/Desktop/Repos/AsteroidGame/HorizentalVerticalControl.v 
 # -- Compiling module HorizentalVerticalControl
 # 
 # Top level modules:
 # 	HorizentalVerticalControl
-# End time: 16:38:51 on Nov 23,2021, Elapsed time: 0:00:00
+# End time: 22:31:52 on Nov 25,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/VGAControl.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/Repos/AsteroidGame {C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:38:51 on Nov 23,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/MyProjects/AsteroidGame" C:/MyProjects/AsteroidGame/VGAControl.v 
+# Start time: 22:31:53 on Nov 25,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame" C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v 
 # -- Compiling module VGAControl
 # 
 # Top level modules:
 # 	VGAControl
-# End time: 16:38:51 on Nov 23,2021, Elapsed time: 0:00:00
+# End time: 22:31:53 on Nov 25,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/ClockDivider.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/Repos/AsteroidGame {C:/Users/walid/Desktop/Repos/AsteroidGame/ClockDivider.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 16:38:51 on Nov 23,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/MyProjects/AsteroidGame" C:/MyProjects/AsteroidGame/ClockDivider.v 
+# Start time: 22:31:53 on Nov 25,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame" C:/Users/walid/Desktop/Repos/AsteroidGame/ClockDivider.v 
 # -- Compiling module ClockDivider
 # 
 # Top level modules:
 # 	ClockDivider
-# End time: 16:38:51 on Nov 23,2021, Elapsed time: 0:00:00
+# End time: 22:31:53 on Nov 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/Repos/AsteroidGame {C:/Users/walid/Desktop/Repos/AsteroidGame/movingSquare.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:31:53 on Nov 25,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame" C:/Users/walid/Desktop/Repos/AsteroidGame/movingSquare.v 
+# -- Compiling module movingSquare
+# 
+# Top level modules:
+# 	movingSquare
+# End time: 22:31:53 on Nov 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/Repos/AsteroidGame {C:/Users/walid/Desktop/Repos/AsteroidGame/ClockDividerSixty.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:31:53 on Nov 25,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame" C:/Users/walid/Desktop/Repos/AsteroidGame/ClockDividerSixty.v 
+# -- Compiling module ClockDividerSixty
+# 
+# Top level modules:
+# 	ClockDividerSixty
+# End time: 22:31:53 on Nov 25,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/Repos/AsteroidGame {C:/Users/walid/Desktop/Repos/AsteroidGame/groundTarget.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:31:53 on Nov 25,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/Repos/AsteroidGame" C:/Users/walid/Desktop/Repos/AsteroidGame/groundTarget.v 
+# -- Compiling module groundTarget
+# 
+# Top level modules:
+# 	groundTarget
+# End time: 22:31:53 on Nov 25,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim -gui -l msim_transcript work.VGAControl -L altera_ver
-# vsim -gui -l msim_transcript work.VGAControl -L altera_ver 
-# Start time: 16:39:13 on Nov 23,2021
+vsim work.VGAControl
+# vsim work.VGAControl 
+# Start time: 22:32:12 on Nov 25,2021
 # Loading work.VGAControl
-# Loading work.ClockDivider
-# Loading work.HorizentalVerticalControl
-add wave -position insertpoint  \
-sim:/VGAControl/clk \
-sim:/VGAControl/HSync \
-sim:/VGAControl/VSync \
-sim:/VGAControl/Red \
-sim:/VGAControl/Green \
-sim:/VGAControl/Blue \
-sim:/VGAControl/HCounter \
-sim:/VGAControl/VCounter \
-sim:/VGAControl/clkOut
-force -freeze sim:/VGAControl/clk 1 0, 0 {50 ps} -r 100
-run
-run
-run
-run
-run
-# End time: 16:40:48 on Nov 23,2021, Elapsed time: 0:01:35
-# Errors: 0, Warnings: 0
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDivider'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 43
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDividerSixty'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 44
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'HorizentalVerticalControl'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 46
+# Loading work.movingSquare
+# Loading work.groundTarget
+# Error loading design
+# End time: 22:32:12 on Nov 25,2021, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vsim work.VGAControl
+# vsim work.VGAControl 
+# Start time: 22:32:15 on Nov 25,2021
+# Loading work.VGAControl
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDivider'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 43
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDividerSixty'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 44
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'HorizentalVerticalControl'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 46
+# Loading work.movingSquare
+# Loading work.groundTarget
+# Error loading design
+# End time: 22:32:15 on Nov 25,2021, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vsim work.VGAControl
+# vsim work.VGAControl 
+# Start time: 22:32:19 on Nov 25,2021
+# Loading work.VGAControl
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDivider'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 43
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDividerSixty'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 44
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'HorizentalVerticalControl'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 46
+# Loading work.movingSquare
+# Loading work.groundTarget
+# Error loading design
+# End time: 22:32:19 on Nov 25,2021, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vsim work.VGAControl
+# vsim work.VGAControl 
+# Start time: 22:32:21 on Nov 25,2021
+# Loading work.VGAControl
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDivider'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 43
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDividerSixty'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 44
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'HorizentalVerticalControl'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 46
+# Loading work.movingSquare
+# Loading work.groundTarget
+# Error loading design
+# End time: 22:32:21 on Nov 25,2021, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vsim work.VGAControl
+# vsim work.VGAControl 
+# Start time: 22:32:30 on Nov 25,2021
+# Loading work.VGAControl
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDivider'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 43
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDividerSixty'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 44
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'HorizentalVerticalControl'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 46
+# Loading work.movingSquare
+# Loading work.groundTarget
+# Error loading design
+# End time: 22:32:31 on Nov 25,2021, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+vsim work.VGAControl
+# vsim work.VGAControl 
+# Start time: 22:32:35 on Nov 25,2021
+# Loading work.VGAControl
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDivider'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 43
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDividerSixty'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 44
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'HorizentalVerticalControl'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 46
+# Loading work.movingSquare
+# Loading work.groundTarget
+# Error loading design
+# End time: 22:32:35 on Nov 25,2021, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vsim work.VGAControl
+# vsim work.VGAControl 
+# Start time: 22:32:37 on Nov 25,2021
+# Loading work.VGAControl
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDivider'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 43
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDividerSixty'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 44
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'HorizentalVerticalControl'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 46
+# Loading work.movingSquare
+# Loading work.groundTarget
+# Error loading design
+vsim work.VGAControl
+# End time: 22:32:37 on Nov 25,2021, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# vsim work.VGAControl 
+# Start time: 22:32:37 on Nov 25,2021
+# Loading work.VGAControl
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDivider'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 43
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDividerSixty'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 44
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'HorizentalVerticalControl'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 46
+# Loading work.movingSquare
+# Loading work.groundTarget
+# Error loading design
+# End time: 22:32:38 on Nov 25,2021, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+vsim work.VGAControl
+# vsim work.VGAControl 
+# Start time: 22:32:40 on Nov 25,2021
+# Loading work.VGAControl
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDivider'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 43
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDividerSixty'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 44
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'HorizentalVerticalControl'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 46
+# Loading work.movingSquare
+# Loading work.groundTarget
+# Error loading design
+# End time: 22:32:40 on Nov 25,2021, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vsim work.VGAControl
+# vsim work.VGAControl 
+# Start time: 22:32:47 on Nov 25,2021
+# Loading work.VGAControl
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDivider'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 43
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'ClockDividerSixty'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 44
+# ** Error: (vsim-3037) Missing instance name in instantiation of 'HorizentalVerticalControl'.
+#    Time: 0 ps  Iteration: 0  Instance: /VGAControl File: C:/Users/walid/Desktop/Repos/AsteroidGame/VGAControl.v Line: 46
+# Loading work.movingSquare
+# Loading work.groundTarget
+# Error loading design
+# End time: 22:32:48 on Nov 25,2021, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0

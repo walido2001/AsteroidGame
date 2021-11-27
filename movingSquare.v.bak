@@ -1,0 +1,43 @@
+module movingSquare(
+
+	input [9:0] HCounter,
+	input [9:0] VCounter,
+	input HSync,
+	
+	output reg result
+);
+	//Horizental Parameters
+	reg leftEnd = 464;
+	reg rightEnd = 494;
+	
+	//Vertical Parameters
+	reg top = 35;
+	reg bottom = 65;
+	
+	always @ (HCounter or VCounter) begin 
+	
+		if(HCounter > leftEnd && HCounter < rightEnd && VCounter > top && VCounter < bottom) begin
+			result = 1;
+		end
+		
+		else begin 
+			result = 0;
+		end
+		
+	end
+	always @ (posedge HSync) begin
+		if(HSync == 1) begin 
+		
+			if(bottom != 515) begin 
+				top = top + 1;
+				bottom = bottom + 1;
+			end 
+			else begin 
+				top = 35;
+				bottom = 65;
+			end
+		end
+	end
+	
+
+endmodule
