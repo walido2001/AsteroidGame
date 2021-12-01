@@ -1,6 +1,6 @@
 Flow report for AsteroidGame
-Tue Nov 30 00:37:17 2021
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
+Tue Nov 30 22:53:53 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -38,28 +38,28 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------------------------+
-; Flow Summary                                                                                   ;
-+------------------------------------+-----------------------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 30 00:37:17 2021                     ;
-; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition ;
-; Revision Name                      ; AsteroidGame                                              ;
-; Top-level Entity Name              ; VGAControl                                                ;
-; Family                             ; MAX 10                                                    ;
-; Device                             ; 10M50DAF484C6GES                                          ;
-; Timing Models                      ; Preliminary                                               ;
-; Total logic elements               ; 979 / 49,760 ( 2 % )                                      ;
-;     Total combinational functions  ; 975 / 49,760 ( 2 % )                                      ;
-;     Dedicated logic registers      ; 226 / 49,760 ( < 1 % )                                    ;
-; Total registers                    ; 226                                                       ;
-; Total pins                         ; 17 / 360 ( 5 % )                                          ;
-; Total virtual pins                 ; 0                                                         ;
-; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                                     ;
-; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                           ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                             ;
-; UFM blocks                         ; 0 / 1 ( 0 % )                                             ;
-; ADC blocks                         ; 0 / 2 ( 0 % )                                             ;
-+------------------------------------+-----------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Successful - Tue Nov 30 22:53:53 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; AsteroidGame                                ;
+; Top-level Entity Name              ; VGAControl                                  ;
+; Family                             ; MAX 10                                      ;
+; Device                             ; 10M50DAF484C6GES                            ;
+; Timing Models                      ; Preliminary                                 ;
+; Total logic elements               ; 4,171 / 49,760 ( 8 % )                      ;
+;     Total combinational functions  ; 4,166 / 49,760 ( 8 % )                      ;
+;     Dedicated logic registers      ; 838 / 49,760 ( 2 % )                        ;
+; Total registers                    ; 838                                         ;
+; Total pins                         ; 21 / 360 ( 6 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
++------------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/30/2021 00:36:33 ;
+; Start date & time ; 11/30/2021 22:53:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; AsteroidGame        ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 141623909912925.163825059313272        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1097281539174.163833078311292          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
@@ -98,12 +98,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4772 MB             ; 00:00:30                           ;
-; Fitter               ; 00:00:16     ; 1.2                     ; 5664 MB             ; 00:00:26                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4699 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.4                     ; 4827 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4661 MB             ; 00:00:01                           ;
-; Total                ; 00:00:37     ; --                      ; --                  ; 00:01:07                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4810 MB             ; 00:00:26                           ;
+; Fitter               ; 00:00:23     ; 1.5                     ; 5821 MB             ; 00:00:50                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4700 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:04     ; 2.3                     ; 4868 MB             ; 00:00:08                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4678 MB             ; 00:00:01                           ;
+; Total                ; 00:00:46     ; --                      ; --                  ; 00:01:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,11 +112,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Faruq            ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Faruq            ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Faruq            ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Faruq            ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Faruq            ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; LAPTOP-CII58E7K  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-CII58E7K  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-CII58E7K  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-CII58E7K  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-CII58E7K  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

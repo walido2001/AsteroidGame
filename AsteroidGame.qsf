@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name TOP_LEVEL_ENTITY VGAControl
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:45:13 JUNE 17,2016"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 SP0.02i Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
@@ -267,7 +267,11 @@ set_global_assignment -name VERILOG_FILE ClockDividerSixty.v
 set_global_assignment -name VERILOG_FILE groundTarget.v
 set_global_assignment -name VERILOG_FILE movingSquare.v
 set_location_assignment PIN_N14 -to clk2
-set_location_assignment PIN_C10 -to switch
 set_global_assignment -name VERILOG_FILE destroyAnimation.v
 set_global_assignment -name VERILOG_FILE DesClockDivider.v
+set_location_assignment PIN_A12 -to switch1
+set_location_assignment PIN_C12 -to switch2
+set_location_assignment PIN_D12 -to switch3
+set_location_assignment PIN_C11 -to switch4
+set_location_assignment PIN_C10 -to switch5
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

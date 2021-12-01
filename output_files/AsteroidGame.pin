@@ -65,7 +65,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 CHIP  "AsteroidGame"  ASSIGNED TO AN: 10M50DAF484C6GES
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -81,7 +81,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A10       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A11       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
+switch1                      : A12       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7         :                
@@ -167,9 +167,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : C7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
-switch                       : C10       : input  : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C12       :        :                   :         : 7         :                
+switch5                      : C10       : input  : 2.5 V             :         : 7         : Y              
+switch4                      : C11       : input  : 2.5 V             :         : 7         : Y              
+switch2                      : C12       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7         :                
@@ -191,7 +191,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D10       :        :                   :         : 8         :                
 GND                          : D11       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
+switch3                      : D12       : input  : 2.5 V             :         : 7         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D13       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 7         :                

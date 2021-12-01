@@ -6,6 +6,8 @@ module movingSquare(
 	input switch,
 	input desClock,
 	
+	input [9:0] middle,
+	
 	output reg startDesClock,
 	output reg result,
 	output reg destroyed,
@@ -13,8 +15,8 @@ module movingSquare(
 	output reg [32:0] dV);
 
 	//Horizental Parameters
-	reg [32:0] leftEnd = 33'd464;
-	reg [32:0] rightEnd = 33'd494;
+//	reg [32:0] leftEnd = 33'd464;
+//	reg [32:0] rightEnd = 33'd494;
 	//Vertical Parameters
 	reg [32:0] top = 33'd35;
 	reg [32:0] bottom = 33'd65;
@@ -24,7 +26,7 @@ module movingSquare(
 	
 	always @ (HCounter or VCounter) begin 
 		if(VCounter >= top && VCounter <= bottom) begin
-			if(HCounter >= (10'd479 - midSpan) && HCounter <= (10'd479 + midSpan)) begin
+			if(HCounter >= (middle - midSpan) && HCounter <= (middle + midSpan)) begin
 				result = 1;
 			end else begin
 				result = 0;
@@ -61,7 +63,8 @@ module movingSquare(
 			bottom = bottom + 33'd1;
 		end 
 		else if(destroyed == 1'b1 || (top >= 33'd515))begin
-			dH = leftEnd + 33'd15;
+			//dH = leftEnd + 33'd15;
+			dH = middle;
 			if(destroyed == 1'b1) begin
 				dV = top + 33'd15;
 			end else begin

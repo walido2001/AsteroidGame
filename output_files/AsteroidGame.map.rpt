@@ -1,6 +1,6 @@
 Analysis & Synthesis report for AsteroidGame
-Tue Nov 30 00:36:46 2021
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
+Tue Nov 30 22:53:16 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -19,12 +19,25 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
  12. Parameter Settings for User Entity Instance: ClockDivider:clkDiv
  13. Parameter Settings for User Entity Instance: ClockDividerSixty:clockTwo
- 14. Parameter Settings for User Entity Instance: DesClockDivider:desClock
- 15. Port Connectivity Checks: "destroyAnimation:destroy1"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+ 14. Parameter Settings for User Entity Instance: DesClockDivider:desClock1
+ 15. Parameter Settings for User Entity Instance: DesClockDivider:desClock2
+ 16. Parameter Settings for User Entity Instance: DesClockDivider:desClock3
+ 17. Parameter Settings for User Entity Instance: DesClockDivider:desClock4
+ 18. Parameter Settings for User Entity Instance: DesClockDivider:desClock5
+ 19. Port Connectivity Checks: "destroyAnimation:destroy5"
+ 20. Port Connectivity Checks: "destroyAnimation:destroy4"
+ 21. Port Connectivity Checks: "destroyAnimation:destroy3"
+ 22. Port Connectivity Checks: "destroyAnimation:destroy2"
+ 23. Port Connectivity Checks: "destroyAnimation:destroy1"
+ 24. Port Connectivity Checks: "movingSquare:squareMoving5"
+ 25. Port Connectivity Checks: "movingSquare:squareMoving4"
+ 26. Port Connectivity Checks: "movingSquare:squareMoving3"
+ 27. Port Connectivity Checks: "movingSquare:squareMoving2"
+ 28. Port Connectivity Checks: "movingSquare:squareMoving1"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+ 32. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,26 +61,26 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                                   ;
-+------------------------------------+-----------------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 30 00:36:46 2021                     ;
-; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition ;
-; Revision Name                      ; AsteroidGame                                              ;
-; Top-level Entity Name              ; VGAControl                                                ;
-; Family                             ; MAX 10                                                    ;
-; Total logic elements               ; 975                                                       ;
-;     Total combinational functions  ; 975                                                       ;
-;     Dedicated logic registers      ; 226                                                       ;
-; Total registers                    ; 226                                                       ;
-; Total pins                         ; 17                                                        ;
-; Total virtual pins                 ; 0                                                         ;
-; Total memory bits                  ; 0                                                         ;
-; Embedded Multiplier 9-bit elements ; 0                                                         ;
-; Total PLLs                         ; 0                                                         ;
-; UFM blocks                         ; 0                                                         ;
-; ADC blocks                         ; 0                                                         ;
-+------------------------------------+-----------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov 30 22:53:16 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                      ; AsteroidGame                                ;
+; Top-level Entity Name              ; VGAControl                                  ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 4,166                                       ;
+;     Total combinational functions  ; 4,166                                       ;
+;     Dedicated logic registers      ; 838                                         ;
+; Total registers                    ; 838                                         ;
+; Total pins                         ; 21                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -161,33 +174,37 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                           ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
-; HorizentalVerticalControl.v      ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v ;         ;
-; VGAControl.v                     ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/VGAControl.v                ;         ;
-; ClockDivider.v                   ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/ClockDivider.v              ;         ;
-; DrawPlanet.v                     ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/DrawPlanet.v                ;         ;
-; DrawDefense.v                    ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/DrawDefense.v               ;         ;
-; ClockDividerSixty.v              ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/ClockDividerSixty.v         ;         ;
-; movingSquare.v                   ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/movingSquare.v              ;         ;
-; destroyAnimation.v               ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/destroyAnimation.v          ;         ;
-; DesClockDivider.v                ; yes             ; User Verilog HDL File  ; C:/MyProjects/AsteroidGame/DesClockDivider.v           ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                               ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------+---------+
+; HorizentalVerticalControl.v      ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/HorizentalVerticalControl.v ;         ;
+; VGAControl.v                     ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v                ;         ;
+; ClockDivider.v                   ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDivider.v              ;         ;
+; DrawPlanet.v                     ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v                ;         ;
+; DrawDefense.v                    ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawDefense.v               ;         ;
+; ClockDividerSixty.v              ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDividerSixty.v         ;         ;
+; movingSquare.v                   ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v              ;         ;
+; destroyAnimation.v               ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v          ;         ;
+; DesClockDivider.v                ; yes             ; User Verilog HDL File  ; C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DesClockDivider.v           ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------+
@@ -195,30 +212,30 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------------------+
 ; Resource                                    ; Usage                           ;
 +---------------------------------------------+---------------------------------+
-; Estimated Total logic elements              ; 975                             ;
+; Estimated Total logic elements              ; 4,166                           ;
 ;                                             ;                                 ;
-; Total combinational functions               ; 975                             ;
+; Total combinational functions               ; 4166                            ;
 ; Logic element usage by number of LUT inputs ;                                 ;
-;     -- 4 input functions                    ; 240                             ;
-;     -- 3 input functions                    ; 115                             ;
-;     -- <=2 input functions                  ; 620                             ;
+;     -- 4 input functions                    ; 1021                            ;
+;     -- 3 input functions                    ; 404                             ;
+;     -- <=2 input functions                  ; 2741                            ;
 ;                                             ;                                 ;
 ; Logic elements by mode                      ;                                 ;
-;     -- normal mode                          ; 391                             ;
-;     -- arithmetic mode                      ; 584                             ;
+;     -- normal mode                          ; 1639                            ;
+;     -- arithmetic mode                      ; 2527                            ;
 ;                                             ;                                 ;
-; Total registers                             ; 226                             ;
-;     -- Dedicated logic registers            ; 226                             ;
+; Total registers                             ; 838                             ;
+;     -- Dedicated logic registers            ; 838                             ;
 ;     -- I/O registers                        ; 0                               ;
 ;                                             ;                                 ;
-; I/O pins                                    ; 17                              ;
+; I/O pins                                    ; 21                              ;
 ;                                             ;                                 ;
 ; Embedded Multiplier 9-bit elements          ; 0                               ;
 ;                                             ;                                 ;
 ; Maximum fan-out node                        ; ClockDividerSixty:clockTwo|cout ;
-; Maximum fan-out                             ; 100                             ;
-; Total fan-out                               ; 3192                            ;
-; Average fan-out                             ; 2.58                            ;
+; Maximum fan-out                             ; 500                             ;
+; Total fan-out                               ; 13109                           ;
+; Average fan-out                             ; 2.60                            ;
 +---------------------------------------------+---------------------------------+
 
 
@@ -227,33 +244,76 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                             ; Entity Name               ; Library Name ;
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------------+--------------+
-; |VGAControl                              ; 975 (12)            ; 226 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 17   ; 0            ; 0          ; |VGAControl                                     ; VGAControl                ; work         ;
+; |VGAControl                              ; 4166 (75)           ; 838 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 21   ; 0            ; 0          ; |VGAControl                                     ; VGAControl                ; work         ;
 ;    |ClockDivider:clkDiv|                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|ClockDivider:clkDiv                 ; ClockDivider              ; work         ;
 ;    |ClockDividerSixty:clockTwo|          ; 43 (43)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|ClockDividerSixty:clockTwo          ; ClockDividerSixty         ; work         ;
-;    |DesClockDivider:desClock|            ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DesClockDivider:desClock            ; DesClockDivider           ; work         ;
-;    |DrawDefense:dDefense|                ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DrawDefense:dDefense                ; DrawDefense               ; work         ;
-;    |DrawPlanet:dPlanet|                  ; 83 (83)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DrawPlanet:dPlanet                  ; DrawPlanet                ; work         ;
+;    |DesClockDivider:desClock1|           ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DesClockDivider:desClock1           ; DesClockDivider           ; work         ;
+;    |DesClockDivider:desClock2|           ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DesClockDivider:desClock2           ; DesClockDivider           ; work         ;
+;    |DesClockDivider:desClock3|           ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DesClockDivider:desClock3           ; DesClockDivider           ; work         ;
+;    |DesClockDivider:desClock4|           ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DesClockDivider:desClock4           ; DesClockDivider           ; work         ;
+;    |DesClockDivider:desClock5|           ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DesClockDivider:desClock5           ; DesClockDivider           ; work         ;
+;    |DrawDefense:dDefense|                ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DrawDefense:dDefense                ; DrawDefense               ; work         ;
+;    |DrawPlanet:dPlanet|                  ; 86 (86)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|DrawPlanet:dPlanet                  ; DrawPlanet                ; work         ;
 ;    |HorizentalVerticalControl:HVControl| ; 24 (24)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|HorizentalVerticalControl:HVControl ; HorizentalVerticalControl ; work         ;
-;    |destroyAnimation:destroy1|           ; 464 (464)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|destroyAnimation:destroy1           ; destroyAnimation          ; work         ;
-;    |movingSquare:squareMoving1|          ; 291 (291)           ; 120 (120)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|movingSquare:squareMoving1          ; movingSquare              ; work         ;
+;    |destroyAnimation:destroy1|           ; 460 (460)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|destroyAnimation:destroy1           ; destroyAnimation          ; work         ;
+;    |destroyAnimation:destroy2|           ; 448 (448)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|destroyAnimation:destroy2           ; destroyAnimation          ; work         ;
+;    |destroyAnimation:destroy3|           ; 434 (434)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|destroyAnimation:destroy3           ; destroyAnimation          ; work         ;
+;    |destroyAnimation:destroy4|           ; 443 (443)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|destroyAnimation:destroy4           ; destroyAnimation          ; work         ;
+;    |destroyAnimation:destroy5|           ; 458 (458)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|destroyAnimation:destroy5           ; destroyAnimation          ; work         ;
+;    |movingSquare:squareMoving1|          ; 290 (290)           ; 120 (120)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|movingSquare:squareMoving1          ; movingSquare              ; work         ;
+;    |movingSquare:squareMoving2|          ; 290 (290)           ; 120 (120)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|movingSquare:squareMoving2          ; movingSquare              ; work         ;
+;    |movingSquare:squareMoving3|          ; 290 (290)           ; 120 (120)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|movingSquare:squareMoving3          ; movingSquare              ; work         ;
+;    |movingSquare:squareMoving4|          ; 290 (290)           ; 120 (120)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|movingSquare:squareMoving4          ; movingSquare              ; work         ;
+;    |movingSquare:squareMoving5|          ; 290 (290)           ; 120 (120)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |VGAControl|movingSquare:squareMoving5          ; movingSquare              ; work         ;
 +------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+----------------------------------------+--------------------------------------------------+
-; Register name                          ; Reason for Removal                               ;
-+----------------------------------------+--------------------------------------------------+
-; movingSquare:squareMoving1|dH[0..4]    ; Stuck at VCC due to stuck port data_in           ;
-; movingSquare:squareMoving1|dH[5]       ; Stuck at GND due to stuck port data_in           ;
-; movingSquare:squareMoving1|dH[6..8]    ; Stuck at VCC due to stuck port data_in           ;
-; movingSquare:squareMoving1|dH[9..32]   ; Stuck at GND due to stuck port data_in           ;
-; ClockDivider:clkDiv|count[0..31]       ; Stuck at GND due to stuck port data_in           ;
-; movingSquare:squareMoving1|top[0]      ; Merged with movingSquare:squareMoving1|bottom[0] ;
-; DrawPlanet:dPlanet|midSpan[9]          ; Stuck at GND due to stuck port data_in           ;
-; Total Number of Removed Registers = 67 ;                                                  ;
-+----------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++-----------------------------------------+--------------------------------------------------+
+; Register name                           ; Reason for Removal                               ;
++-----------------------------------------+--------------------------------------------------+
+; movingSquare:squareMoving5|dH[0..3]     ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving5|dH[4]        ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving5|dH[5]        ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving5|dH[6,7]      ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving5|dH[8]        ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving5|dH[9]        ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving5|dH[10..32]   ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving4|dH[0..3]     ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving4|dH[4]        ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving4|dH[5]        ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving4|dH[6]        ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving4|dH[7,8]      ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving4|dH[9]        ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving4|dH[10..32]   ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving3|dH[0..3]     ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving3|dH[4]        ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving3|dH[5]        ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving3|dH[6..8]     ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving3|dH[9..32]    ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving2|dH[0..3]     ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving2|dH[4]        ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving2|dH[5]        ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving2|dH[6]        ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving2|dH[7]        ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving2|dH[8]        ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving2|dH[9..32]    ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving1|dH[0..3]     ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving1|dH[4]        ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving1|dH[5]        ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving1|dH[6,7]      ; Stuck at VCC due to stuck port data_in           ;
+; movingSquare:squareMoving1|dH[8..32]    ; Stuck at GND due to stuck port data_in           ;
+; ClockDivider:clkDiv|count[0..31]        ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving3|top[0]       ; Merged with movingSquare:squareMoving3|bottom[0] ;
+; movingSquare:squareMoving2|top[0]       ; Merged with movingSquare:squareMoving2|bottom[0] ;
+; movingSquare:squareMoving5|top[0]       ; Merged with movingSquare:squareMoving5|bottom[0] ;
+; DrawPlanet:dPlanet|midSpan[9]           ; Stuck at GND due to stuck port data_in           ;
+; movingSquare:squareMoving1|bottom[0]    ; Merged with movingSquare:squareMoving1|top[0]    ;
+; movingSquare:squareMoving4|bottom[0]    ; Merged with movingSquare:squareMoving4|top[0]    ;
+; Total Number of Removed Registers = 203 ;                                                  ;
++-----------------------------------------+--------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -261,12 +321,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 226   ;
-; Number of registers using Synchronous Clear  ; 85    ;
-; Number of registers using Synchronous Load   ; 34    ;
+; Total registers                              ; 838   ;
+; Number of registers using Synchronous Clear  ; 217   ;
+; Number of registers using Synchronous Load   ; 170   ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 43    ;
+; Number of registers using Clock Enable       ; 175   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -276,34 +336,78 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
+; movingSquare:squareMoving2|top[5]       ; 6       ;
+; movingSquare:squareMoving2|top[1]       ; 5       ;
+; movingSquare:squareMoving2|bottom[0]    ; 8       ;
+; movingSquare:squareMoving2|bottom[6]    ; 4       ;
+; movingSquare:squareMoving2|midSpan[2]   ; 3       ;
+; movingSquare:squareMoving2|midSpan[0]   ; 4       ;
 ; movingSquare:squareMoving1|top[5]       ; 6       ;
 ; movingSquare:squareMoving1|top[1]       ; 5       ;
-; movingSquare:squareMoving1|bottom[0]    ; 8       ;
+; movingSquare:squareMoving1|top[0]       ; 8       ;
 ; movingSquare:squareMoving1|bottom[6]    ; 4       ;
 ; movingSquare:squareMoving1|midSpan[2]   ; 3       ;
-; movingSquare:squareMoving1|midSpan[0]   ; 3       ;
+; movingSquare:squareMoving1|midSpan[0]   ; 4       ;
+; movingSquare:squareMoving5|top[5]       ; 6       ;
+; movingSquare:squareMoving5|top[1]       ; 5       ;
+; movingSquare:squareMoving5|bottom[0]    ; 8       ;
+; movingSquare:squareMoving5|bottom[6]    ; 4       ;
+; movingSquare:squareMoving5|midSpan[2]   ; 3       ;
+; movingSquare:squareMoving5|midSpan[0]   ; 4       ;
+; movingSquare:squareMoving3|top[5]       ; 6       ;
+; movingSquare:squareMoving3|top[1]       ; 5       ;
+; movingSquare:squareMoving3|bottom[0]    ; 8       ;
+; movingSquare:squareMoving3|bottom[6]    ; 4       ;
+; movingSquare:squareMoving3|midSpan[2]   ; 3       ;
+; movingSquare:squareMoving3|midSpan[0]   ; 4       ;
+; movingSquare:squareMoving4|top[5]       ; 6       ;
+; movingSquare:squareMoving4|top[1]       ; 5       ;
+; movingSquare:squareMoving4|top[0]       ; 8       ;
+; movingSquare:squareMoving4|bottom[6]    ; 4       ;
+; movingSquare:squareMoving4|midSpan[2]   ; 3       ;
+; movingSquare:squareMoving4|midSpan[0]   ; 4       ;
 ; DrawPlanet:dPlanet|midSpan[5]           ; 3       ;
 ; DrawPlanet:dPlanet|midSpan[3]           ; 3       ;
 ; DrawPlanet:dPlanet|midSpan[2]           ; 3       ;
+; movingSquare:squareMoving2|increment[2] ; 2       ;
+; movingSquare:squareMoving2|increment[0] ; 2       ;
 ; movingSquare:squareMoving1|increment[2] ; 2       ;
 ; movingSquare:squareMoving1|increment[0] ; 2       ;
+; movingSquare:squareMoving5|increment[2] ; 2       ;
+; movingSquare:squareMoving5|increment[0] ; 2       ;
+; movingSquare:squareMoving3|increment[2] ; 2       ;
+; movingSquare:squareMoving3|increment[0] ; 2       ;
+; movingSquare:squareMoving4|increment[2] ; 2       ;
+; movingSquare:squareMoving4|increment[0] ; 2       ;
 ; DrawPlanet:dPlanet|increment[5]         ; 2       ;
 ; DrawPlanet:dPlanet|increment[0]         ; 2       ;
-; Total number of inverted registers = 13 ;         ;
+; Total number of inverted registers = 45 ;         ;
 +-----------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
-; 3:1                ; 61 bits   ; 122 LEs       ; 61 LEs               ; 61 LEs                 ; Yes        ; |VGAControl|movingSquare:squareMoving1|top[28] ;
-; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |VGAControl|DrawPlanet:dPlanet|increment[1]    ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VGAControl|DesClockDivider:desClock|count[23] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |VGAControl|movingSquare:squareMoving1|top[1]  ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |VGAControl|DrawPlanet:dPlanet|increment[0]    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 61 bits   ; 122 LEs       ; 61 LEs               ; 61 LEs                 ; Yes        ; |VGAControl|movingSquare:squareMoving1|top[32]    ;
+; 3:1                ; 61 bits   ; 122 LEs       ; 61 LEs               ; 61 LEs                 ; Yes        ; |VGAControl|movingSquare:squareMoving2|top[32]    ;
+; 3:1                ; 61 bits   ; 122 LEs       ; 61 LEs               ; 61 LEs                 ; Yes        ; |VGAControl|movingSquare:squareMoving3|top[9]     ;
+; 3:1                ; 61 bits   ; 122 LEs       ; 61 LEs               ; 61 LEs                 ; Yes        ; |VGAControl|movingSquare:squareMoving4|top[29]    ;
+; 3:1                ; 61 bits   ; 122 LEs       ; 61 LEs               ; 61 LEs                 ; Yes        ; |VGAControl|movingSquare:squareMoving5|bottom[28] ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |VGAControl|DrawPlanet:dPlanet|midSpan[1]         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VGAControl|DesClockDivider:desClock1|count[31]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VGAControl|DesClockDivider:desClock2|count[23]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VGAControl|DesClockDivider:desClock3|count[4]    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VGAControl|DesClockDivider:desClock4|count[27]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |VGAControl|DesClockDivider:desClock5|count[15]   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |VGAControl|movingSquare:squareMoving1|top[5]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |VGAControl|movingSquare:squareMoving2|top[1]     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |VGAControl|movingSquare:squareMoving3|top[1]     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |VGAControl|movingSquare:squareMoving4|bottom[0]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |VGAControl|movingSquare:squareMoving5|top[5]     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |VGAControl|DrawPlanet:dPlanet|midSpan[3]         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
 +---------------------------------------------------------------------+
@@ -326,23 +430,168 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: DesClockDivider:desClock ;
-+----------------+----------------------------------+-------------------+
-; Parameter Name ; Value                            ; Type              ;
-+----------------+----------------------------------+-------------------+
-; D              ; 00000000010011000100101101000000 ; Unsigned Binary   ;
-+----------------+----------------------------------+-------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DesClockDivider:desClock1 ;
++----------------+----------------------------------+--------------------+
+; Parameter Name ; Value                            ; Type               ;
++----------------+----------------------------------+--------------------+
+; D              ; 00000000010011000100101101000000 ; Unsigned Binary    ;
++----------------+----------------------------------+--------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "destroyAnimation:destroy1"                                                            ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; dGreen ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DesClockDivider:desClock2 ;
++----------------+----------------------------------+--------------------+
+; Parameter Name ; Value                            ; Type               ;
++----------------+----------------------------------+--------------------+
+; D              ; 00000000010011000100101101000000 ; Unsigned Binary    ;
++----------------+----------------------------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DesClockDivider:desClock3 ;
++----------------+----------------------------------+--------------------+
+; Parameter Name ; Value                            ; Type               ;
++----------------+----------------------------------+--------------------+
+; D              ; 00000000010011000100101101000000 ; Unsigned Binary    ;
++----------------+----------------------------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DesClockDivider:desClock4 ;
++----------------+----------------------------------+--------------------+
+; Parameter Name ; Value                            ; Type               ;
++----------------+----------------------------------+--------------------+
+; D              ; 00000000010011000100101101000000 ; Unsigned Binary    ;
++----------------+----------------------------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DesClockDivider:desClock5 ;
++----------------+----------------------------------+--------------------+
+; Parameter Name ; Value                            ; Type               ;
++----------------+----------------------------------+--------------------+
+; D              ; 00000000010011000100101101000000 ; Unsigned Binary    ;
++----------------+----------------------------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "destroyAnimation:destroy5"                                                                                 ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                  ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; dGreen ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "destroyAnimation:destroy4"                                                                                 ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                  ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; dGreen ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "destroyAnimation:destroy3"                                                                                 ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                  ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; dGreen ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "destroyAnimation:destroy2"                                                                                 ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                  ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; dGreen ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "destroyAnimation:destroy1"                                                                                 ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                  ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; dGreen ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "movingSquare:squareMoving5" ;
++--------------+-------+----------+----------------------+
+; Port         ; Type  ; Severity ; Details              ;
++--------------+-------+----------+----------------------+
+; middle[7..6] ; Input ; Info     ; Stuck at VCC         ;
+; middle[3..0] ; Input ; Info     ; Stuck at GND         ;
+; middle[9]    ; Input ; Info     ; Stuck at VCC         ;
+; middle[8]    ; Input ; Info     ; Stuck at GND         ;
+; middle[5]    ; Input ; Info     ; Stuck at GND         ;
+; middle[4]    ; Input ; Info     ; Stuck at VCC         ;
++--------------+-------+----------+----------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "movingSquare:squareMoving4" ;
++--------------+-------+----------+----------------------+
+; Port         ; Type  ; Severity ; Details              ;
++--------------+-------+----------+----------------------+
+; middle[8..7] ; Input ; Info     ; Stuck at GND         ;
+; middle[3..0] ; Input ; Info     ; Stuck at GND         ;
+; middle[9]    ; Input ; Info     ; Stuck at VCC         ;
+; middle[6]    ; Input ; Info     ; Stuck at VCC         ;
+; middle[5]    ; Input ; Info     ; Stuck at GND         ;
+; middle[4]    ; Input ; Info     ; Stuck at VCC         ;
++--------------+-------+----------+----------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "movingSquare:squareMoving3" ;
++--------------+-------+----------+----------------------+
+; Port         ; Type  ; Severity ; Details              ;
++--------------+-------+----------+----------------------+
+; middle[8..6] ; Input ; Info     ; Stuck at VCC         ;
+; middle[3..0] ; Input ; Info     ; Stuck at GND         ;
+; middle[9]    ; Input ; Info     ; Stuck at GND         ;
+; middle[5]    ; Input ; Info     ; Stuck at GND         ;
+; middle[4]    ; Input ; Info     ; Stuck at VCC         ;
++--------------+-------+----------+----------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "movingSquare:squareMoving2" ;
++--------------+-------+----------+----------------------+
+; Port         ; Type  ; Severity ; Details              ;
++--------------+-------+----------+----------------------+
+; middle[3..0] ; Input ; Info     ; Stuck at GND         ;
+; middle[9]    ; Input ; Info     ; Stuck at GND         ;
+; middle[8]    ; Input ; Info     ; Stuck at VCC         ;
+; middle[7]    ; Input ; Info     ; Stuck at GND         ;
+; middle[6]    ; Input ; Info     ; Stuck at VCC         ;
+; middle[5]    ; Input ; Info     ; Stuck at GND         ;
+; middle[4]    ; Input ; Info     ; Stuck at VCC         ;
++--------------+-------+----------+----------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "movingSquare:squareMoving1" ;
++--------------+-------+----------+----------------------+
+; Port         ; Type  ; Severity ; Details              ;
++--------------+-------+----------+----------------------+
+; middle[7..6] ; Input ; Info     ; Stuck at VCC         ;
+; middle[9..8] ; Input ; Info     ; Stuck at GND         ;
+; middle[3..0] ; Input ; Info     ; Stuck at GND         ;
+; middle[5]    ; Input ; Info     ; Stuck at GND         ;
+; middle[4]    ; Input ; Info     ; Stuck at VCC         ;
++--------------+-------+----------+----------------------+
 
 
 +-----------------------------------------------------+
@@ -350,26 +599,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 17                          ;
-; cycloneiii_ff         ; 226                         ;
+; boundary_port         ; 21                          ;
+; cycloneiii_ff         ; 838                         ;
 ;     ENA SCLR          ; 10                          ;
-;     ENA SLD           ; 33                          ;
-;     SCLR              ; 75                          ;
-;     SLD               ; 1                           ;
-;     plain             ; 107                         ;
-; cycloneiii_lcell_comb ; 977                         ;
-;     arith             ; 584                         ;
-;         2 data inputs ; 509                         ;
-;         3 data inputs ; 75                          ;
-;     normal            ; 393                         ;
+;     ENA SLD           ; 165                         ;
+;     SCLR              ; 207                         ;
+;     SLD               ; 5                           ;
+;     plain             ; 451                         ;
+; cycloneiii_lcell_comb ; 4168                        ;
+;     arith             ; 2527                        ;
+;         2 data inputs ; 2258                        ;
+;         3 data inputs ; 269                         ;
+;     normal            ; 1641                        ;
 ;         0 data inputs ; 3                           ;
-;         1 data inputs ; 25                          ;
-;         2 data inputs ; 85                          ;
-;         3 data inputs ; 40                          ;
-;         4 data inputs ; 240                         ;
+;         1 data inputs ; 93                          ;
+;         2 data inputs ; 389                         ;
+;         3 data inputs ; 135                         ;
+;         4 data inputs ; 1021                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 13.70                       ;
-; Average LUT depth     ; 7.80                        ;
+; Max LUT depth         ; 15.70                       ;
+; Average LUT depth     ; 8.95                        ;
 +-----------------------+-----------------------------+
 
 
@@ -378,7 +627,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -387,104 +636,104 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
-    Info: Processing started: Tue Nov 30 00:36:33 2021
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Nov 30 22:53:02 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AsteroidGame -c AsteroidGame
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file horizentalverticalcontrol.v
-    Info (12023): Found entity 1: HorizentalVerticalControl File: C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v Line: 5
+    Info (12023): Found entity 1: HorizentalVerticalControl File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/HorizentalVerticalControl.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file vgacontrol.v
-    Info (12023): Found entity 1: VGAControl File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 4
+    Info (12023): Found entity 1: VGAControl File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file clockdivider.v
-    Info (12023): Found entity 1: ClockDivider File: C:/MyProjects/AsteroidGame/ClockDivider.v Line: 1
+    Info (12023): Found entity 1: ClockDivider File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDivider.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file drawplanet.v
-    Info (12023): Found entity 1: DrawPlanet File: C:/MyProjects/AsteroidGame/DrawPlanet.v Line: 1
+    Info (12023): Found entity 1: DrawPlanet File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file drawdefense.v
-    Info (12023): Found entity 1: DrawDefense File: C:/MyProjects/AsteroidGame/DrawDefense.v Line: 1
+    Info (12023): Found entity 1: DrawDefense File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawDefense.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clockdividersixty.v
-    Info (12023): Found entity 1: ClockDividerSixty File: C:/MyProjects/AsteroidGame/ClockDividerSixty.v Line: 1
+    Info (12023): Found entity 1: ClockDividerSixty File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDividerSixty.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file groundtarget.v
-    Info (12023): Found entity 1: groundTarget File: C:/MyProjects/AsteroidGame/groundTarget.v Line: 1
+    Info (12023): Found entity 1: groundTarget File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/groundTarget.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file movingsquare.v
-    Info (12023): Found entity 1: movingSquare File: C:/MyProjects/AsteroidGame/movingSquare.v Line: 1
+    Info (12023): Found entity 1: movingSquare File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file destroyanimation.v
-    Info (12023): Found entity 1: destroyAnimation File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 1
+    Info (12023): Found entity 1: destroyAnimation File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file desclockdivider.v
-    Info (12023): Found entity 1: DesClockDivider File: C:/MyProjects/AsteroidGame/DesClockDivider.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at VGAControl.v(74): created implicit net for "drawDestroyGreen" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 74
+    Info (12023): Found entity 1: DesClockDivider File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DesClockDivider.v Line: 1
 Info (12127): Elaborating entity "VGAControl" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at VGAControl.v(68): truncated value with size 32 to match size of target (1) File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 68
-Warning (10230): Verilog HDL assignment warning at VGAControl.v(69): truncated value with size 32 to match size of target (1) File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 69
-Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:clkDiv" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 63
-Info (12128): Elaborating entity "ClockDividerSixty" for hierarchy "ClockDividerSixty:clockTwo" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 64
-Info (12128): Elaborating entity "DesClockDivider" for hierarchy "DesClockDivider:desClock" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 65
-Info (12128): Elaborating entity "HorizentalVerticalControl" for hierarchy "HorizentalVerticalControl:HVControl" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 66
-Warning (10230): Verilog HDL assignment warning at HorizentalVerticalControl.v(17): truncated value with size 32 to match size of target (10) File: C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v Line: 17
-Warning (10230): Verilog HDL assignment warning at HorizentalVerticalControl.v(26): truncated value with size 32 to match size of target (10) File: C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v Line: 26
-Info (12128): Elaborating entity "DrawDefense" for hierarchy "DrawDefense:dDefense" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 71
-Info (12128): Elaborating entity "DrawPlanet" for hierarchy "DrawPlanet:dPlanet" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 72
-Warning (10036): Verilog HDL or VHDL warning at DrawPlanet.v(11): object "diff" assigned a value but never read File: C:/MyProjects/AsteroidGame/DrawPlanet.v Line: 11
-Warning (10235): Verilog HDL Always Construct warning at DrawPlanet.v(15): variable "midSpan" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/DrawPlanet.v Line: 15
-Warning (10646): Verilog HDL Event Control warning at DrawPlanet.v(25): posedge or negedge of vector "VCounter" depends solely on its least-significant bit File: C:/MyProjects/AsteroidGame/DrawPlanet.v Line: 25
-Info (12128): Elaborating entity "movingSquare" for hierarchy "movingSquare:squareMoving1" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 73
-Warning (10036): Verilog HDL or VHDL warning at movingSquare.v(17): object "rightEnd" assigned a value but never read File: C:/MyProjects/AsteroidGame/movingSquare.v Line: 17
-Warning (10235): Verilog HDL Always Construct warning at movingSquare.v(26): variable "top" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/movingSquare.v Line: 26
-Warning (10235): Verilog HDL Always Construct warning at movingSquare.v(26): variable "bottom" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/movingSquare.v Line: 26
-Warning (10235): Verilog HDL Always Construct warning at movingSquare.v(27): variable "midSpan" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/movingSquare.v Line: 27
-Warning (10646): Verilog HDL Event Control warning at movingSquare.v(38): posedge or negedge of vector "VCounter" depends solely on its least-significant bit File: C:/MyProjects/AsteroidGame/movingSquare.v Line: 38
-Info (12128): Elaborating entity "destroyAnimation" for hierarchy "destroyAnimation:destroy1" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 74
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(20): variable "clk" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 20
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(21): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(21): variable "vMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(22): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 22
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(27): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 27
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(27): variable "vMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 27
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(27): variable "one" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 27
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(28): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 28
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(28): variable "hMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 28
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(28): variable "one" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 28
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(33): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 33
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(33): variable "vMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 33
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(33): variable "two" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 33
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(34): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 34
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(34): variable "hMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 34
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(34): variable "two" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 34
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(39): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 39
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(39): variable "vMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 39
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(39): variable "three" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 39
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(40): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 40
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(40): variable "hMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 40
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(40): variable "three" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 40
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(45): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 45
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(45): variable "vMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 45
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(45): variable "four" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 45
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(46): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 46
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(46): variable "hMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 46
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(46): variable "two" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 46
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(51): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 51
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(52): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 52
-Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(52): variable "hMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/MyProjects/AsteroidGame/destroyAnimation.v Line: 52
+Warning (10230): Verilog HDL assignment warning at VGAControl.v(122): truncated value with size 32 to match size of target (1) File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 122
+Warning (10230): Verilog HDL assignment warning at VGAControl.v(123): truncated value with size 32 to match size of target (1) File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 123
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "ClockDivider:clkDiv" File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 111
+Info (12128): Elaborating entity "ClockDividerSixty" for hierarchy "ClockDividerSixty:clockTwo" File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 112
+Info (12128): Elaborating entity "DesClockDivider" for hierarchy "DesClockDivider:desClock1" File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 114
+Info (12128): Elaborating entity "HorizentalVerticalControl" for hierarchy "HorizentalVerticalControl:HVControl" File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 120
+Warning (10230): Verilog HDL assignment warning at HorizentalVerticalControl.v(17): truncated value with size 32 to match size of target (10) File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/HorizentalVerticalControl.v Line: 17
+Warning (10230): Verilog HDL assignment warning at HorizentalVerticalControl.v(26): truncated value with size 32 to match size of target (10) File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/HorizentalVerticalControl.v Line: 26
+Info (12128): Elaborating entity "DrawDefense" for hierarchy "DrawDefense:dDefense" File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 125
+Info (12128): Elaborating entity "DrawPlanet" for hierarchy "DrawPlanet:dPlanet" File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 126
+Warning (10036): Verilog HDL or VHDL warning at DrawPlanet.v(11): object "diff" assigned a value but never read File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v Line: 11
+Warning (10235): Verilog HDL Always Construct warning at DrawPlanet.v(15): variable "midSpan" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v Line: 15
+Warning (10646): Verilog HDL Event Control warning at DrawPlanet.v(25): posedge or negedge of vector "VCounter" depends solely on its least-significant bit File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v Line: 25
+Info (12128): Elaborating entity "movingSquare" for hierarchy "movingSquare:squareMoving1" File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 128
+Warning (10235): Verilog HDL Always Construct warning at movingSquare.v(28): variable "top" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at movingSquare.v(28): variable "bottom" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at movingSquare.v(29): variable "middle" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at movingSquare.v(29): variable "midSpan" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v Line: 29
+Warning (10646): Verilog HDL Event Control warning at movingSquare.v(40): posedge or negedge of vector "VCounter" depends solely on its least-significant bit File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v Line: 40
+Info (12128): Elaborating entity "destroyAnimation" for hierarchy "destroyAnimation:destroy1" File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 134
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(20): variable "clk" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 20
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(21): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(21): variable "vMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 21
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(22): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 22
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(27): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 27
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(27): variable "vMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 27
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(27): variable "one" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 27
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(28): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(28): variable "hMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(28): variable "one" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 28
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(33): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 33
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(33): variable "vMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 33
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(33): variable "two" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 33
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(34): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 34
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(34): variable "hMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 34
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(34): variable "two" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 34
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(39): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 39
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(39): variable "vMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 39
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(39): variable "three" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 39
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(40): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 40
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(40): variable "hMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 40
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(40): variable "three" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 40
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(45): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 45
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(45): variable "vMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 45
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(45): variable "four" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 45
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(46): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 46
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(46): variable "hMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 46
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(46): variable "two" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 46
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(51): variable "VCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 51
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(52): variable "HCounter" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 52
+Warning (10235): Verilog HDL Always Construct warning at destroyAnimation.v(52): variable "hMax" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v Line: 52
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/MyProjects/AsteroidGame/output_files/AsteroidGame.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/output_files/AsteroidGame.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk2" File: C:/MyProjects/AsteroidGame/VGAControl.v Line: 6
-Info (21057): Implemented 993 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+    Warning (15610): No output dependent on input pin "clk2" File: C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v Line: 6
+Info (21057): Implemented 4188 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 976 logic cells
+    Info (21061): Implemented 4167 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
-    Info: Peak virtual memory: 4772 megabytes
-    Info: Processing ended: Tue Nov 30 00:36:46 2021
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Peak virtual memory: 4810 megabytes
+    Info: Processing ended: Tue Nov 30 22:53:16 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/MyProjects/AsteroidGame/output_files/AsteroidGame.map.smsg.
+The suppressed messages can be found in C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/output_files/AsteroidGame.map.smsg.
 
 
