@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at DrawPlanet.v(13): always construct contains both blocking and non-blocking assignments File: C:/MyProjects/AsteroidGame/DrawPlanet.v Line: 13
+Warning (10268): Verilog HDL information at movingSquare.v(50): always construct contains both blocking and non-blocking assignments File: C:/MyProjects/AsteroidGame/movingSquare.v Line: 50

@@ -25,12 +25,17 @@ end
 always @ (posedge VCounter) begin
 	if(VCounter >= 10'd456 && VCounter <= 10'd515) begin
 	//increasing span everytime VCounter changes
-		midSpan <= midSpan + increment;
-		increment <= increment - 10'd1;
+		midSpan = midSpan + increment;
+		if(midSpan < 10'd320) begin
+			increment = increment - 10'd1;
+		end else begin
+			midSpan = 10'd320;
+			increment = 10'd0;
+		end
 	end else begin
 	//Reseting if we're outside our range
-		midSpan <= 10'd44;
-		increment <= 10'd33;
+		midSpan = 10'd44;
+		increment = 10'd33;
 		//diff <= 10'd0;
 	end
 end

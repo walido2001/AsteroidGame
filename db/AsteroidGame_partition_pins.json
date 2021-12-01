@@ -60,15 +60,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "switch",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "clk2",
+					"name" : "switch",
 					"strict" : false
 				}
 			]

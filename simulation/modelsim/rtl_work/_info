@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/MyProjects/AsteroidGame/simulation/modelsim
 vClockDivider
-Z1 !s110 1637984249
+Z1 !s110 1638244698
 !i10b 1
 !s100 64T_UzoVB0UL87_?>fiQ@3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1637984249.000000
+Z5 !s108 1638244698.000000
 !s107 C:/MyProjects/AsteroidGame/ClockDivider.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/ClockDivider.v|
 !i113 1
@@ -35,14 +35,14 @@ Z7 !s92 -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame
 Z8 tCvgOpt 0
 n@clock@divider
 vClockDividerSixty
-R1
+Z9 !s110 1638244699
 !i10b 1
 !s100 UE9z__za1XCnUAUBjLDcA0
 R2
 I@EcKKcdG4VS4S6SliXWYf1
 R3
 R0
-w1637982585
+w1638056061
 8C:/MyProjects/AsteroidGame/ClockDividerSixty.v
 FC:/MyProjects/AsteroidGame/ClockDividerSixty.v
 !i122 5
@@ -51,7 +51,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z10 !s108 1638244699.000000
 !s107 C:/MyProjects/AsteroidGame/ClockDividerSixty.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/ClockDividerSixty.v|
 !i113 1
@@ -59,15 +59,40 @@ R6
 R7
 R8
 n@clock@divider@sixty
+vdestroyAnimation
+Z11 !s110 1638244700
+!i10b 1
+!s100 eAgQkBK_MElXDQRTW2SkX0
+R2
+IE^heV;WNV`^`21N]i9NX]0
+R3
+R0
+w1638244506
+8C:/MyProjects/AsteroidGame/destroyAnimation.v
+FC:/MyProjects/AsteroidGame/destroyAnimation.v
+!i122 7
+L0 1 60
+R4
+r1
+!s85 0
+31
+!s108 1638244700.000000
+!s107 C:/MyProjects/AsteroidGame/destroyAnimation.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/destroyAnimation.v|
+!i113 1
+R6
+R7
+R8
+ndestroy@animation
 vDrawDefense
-R1
+R9
 !i10b 1
 !s100 Zc`0ZVF<^2an=i]Hhi=^N1
 R2
 I@:IKiS]j>]JWKlSf>E`A^3
 R3
 R0
-Z9 w1637979995
+w1637979995
 8C:/MyProjects/AsteroidGame/DrawDefense.v
 FC:/MyProjects/AsteroidGame/DrawDefense.v
 !i122 4
@@ -87,16 +112,16 @@ n@draw@defense
 vDrawPlanet
 R1
 !i10b 1
-!s100 =Y@I`Tc>cd?VY[HlNKkEL0
+!s100 cHd:7jek4g=WK<X>?@aj62
 R2
-IebJ8jT_hHbdRb9Td^R2bl2
+IFL1lXNBme;fj7BBe4GMzJ1
 R3
 R0
-R9
+w1638067518
 8C:/MyProjects/AsteroidGame/DrawPlanet.v
 FC:/MyProjects/AsteroidGame/DrawPlanet.v
 !i122 3
-L0 1 74
+L0 1 77
 R4
 r1
 !s85 0
@@ -110,7 +135,7 @@ R7
 R8
 n@draw@planet
 vHorizentalVerticalControl
-R1
+!s110 1638244697
 !i10b 1
 !s100 5aifTWh5>RMzQ=FQP6Ub[2
 R2
@@ -126,7 +151,7 @@ R4
 r1
 !s85 0
 31
-!s108 1637984248.000000
+Z12 !s108 1638244697.000000
 !s107 C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v|
 !i113 1
@@ -135,23 +160,23 @@ R7
 R8
 n@horizental@vertical@control
 vmovingSquare
-R1
+R11
 !i10b 1
-!s100 IA9_HDlZX;U^`THC4O@c12
+!s100 IfFDQ4h>^;c2>LnL0]SR62
 R2
-IbI1<lP6`jL3dMW_?2?:?S3
+I3kFeozz?z^TNAdF0?GPX10
 R3
 R0
-w1637984147
+w1638244309
 8C:/MyProjects/AsteroidGame/movingSquare.v
 FC:/MyProjects/AsteroidGame/movingSquare.v
 !i122 6
-L0 1 49
+L0 1 74
 R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/MyProjects/AsteroidGame/movingSquare.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/movingSquare.v|
 !i113 1
@@ -162,21 +187,21 @@ nmoving@square
 vVGAControl
 R1
 !i10b 1
-!s100 _I5>]lm85DJdj<a<BZdjI2
+!s100 ;zjzo>UoLmT6i46]QK9hA2
 R2
-ITIfe_9HAmAXZPLSnZ9I9a2
+IL?21RcLJ6CbgGNnH=]n<j1
 R3
 R0
-w1637983772
+w1638160039
 8C:/MyProjects/AsteroidGame/VGAControl.v
 FC:/MyProjects/AsteroidGame/VGAControl.v
 !i122 1
-L0 4 71
+L0 4 76
 R4
 r1
 !s85 0
 31
-R5
+R12
 !s107 C:/MyProjects/AsteroidGame/VGAControl.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/VGAControl.v|
 !i113 1

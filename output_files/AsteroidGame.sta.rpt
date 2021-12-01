@@ -1,5 +1,5 @@
 Timing Analyzer report for AsteroidGame
-Fri Nov 26 23:08:54 2021
+Tue Nov 30 00:37:15 2021
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
 
 
@@ -92,12 +92,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.13        ;
+; Average used               ; 1.45        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   4.5%      ;
+;     Processor 2            ;  15.5%      ;
+;     Processor 3            ;  14.9%      ;
+;     Processor 4            ;  14.8%      ;
 +----------------------------+-------------+
 
 
@@ -107,23 +109,22 @@ https://fpgasoftware.intel.com/eula.
 ; Clock Name                                      ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                             ;
 +-------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------+
 ; clk                                             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                             ;
-; clk2                                            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk2 }                                            ;
 ; ClockDivider:clkDiv|cout                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ClockDivider:clkDiv|cout }                        ;
 ; ClockDividerSixty:clockTwo|cout                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ClockDividerSixty:clockTwo|cout }                 ;
 ; HorizentalVerticalControl:HVControl|VControl[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { HorizentalVerticalControl:HVControl|VControl[0] } ;
 +-------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                                                             ;
-+------------+-----------------+-------------------------------------------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note                                                          ;
-+------------+-----------------+-------------------------------------------------+---------------------------------------------------------------+
-; 234.85 MHz ; 234.85 MHz      ; ClockDividerSixty:clockTwo|cout                 ;                                                               ;
-; 271.44 MHz ; 271.44 MHz      ; ClockDivider:clkDiv|cout                        ;                                                               ;
-; 275.18 MHz ; 250.0 MHz       ; clk2                                            ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 347.83 MHz ; 347.83 MHz      ; HorizentalVerticalControl:HVControl|VControl[0] ;                                                               ;
-+------------+-----------------+-------------------------------------------------+---------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                    ;
++------------+-----------------+-------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note ;
++------------+-----------------+-------------------------------------------------+------+
+; 215.19 MHz ; 215.19 MHz      ; clk                                             ;      ;
+; 241.25 MHz ; 241.25 MHz      ; ClockDividerSixty:clockTwo|cout                 ;      ;
+; 258.2 MHz  ; 258.2 MHz       ; ClockDivider:clkDiv|cout                        ;      ;
+; 261.71 MHz ; 261.71 MHz      ; HorizentalVerticalControl:HVControl|VControl[0] ;      ;
++------------+-----------------+-------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -132,11 +133,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; ClockDividerSixty:clockTwo|cout                 ; -3.258 ; -189.484      ;
-; ClockDivider:clkDiv|cout                        ; -2.684 ; -35.510       ;
-; clk2                                            ; -2.634 ; -81.031       ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -1.875 ; -29.273       ;
-; clk                                             ; -0.446 ; -0.446        ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -3.701 ; -116.942      ;
+; clk                                             ; -3.647 ; -208.461      ;
+; ClockDividerSixty:clockTwo|cout                 ; -3.145 ; -271.916      ;
+; ClockDivider:clkDiv|cout                        ; -2.873 ; -38.070       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -145,11 +145,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+-------+---------------+
 ; Clock                                           ; Slack ; End Point TNS ;
 +-------------------------------------------------+-------+---------------+
-; clk2                                            ; 0.398 ; 0.000         ;
-; clk                                             ; 0.432 ; 0.000         ;
-; ClockDivider:clkDiv|cout                        ; 0.520 ; 0.000         ;
-; ClockDividerSixty:clockTwo|cout                 ; 0.703 ; 0.000         ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; 0.744 ; 0.000         ;
+; ClockDividerSixty:clockTwo|cout                 ; 0.309 ; 0.000         ;
+; clk                                             ; 0.325 ; 0.000         ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; 0.394 ; 0.000         ;
+; ClockDivider:clkDiv|cout                        ; 0.517 ; 0.000         ;
 +-------------------------------------------------+-------+---------------+
 
 
@@ -170,11 +169,10 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; clk2                                            ; -3.000 ; -43.326       ;
-; clk                                             ; -3.000 ; -4.222        ;
-; ClockDividerSixty:clockTwo|cout                 ; -1.222 ; -80.652       ;
+; clk                                             ; -3.000 ; -84.874       ;
+; ClockDividerSixty:clockTwo|cout                 ; -1.222 ; -122.200      ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -1.222 ; -47.658       ;
 ; ClockDivider:clkDiv|cout                        ; -1.222 ; -24.440       ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -1.222 ; -24.440       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -184,16 +182,16 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                                                              ;
-+------------+-----------------+-------------------------------------------------+---------------------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note                                                          ;
-+------------+-----------------+-------------------------------------------------+---------------------------------------------------------------+
-; 256.81 MHz ; 256.81 MHz      ; ClockDividerSixty:clockTwo|cout                 ;                                                               ;
-; 295.86 MHz ; 295.86 MHz      ; ClockDivider:clkDiv|cout                        ;                                                               ;
-; 298.42 MHz ; 250.0 MHz       ; clk2                                            ; limit due to minimum period restriction (max I/O toggle rate) ;
-; 381.83 MHz ; 381.83 MHz      ; HorizentalVerticalControl:HVControl|VControl[0] ;                                                               ;
-+------------+-----------------+-------------------------------------------------+---------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                     ;
++------------+-----------------+-------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note ;
++------------+-----------------+-------------------------------------------------+------+
+; 233.54 MHz ; 233.54 MHz      ; clk                                             ;      ;
+; 265.53 MHz ; 265.53 MHz      ; ClockDividerSixty:clockTwo|cout                 ;      ;
+; 282.57 MHz ; 282.57 MHz      ; ClockDivider:clkDiv|cout                        ;      ;
+; 288.6 MHz  ; 288.6 MHz       ; HorizentalVerticalControl:HVControl|VControl[0] ;      ;
++------------+-----------------+-------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -202,11 +200,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; ClockDividerSixty:clockTwo|cout                 ; -2.894 ; -166.828      ;
-; ClockDivider:clkDiv|cout                        ; -2.380 ; -31.010       ;
-; clk2                                            ; -2.351 ; -71.535       ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -1.619 ; -24.851       ;
-; clk                                             ; -0.280 ; -0.280        ;
+; clk                                             ; -3.282 ; -187.379      ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -3.232 ; -102.193      ;
+; ClockDividerSixty:clockTwo|cout                 ; -2.766 ; -240.885      ;
+; ClockDivider:clkDiv|cout                        ; -2.539 ; -33.230       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -215,11 +212,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+-------+---------------+
 ; Clock                                           ; Slack ; End Point TNS ;
 +-------------------------------------------------+-------+---------------+
-; clk                                             ; 0.291 ; 0.000         ;
-; clk2                                            ; 0.359 ; 0.000         ;
-; ClockDivider:clkDiv|cout                        ; 0.480 ; 0.000         ;
-; ClockDividerSixty:clockTwo|cout                 ; 0.641 ; 0.000         ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; 0.663 ; 0.000         ;
+; ClockDividerSixty:clockTwo|cout                 ; 0.280 ; 0.000         ;
+; clk                                             ; 0.295 ; 0.000         ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; 0.333 ; 0.000         ;
+; ClockDivider:clkDiv|cout                        ; 0.477 ; 0.000         ;
 +-------------------------------------------------+-------+---------------+
 
 
@@ -240,11 +236,10 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; clk2                                            ; -3.000 ; -43.326       ;
-; clk                                             ; -3.000 ; -4.222        ;
-; ClockDividerSixty:clockTwo|cout                 ; -1.222 ; -80.652       ;
+; clk                                             ; -3.000 ; -84.874       ;
+; ClockDividerSixty:clockTwo|cout                 ; -1.222 ; -122.200      ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -1.222 ; -47.658       ;
 ; ClockDivider:clkDiv|cout                        ; -1.222 ; -24.440       ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -1.222 ; -24.440       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -259,11 +254,10 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; ClockDividerSixty:clockTwo|cout                 ; -1.049 ; -56.887       ;
-; ClockDivider:clkDiv|cout                        ; -1.000 ; -7.624        ;
-; clk2                                            ; -0.757 ; -22.047       ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -0.366 ; -3.520        ;
-; clk                                             ; -0.077 ; -0.077        ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -1.333 ; -37.342       ;
+; clk                                             ; -1.125 ; -59.961       ;
+; ClockDividerSixty:clockTwo|cout                 ; -1.040 ; -77.898       ;
+; ClockDivider:clkDiv|cout                        ; -0.840 ; -8.248        ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -272,11 +266,10 @@ No synchronizer chains to report.
 +-------------------------------------------------+-------+---------------+
 ; Clock                                           ; Slack ; End Point TNS ;
 +-------------------------------------------------+-------+---------------+
-; clk2                                            ; 0.189 ; 0.000         ;
-; ClockDivider:clkDiv|cout                        ; 0.232 ; 0.000         ;
-; clk                                             ; 0.303 ; 0.000         ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; 0.317 ; 0.000         ;
-; ClockDividerSixty:clockTwo|cout                 ; 0.320 ; 0.000         ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; 0.065 ; 0.000         ;
+; ClockDividerSixty:clockTwo|cout                 ; 0.141 ; 0.000         ;
+; clk                                             ; 0.149 ; 0.000         ;
+; ClockDivider:clkDiv|cout                        ; 0.233 ; 0.000         ;
 +-------------------------------------------------+-------+---------------+
 
 
@@ -297,11 +290,10 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; clk2                                            ; -3.000 ; -37.185       ;
-; clk                                             ; -3.000 ; -4.082        ;
-; ClockDividerSixty:clockTwo|cout                 ; -1.000 ; -66.000       ;
+; clk                                             ; -3.000 ; -72.269       ;
+; ClockDividerSixty:clockTwo|cout                 ; -1.000 ; -100.000      ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -1.000 ; -39.000       ;
 ; ClockDivider:clkDiv|cout                        ; -1.000 ; -20.000       ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -1.000 ; -20.000       ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -316,18 +308,16 @@ No synchronizer chains to report.
 +--------------------------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                                            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                 ; -3.258   ; 0.189 ; N/A      ; N/A     ; -3.000              ;
-;  ClockDivider:clkDiv|cout                        ; -2.684   ; 0.232 ; N/A      ; N/A     ; -1.222              ;
-;  ClockDividerSixty:clockTwo|cout                 ; -3.258   ; 0.320 ; N/A      ; N/A     ; -1.222              ;
-;  HorizentalVerticalControl:HVControl|VControl[0] ; -1.875   ; 0.317 ; N/A      ; N/A     ; -1.222              ;
-;  clk                                             ; -0.446   ; 0.291 ; N/A      ; N/A     ; -3.000              ;
-;  clk2                                            ; -2.634   ; 0.189 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS                                  ; -335.744 ; 0.0   ; 0.0      ; 0.0     ; -177.08             ;
-;  ClockDivider:clkDiv|cout                        ; -35.510  ; 0.000 ; N/A      ; N/A     ; -24.440             ;
-;  ClockDividerSixty:clockTwo|cout                 ; -189.484 ; 0.000 ; N/A      ; N/A     ; -80.652             ;
-;  HorizentalVerticalControl:HVControl|VControl[0] ; -29.273  ; 0.000 ; N/A      ; N/A     ; -24.440             ;
-;  clk                                             ; -0.446   ; 0.000 ; N/A      ; N/A     ; -4.222              ;
-;  clk2                                            ; -81.031  ; 0.000 ; N/A      ; N/A     ; -43.326             ;
+; Worst-case Slack                                 ; -3.701   ; 0.065 ; N/A      ; N/A     ; -3.000              ;
+;  ClockDivider:clkDiv|cout                        ; -2.873   ; 0.233 ; N/A      ; N/A     ; -1.222              ;
+;  ClockDividerSixty:clockTwo|cout                 ; -3.145   ; 0.141 ; N/A      ; N/A     ; -1.222              ;
+;  HorizentalVerticalControl:HVControl|VControl[0] ; -3.701   ; 0.065 ; N/A      ; N/A     ; -1.222              ;
+;  clk                                             ; -3.647   ; 0.149 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS                                  ; -635.389 ; 0.0   ; 0.0      ; 0.0     ; -279.172            ;
+;  ClockDivider:clkDiv|cout                        ; -38.070  ; 0.000 ; N/A      ; N/A     ; -24.440             ;
+;  ClockDividerSixty:clockTwo|cout                 ; -271.916 ; 0.000 ; N/A      ; N/A     ; -122.200            ;
+;  HorizentalVerticalControl:HVControl|VControl[0] ; -116.942 ; 0.000 ; N/A      ; N/A     ; -47.658             ;
+;  clk                                             ; -208.461 ; 0.000 ; N/A      ; N/A     ; -84.874             ;
 +--------------------------------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -359,9 +349,9 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
-; switch              ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; clk                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; clk2                ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; clk                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; switch              ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TDI~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -446,13 +436,16 @@ No synchronizer chains to report.
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                      ; To Clock                                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
+; clk                                             ; clk                                             ; 3169     ; 0        ; 0        ; 0        ;
 ; ClockDivider:clkDiv|cout                        ; clk                                             ; 1        ; 1        ; 0        ; 0        ;
-; clk2                                            ; clk2                                            ; 1617     ; 0        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; clk                                             ; 33       ; 0        ; 0        ; 0        ;
 ; ClockDivider:clkDiv|cout                        ; ClockDivider:clkDiv|cout                        ; 290      ; 0        ; 0        ; 0        ;
 ; HorizentalVerticalControl:HVControl|VControl[0] ; ClockDivider:clkDiv|cout                        ; 20       ; 20       ; 0        ; 0        ;
-; ClockDividerSixty:clockTwo|cout                 ; ClockDividerSixty:clockTwo|cout                 ; 6534     ; 0        ; 0        ; 0        ;
-; ClockDivider:clkDiv|cout                        ; HorizentalVerticalControl:HVControl|VControl[0] ; 280      ; 0        ; 0        ; 0        ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; HorizentalVerticalControl:HVControl|VControl[0] ; 165      ; 0        ; 0        ; 0        ;
+; clk                                             ; ClockDividerSixty:clockTwo|cout                 ; 1        ; 0        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; ClockDividerSixty:clockTwo|cout                 ; 5188     ; 0        ; 0        ; 0        ;
+; ClockDivider:clkDiv|cout                        ; HorizentalVerticalControl:HVControl|VControl[0] ; 531      ; 0        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; HorizentalVerticalControl:HVControl|VControl[0] ; 1320     ; 0        ; 0        ; 0        ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; HorizentalVerticalControl:HVControl|VControl[0] ; 1603     ; 40       ; 0        ; 0        ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -462,13 +455,16 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                      ; To Clock                                        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
+; clk                                             ; clk                                             ; 3169     ; 0        ; 0        ; 0        ;
 ; ClockDivider:clkDiv|cout                        ; clk                                             ; 1        ; 1        ; 0        ; 0        ;
-; clk2                                            ; clk2                                            ; 1617     ; 0        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; clk                                             ; 33       ; 0        ; 0        ; 0        ;
 ; ClockDivider:clkDiv|cout                        ; ClockDivider:clkDiv|cout                        ; 290      ; 0        ; 0        ; 0        ;
 ; HorizentalVerticalControl:HVControl|VControl[0] ; ClockDivider:clkDiv|cout                        ; 20       ; 20       ; 0        ; 0        ;
-; ClockDividerSixty:clockTwo|cout                 ; ClockDividerSixty:clockTwo|cout                 ; 6534     ; 0        ; 0        ; 0        ;
-; ClockDivider:clkDiv|cout                        ; HorizentalVerticalControl:HVControl|VControl[0] ; 280      ; 0        ; 0        ; 0        ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; HorizentalVerticalControl:HVControl|VControl[0] ; 165      ; 0        ; 0        ; 0        ;
+; clk                                             ; ClockDividerSixty:clockTwo|cout                 ; 1        ; 0        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; ClockDividerSixty:clockTwo|cout                 ; 5188     ; 0        ; 0        ; 0        ;
+; ClockDivider:clkDiv|cout                        ; HorizentalVerticalControl:HVControl|VControl[0] ; 531      ; 0        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; HorizentalVerticalControl:HVControl|VControl[0] ; 1320     ; 0        ; 0        ; 0        ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; HorizentalVerticalControl:HVControl|VControl[0] ; 1603     ; 40       ; 0        ; 0        ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -493,9 +489,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 1     ; 1    ;
-; Unconstrained Input Port Paths  ; 66    ; 66   ;
+; Unconstrained Input Port Paths  ; 1     ; 1    ;
 ; Unconstrained Output Ports      ; 14    ; 14   ;
-; Unconstrained Output Port Paths ; 1126  ; 1126 ;
+; Unconstrained Output Port Paths ; 1634  ; 1634 ;
 +---------------------------------+-------+------+
 
 
@@ -508,7 +504,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ClockDividerSixty:clockTwo|cout                 ; ClockDividerSixty:clockTwo|cout                 ; Base ; Constrained ;
 ; HorizentalVerticalControl:HVControl|VControl[0] ; HorizentalVerticalControl:HVControl|VControl[0] ; Base ; Constrained ;
 ; clk                                             ; clk                                             ; Base ; Constrained ;
-; clk2                                            ; clk2                                            ; Base ; Constrained ;
 +-------------------------------------------------+-------------------------------------------------+------+-------------+
 
 
@@ -580,7 +575,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 Patches 0.02i SJ Lite Edition
-    Info: Processing started: Fri Nov 26 23:08:51 2021
+    Info: Processing started: Tue Nov 30 00:37:11 2021
 Info: Command: quartus_sta AsteroidGame -c AsteroidGame
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -593,7 +588,6 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name ClockDivider:clkDiv|cout ClockDivider:clkDiv|cout
     Info (332105): create_clock -period 1.000 -name clk clk
     Info (332105): create_clock -period 1.000 -name ClockDividerSixty:clockTwo|cout ClockDividerSixty:clockTwo|cout
-    Info (332105): create_clock -period 1.000 -name clk2 clk2
     Info (332105): create_clock -period 1.000 -name HorizentalVerticalControl:HVControl|VControl[0] HorizentalVerticalControl:HVControl|VControl[0]
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
@@ -601,99 +595,90 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.258
+Info (332146): Worst-case setup slack is -3.701
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.258            -189.484 ClockDividerSixty:clockTwo|cout 
-    Info (332119):    -2.684             -35.510 ClockDivider:clkDiv|cout 
-    Info (332119):    -2.634             -81.031 clk2 
-    Info (332119):    -1.875             -29.273 HorizentalVerticalControl:HVControl|VControl[0] 
-    Info (332119):    -0.446              -0.446 clk 
-Info (332146): Worst-case hold slack is 0.398
+    Info (332119):    -3.701            -116.942 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):    -3.647            -208.461 clk 
+    Info (332119):    -3.145            -271.916 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -2.873             -38.070 ClockDivider:clkDiv|cout 
+Info (332146): Worst-case hold slack is 0.309
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.398               0.000 clk2 
-    Info (332119):     0.432               0.000 clk 
-    Info (332119):     0.520               0.000 ClockDivider:clkDiv|cout 
-    Info (332119):     0.703               0.000 ClockDividerSixty:clockTwo|cout 
-    Info (332119):     0.744               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):     0.309               0.000 ClockDividerSixty:clockTwo|cout 
+    Info (332119):     0.325               0.000 clk 
+    Info (332119):     0.394               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):     0.517               0.000 ClockDivider:clkDiv|cout 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -43.326 clk2 
-    Info (332119):    -3.000              -4.222 clk 
-    Info (332119):    -1.222             -80.652 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -3.000             -84.874 clk 
+    Info (332119):    -1.222            -122.200 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -1.222             -47.658 HorizentalVerticalControl:HVControl|VControl[0] 
     Info (332119):    -1.222             -24.440 ClockDivider:clkDiv|cout 
-    Info (332119):    -1.222             -24.440 HorizentalVerticalControl:HVControl|VControl[0] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.894
+Info (332146): Worst-case setup slack is -3.282
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.894            -166.828 ClockDividerSixty:clockTwo|cout 
-    Info (332119):    -2.380             -31.010 ClockDivider:clkDiv|cout 
-    Info (332119):    -2.351             -71.535 clk2 
-    Info (332119):    -1.619             -24.851 HorizentalVerticalControl:HVControl|VControl[0] 
-    Info (332119):    -0.280              -0.280 clk 
-Info (332146): Worst-case hold slack is 0.291
+    Info (332119):    -3.282            -187.379 clk 
+    Info (332119):    -3.232            -102.193 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):    -2.766            -240.885 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -2.539             -33.230 ClockDivider:clkDiv|cout 
+Info (332146): Worst-case hold slack is 0.280
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.291               0.000 clk 
-    Info (332119):     0.359               0.000 clk2 
-    Info (332119):     0.480               0.000 ClockDivider:clkDiv|cout 
-    Info (332119):     0.641               0.000 ClockDividerSixty:clockTwo|cout 
-    Info (332119):     0.663               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):     0.280               0.000 ClockDividerSixty:clockTwo|cout 
+    Info (332119):     0.295               0.000 clk 
+    Info (332119):     0.333               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):     0.477               0.000 ClockDivider:clkDiv|cout 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -43.326 clk2 
-    Info (332119):    -3.000              -4.222 clk 
-    Info (332119):    -1.222             -80.652 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -3.000             -84.874 clk 
+    Info (332119):    -1.222            -122.200 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -1.222             -47.658 HorizentalVerticalControl:HVControl|VControl[0] 
     Info (332119):    -1.222             -24.440 ClockDivider:clkDiv|cout 
-    Info (332119):    -1.222             -24.440 HorizentalVerticalControl:HVControl|VControl[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.049
+Info (332146): Worst-case setup slack is -1.333
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.049             -56.887 ClockDividerSixty:clockTwo|cout 
-    Info (332119):    -1.000              -7.624 ClockDivider:clkDiv|cout 
-    Info (332119):    -0.757             -22.047 clk2 
-    Info (332119):    -0.366              -3.520 HorizentalVerticalControl:HVControl|VControl[0] 
-    Info (332119):    -0.077              -0.077 clk 
-Info (332146): Worst-case hold slack is 0.189
+    Info (332119):    -1.333             -37.342 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):    -1.125             -59.961 clk 
+    Info (332119):    -1.040             -77.898 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -0.840              -8.248 ClockDivider:clkDiv|cout 
+Info (332146): Worst-case hold slack is 0.065
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.189               0.000 clk2 
-    Info (332119):     0.232               0.000 ClockDivider:clkDiv|cout 
-    Info (332119):     0.303               0.000 clk 
-    Info (332119):     0.317               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
-    Info (332119):     0.320               0.000 ClockDividerSixty:clockTwo|cout 
+    Info (332119):     0.065               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):     0.141               0.000 ClockDividerSixty:clockTwo|cout 
+    Info (332119):     0.149               0.000 clk 
+    Info (332119):     0.233               0.000 ClockDivider:clkDiv|cout 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -37.185 clk2 
-    Info (332119):    -3.000              -4.082 clk 
-    Info (332119):    -1.000             -66.000 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -3.000             -72.269 clk 
+    Info (332119):    -1.000            -100.000 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -1.000             -39.000 HorizentalVerticalControl:HVControl|VControl[0] 
     Info (332119):    -1.000             -20.000 ClockDivider:clkDiv|cout 
-    Info (332119):    -1.000             -20.000 HorizentalVerticalControl:HVControl|VControl[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Fri Nov 26 23:08:54 2021
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Tue Nov 30 00:37:15 2021
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 

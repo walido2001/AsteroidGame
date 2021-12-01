@@ -10,4 +10,7 @@ vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/
 vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/ClockDivider.v}
 vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/DrawPlanet.v}
 vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/DrawDefense.v}
+vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/ClockDividerSixty.v}
+vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/movingSquare.v}
+vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/destroyAnimation.v}
 
