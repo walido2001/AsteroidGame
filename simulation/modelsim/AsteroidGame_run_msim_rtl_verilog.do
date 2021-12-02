@@ -5,12 +5,14 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v}
-vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/VGAControl.v}
-vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/ClockDivider.v}
-vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/DrawPlanet.v}
-vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/DrawDefense.v}
-vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/ClockDividerSixty.v}
-vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/movingSquare.v}
-vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/destroyAnimation.v}
+vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/HorizentalVerticalControl.v}
+vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v}
+vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDivider.v}
+vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v}
+vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawDefense.v}
+vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDividerSixty.v}
+vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v}
+vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v}
+vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DesClockDivider.v}
+vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/segmentDisplay.v}
 

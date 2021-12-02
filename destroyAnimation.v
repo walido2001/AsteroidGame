@@ -9,12 +9,12 @@ input clk,
 output reg dRed,
 output reg dGreen);
 
-	reg [32:0] hMax = 33'd20;
-	reg [32:0] vMax = 33'd20;
-	reg [32:0] one = 33'd4;
-	reg [32:0] two = 33'd8;
-	reg [32:0] three = 33'd12;
-	reg [32:0] four = 33'd16;
+	reg [32:0] hMax = 33'd40;
+	reg [32:0] vMax = 33'd40;
+	reg [32:0] one = 33'd8;
+	reg [32:0] two = 33'd16;
+	reg [32:0] three = 33'd24;
+	reg [32:0] four = 33'd32;
 	
 	always@(dV or dH) begin
 		if(clk == 0) begin

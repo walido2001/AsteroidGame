@@ -10,84 +10,104 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/HorizentalVerticalControl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:58:17 on Nov 29,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/MyProjects/AsteroidGame" C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v 
+# Start time: 16:42:22 on Dec 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch" C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/HorizentalVerticalControl.v 
 # -- Compiling module HorizentalVerticalControl
 # 
 # Top level modules:
 # 	HorizentalVerticalControl
-# End time: 22:58:17 on Nov 29,2021, Elapsed time: 0:00:00
+# End time: 16:42:22 on Dec 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/VGAControl.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:58:17 on Nov 29,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/MyProjects/AsteroidGame" C:/MyProjects/AsteroidGame/VGAControl.v 
+# Start time: 16:42:23 on Dec 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch" C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v 
 # -- Compiling module VGAControl
 # 
 # Top level modules:
 # 	VGAControl
-# End time: 22:58:18 on Nov 29,2021, Elapsed time: 0:00:01
+# End time: 16:42:23 on Dec 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/ClockDivider.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDivider.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:58:18 on Nov 29,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/MyProjects/AsteroidGame" C:/MyProjects/AsteroidGame/ClockDivider.v 
+# Start time: 16:42:23 on Dec 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch" C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDivider.v 
 # -- Compiling module ClockDivider
 # 
 # Top level modules:
 # 	ClockDivider
-# End time: 22:58:18 on Nov 29,2021, Elapsed time: 0:00:00
+# End time: 16:42:23 on Dec 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/DrawPlanet.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:58:18 on Nov 29,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/MyProjects/AsteroidGame" C:/MyProjects/AsteroidGame/DrawPlanet.v 
+# Start time: 16:42:23 on Dec 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch" C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v 
 # -- Compiling module DrawPlanet
 # 
 # Top level modules:
 # 	DrawPlanet
-# End time: 22:58:18 on Nov 29,2021, Elapsed time: 0:00:00
+# End time: 16:42:23 on Dec 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/DrawDefense.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawDefense.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:58:18 on Nov 29,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/MyProjects/AsteroidGame" C:/MyProjects/AsteroidGame/DrawDefense.v 
+# Start time: 16:42:23 on Dec 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch" C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawDefense.v 
 # -- Compiling module DrawDefense
 # 
 # Top level modules:
 # 	DrawDefense
-# End time: 22:58:19 on Nov 29,2021, Elapsed time: 0:00:01
+# End time: 16:42:23 on Dec 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/ClockDividerSixty.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDividerSixty.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:58:19 on Nov 29,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/MyProjects/AsteroidGame" C:/MyProjects/AsteroidGame/ClockDividerSixty.v 
+# Start time: 16:42:23 on Dec 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch" C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDividerSixty.v 
 # -- Compiling module ClockDividerSixty
 # 
 # Top level modules:
 # 	ClockDividerSixty
-# End time: 22:58:19 on Nov 29,2021, Elapsed time: 0:00:00
+# End time: 16:42:23 on Dec 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/movingSquare.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:58:19 on Nov 29,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/MyProjects/AsteroidGame" C:/MyProjects/AsteroidGame/movingSquare.v 
+# Start time: 16:42:23 on Dec 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch" C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v 
 # -- Compiling module movingSquare
 # 
 # Top level modules:
 # 	movingSquare
-# End time: 22:58:20 on Nov 29,2021, Elapsed time: 0:00:01
+# End time: 16:42:23 on Dec 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame {C:/MyProjects/AsteroidGame/destroyAnimation.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:58:20 on Nov 29,2021
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/MyProjects/AsteroidGame" C:/MyProjects/AsteroidGame/destroyAnimation.v 
+# Start time: 16:42:23 on Dec 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch" C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v 
 # -- Compiling module destroyAnimation
 # 
 # Top level modules:
 # 	destroyAnimation
-# End time: 22:58:20 on Nov 29,2021, Elapsed time: 0:00:00
+# End time: 16:42:24 on Dec 01,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DesClockDivider.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:42:24 on Dec 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch" C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DesClockDivider.v 
+# -- Compiling module DesClockDivider
+# 
+# Top level modules:
+# 	DesClockDivider
+# End time: 16:42:24 on Dec 01,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch {C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/segmentDisplay.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:42:24 on Dec 01,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch" C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/segmentDisplay.v 
+# -- Compiling module segmentDisplay
+# 
+# Top level modules:
+# 	segmentDisplay
+# End time: 16:42:24 on Dec 01,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 

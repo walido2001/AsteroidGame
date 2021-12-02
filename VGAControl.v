@@ -16,7 +16,10 @@ module VGAControl(
 	
 	output [3:0] Red,
 	output [3:0] Green,
-	output [3:0] Blue
+	output [3:0] Blue, 
+	
+	output [6:0] hexZero, 
+	output [6:0] hexOne
 );
 	
 	//Pin Assignments
@@ -46,6 +49,23 @@ module VGAControl(
 	//Switch3 -> PIN_D12
 	//Switch4 -> PIN_C11
 	//Switch5 -> PIN_C10
+	
+	//HexZero[0] -> PIN_C14
+	//HexZero[1] -> PIN_E15
+	//HexZero[2] -> PIN_C15
+	//HexZero[3] -> PIN_C16
+	//HexZero[4] -> PIN_E16
+	//HexZero[5] -> PIN_D17
+	//HexZero[6] -> PIN_C17
+	
+	//HexOne[0] -> PIN_C18
+	//HexOne[1] -> PIN_D18
+	//HexOne[2] -> PIN_E18
+	//HexOne[3] -> PIN_B16
+	//HexOne[4] -> PIN_A17
+	//HexOne[5] -> PIN_A18
+	//HexOne[6] -> PIN_B17
+	
 	
 	wire [9:0] HCounter;
 	wire [9:0] VCounter;
@@ -108,6 +128,16 @@ module VGAControl(
 	wire drawGreen;
 	wire drawBlue;
 	
+	wire [3:0] scoreCounter1;
+	wire [3:0] scoreCounter2;
+	
+	wire [4:0] scoreToggle;
+	wire scoreToggle1; 
+	wire scoreToggle2;
+	wire scoreToggle3;
+	wire scoreToggle4;
+	wire scoreToggle5;
+	
 	ClockDivider clkDiv (clk, clkOut);
 	ClockDividerSixty clockTwo(clk, clk50);
 	
@@ -125,17 +155,24 @@ module VGAControl(
 	DrawDefense dDefense (HCounter, VCounter, drawDefenseRed, drawDefenseGreen, drawDefenseBlue);
 	DrawPlanet dPlanet (HCounter, VCounter, drawPlanetRed, drawPlanetGreen, drawPlanetBlue);
 	
-	movingSquare squareMoving1 (HCounter, VCounter, clk50, switch1, desClk1, 10'd208, startDes1, drawSquare1, destroyed1, dH1, dV1);
-	movingSquare squareMoving2 (HCounter, VCounter, clk50, switch2, desClk2, 10'd336, startDes2, drawSquare2, destroyed2, dH2, dV2);
-	movingSquare squareMoving3 (HCounter, VCounter, clk50, switch3, desClk3, 10'd464, startDes3, drawSquare3, destroyed3, dH3, dV3);
-	movingSquare squareMoving4 (HCounter, VCounter, clk50, switch4, desClk4, 10'd592, startDes4, drawSquare4, destroyed4, dH4, dV4);
-	movingSquare squareMoving5 (HCounter, VCounter, clk50, switch5, desClk5, 10'd720, startDes5, drawSquare5, destroyed5, dH5, dV5);
+	movingSquare squareMoving1 (HCounter, VCounter, clk50, switch1, desClk1, 10'd208, startDes1, drawSquare1, destroyed1, dH1, dV1, scoreToggle1);
+	movingSquare squareMoving2 (HCounter, VCounter, clk50, switch2, desClk2, 10'd336, startDes2, drawSquare2, destroyed2, dH2, dV2, scoreToggle2);
+	movingSquare squareMoving3 (HCounter, VCounter, clk50, switch3, desClk3, 10'd464, startDes3, drawSquare3, destroyed3, dH3, dV3, scoreToggle3);
+	movingSquare squareMoving4 (HCounter, VCounter, clk50, switch4, desClk4, 10'd592, startDes4, drawSquare4, destroyed4, dH4, dV4, scoreToggle4);
+	movingSquare squareMoving5 (HCounter, VCounter, clk50, switch5, desClk5, 10'd720, startDes5, drawSquare5, destroyed5, dH5, dV5, scoreToggle5);
 	
 	destroyAnimation destroy1 (HCounter, VCounter, destroyed1, dH1, dV1, desClk1, drawDestroyRed1);
 	destroyAnimation destroy2 (HCounter, VCounter, destroyed2, dH2, dV2, desClk2, drawDestroyRed2);
 	destroyAnimation destroy3 (HCounter, VCounter, destroyed3, dH3, dV3, desClk3, drawDestroyRed3);
 	destroyAnimation destroy4 (HCounter, VCounter, destroyed4, dH4, dV4, desClk4, drawDestroyRed4);
 	destroyAnimation destroy5 (HCounter, VCounter, destroyed5, dH5, dV5, desClk5, drawDestroyRed5);
+	
+	scoreSet score (scoreToggle, scoreCounter1, scoreCounter2);
+	
+	segmentDisplay LSB (scoreCounter1, hexZero);
+	segmentDisplay MSB (scoreCounter2, hexOne);
+	
+	assign scoreToggle = scoreToggle1 || scoreToggle2 || scoreToggle3 || scoreToggle4 || scoreToggle5;
 	
 	assign drawDestroyRed = drawDestroyRed1 || drawDestroyRed2 || drawDestroyRed3 || drawDestroyRed4 || drawDestroyRed5;
 	assign drawSquare = drawSquare1 ||drawSquare2 || drawSquare3 || drawSquare4 || drawSquare5;
@@ -149,6 +186,6 @@ module VGAControl(
 	assign Blue = (drawBlue) ? 4'hF : 4'h0;
 	
 	//	assign Red = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
-//	assign Green = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
-//	assign Blue = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
+	//	assign Green = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
+	//	assign Blue = (HCounter <= 783 && HCounter >= 144 && VCounter <= 515 && VCounter >= 36) ? 4'hF : 4'h0;
 endmodule

@@ -12,7 +12,8 @@ module movingSquare(
 	output reg result,
 	output reg destroyed,
 	output reg [32:0] dH,
-	output reg [32:0] dV);
+	output reg [32:0] dV, 
+	output scoreToggle);
 
 	//Horizental Parameters
 //	reg [32:0] leftEnd = 33'd464;
@@ -23,6 +24,8 @@ module movingSquare(
 	
 	reg [9:0] midSpan = 10'd5;
 	reg [9:0] increment = 10'd5;
+
+	reg scoreToggleTemp = 1'b0;
 	
 	always @ (HCounter or VCounter) begin 
 		if(VCounter >= top && VCounter <= bottom) begin
@@ -53,6 +56,7 @@ module movingSquare(
 		//Resetting the meteor if it is in the range of the defense system and the switch is on
 		if(((bottom >= 33'd376 && bottom <= 33'd416) || (top >= 33'd376 && top <= 33'd416)) && switch == 1) begin 
 			destroyed <= 1'b1;
+			scoreToggleTemp = ~scoreToggleTemp;
 		end
 		if(desClock == 1) begin
 			startDesClock <= 0;
@@ -76,5 +80,7 @@ module movingSquare(
 			destroyed <= 1'b0;
 		end
 	end
-
+	
+	assign scoreToggle = scoreToggleTemp;
+	
 endmodule

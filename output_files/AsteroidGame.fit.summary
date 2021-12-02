@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Nov 30 22:53:40 2021
+Fitter Status : Successful - Wed Dec 01 21:00:36 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : AsteroidGame
 Top-level Entity Name : VGAControl
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 4,171 / 49,760 ( 8 % )
-    Total combinational functions : 4,166 / 49,760 ( 8 % )
-    Dedicated logic registers : 838 / 49,760 ( 2 % )
-Total registers : 838
-Total pins : 21 / 360 ( 6 % )
+Total logic elements : 4,117 / 49,760 ( 8 % )
+    Total combinational functions : 4,109 / 49,760 ( 8 % )
+    Dedicated logic registers : 851 / 49,760 ( 2 % )
+Total registers : 851
+Total pins : 35 / 360 ( 10 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

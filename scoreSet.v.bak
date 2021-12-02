@@ -1,0 +1,21 @@
+module scoreSet(
+input scoreToggle1,
+input scoreToggle2,
+input scoreToggle3,
+input scoreToggle4,
+input scoreToggle5,
+
+output reg scoreCounter1 = 4'b0,
+output reg scoreCounter2 = 4'b0);
+
+	always @ (scoreToggle1 or scoreToggle2 or scoreToggle3 or scoreToggle4 or scoreToggle5) begin 
+		if(scoreCounter1 == 9) begin 
+			scoreCounter1 = 4'b0;
+			scoreCounter2 = scoreCounter2 + 4'b1;
+		end
+		else begin 
+			scoreCounter1 = scoreCounter1 + 4'b1;	
+		end
+	end
+
+endmodule

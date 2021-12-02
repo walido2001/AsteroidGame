@@ -8,204 +8,254 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/MyProjects/AsteroidGame/simulation/modelsim
+Z0 dC:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/simulation/modelsim
 vClockDivider
-Z1 !s110 1638244698
+Z1 !s110 1638394943
 !i10b 1
 !s100 64T_UzoVB0UL87_?>fiQ@3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I]3i<=c@Fahad:Lk9_=JZO0
+I]7IVzInh>RF?FL5ZOA[M93
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1637703842
-8C:/MyProjects/AsteroidGame/ClockDivider.v
-FC:/MyProjects/AsteroidGame/ClockDivider.v
+Z4 w1638324920
+8C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDivider.v
+FC:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDivider.v
 !i122 2
 L0 1 26
-Z4 OV;L;2020.1;71
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1638244698.000000
-!s107 C:/MyProjects/AsteroidGame/ClockDivider.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/ClockDivider.v|
+Z6 !s108 1638394943.000000
+!s107 C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDivider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch|C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDivider.v|
 !i113 1
-Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work +incdir+C:/MyProjects/AsteroidGame
-Z8 tCvgOpt 0
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work +incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch
+Z9 tCvgOpt 0
 n@clock@divider
 vClockDividerSixty
-Z9 !s110 1638244699
+R1
 !i10b 1
 !s100 UE9z__za1XCnUAUBjLDcA0
 R2
-I@EcKKcdG4VS4S6SliXWYf1
+IP0PjH>8]>_O6^8gI[kdW=1
 R3
 R0
-w1638056061
-8C:/MyProjects/AsteroidGame/ClockDividerSixty.v
-FC:/MyProjects/AsteroidGame/ClockDividerSixty.v
+R4
+8C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDividerSixty.v
+FC:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDividerSixty.v
 !i122 5
 L0 1 30
-R4
+R5
 r1
 !s85 0
 31
-Z10 !s108 1638244699.000000
-!s107 C:/MyProjects/AsteroidGame/ClockDividerSixty.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/ClockDividerSixty.v|
-!i113 1
 R6
+!s107 C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDividerSixty.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch|C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/ClockDividerSixty.v|
+!i113 1
 R7
 R8
+R9
 n@clock@divider@sixty
-vdestroyAnimation
-Z11 !s110 1638244700
+vDesClockDivider
+Z10 !s110 1638394944
 !i10b 1
-!s100 eAgQkBK_MElXDQRTW2SkX0
+!s100 d[CYo3P2l>XmN0n=Q:zLR3
 R2
-IE^heV;WNV`^`21N]i9NX]0
+Ifj`9mOU[alcdenLZiH9@K0
 R3
 R0
-w1638244506
-8C:/MyProjects/AsteroidGame/destroyAnimation.v
-FC:/MyProjects/AsteroidGame/destroyAnimation.v
-!i122 7
-L0 1 60
 R4
+8C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DesClockDivider.v
+FC:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DesClockDivider.v
+!i122 8
+L0 1 33
+R5
 r1
 !s85 0
 31
-!s108 1638244700.000000
-!s107 C:/MyProjects/AsteroidGame/destroyAnimation.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/destroyAnimation.v|
+Z11 !s108 1638394944.000000
+!s107 C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DesClockDivider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch|C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DesClockDivider.v|
 !i113 1
-R6
 R7
 R8
+R9
+n@des@clock@divider
+vdestroyAnimation
+R10
+!i10b 1
+!s100 ahj^f4<?[`J15QWzV:lEh1
+R2
+I1T]gm877K@42i_Z^mVagB3
+R3
+R0
+w1638390715
+8C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v
+FC:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v
+!i122 7
+L0 1 65
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch|C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/destroyAnimation.v|
+!i113 1
+R7
+R8
+R9
 ndestroy@animation
 vDrawDefense
-R9
+R1
 !i10b 1
 !s100 Zc`0ZVF<^2an=i]Hhi=^N1
 R2
-I@:IKiS]j>]JWKlSf>E`A^3
+Ign9S;J4Z6]k^[CjGUd1:L1
 R3
 R0
-w1637979995
-8C:/MyProjects/AsteroidGame/DrawDefense.v
-FC:/MyProjects/AsteroidGame/DrawDefense.v
+R4
+8C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawDefense.v
+FC:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawDefense.v
 !i122 4
 L0 1 39
-R4
+R5
 r1
 !s85 0
 31
-R5
-!s107 C:/MyProjects/AsteroidGame/DrawDefense.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/DrawDefense.v|
-!i113 1
 R6
+!s107 C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawDefense.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch|C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawDefense.v|
+!i113 1
 R7
 R8
+R9
 n@draw@defense
 vDrawPlanet
 R1
 !i10b 1
-!s100 cHd:7jek4g=WK<X>?@aj62
+!s100 53[`N^4[6VTQfk8UdG;<Z3
 R2
-IFL1lXNBme;fj7BBe4GMzJ1
+I[NbmQ[:d[PfRYU;fK`HH_1
 R3
 R0
-w1638067518
-8C:/MyProjects/AsteroidGame/DrawPlanet.v
-FC:/MyProjects/AsteroidGame/DrawPlanet.v
-!i122 3
-L0 1 77
 R4
+8C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v
+FC:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v
+!i122 3
+L0 1 79
+R5
 r1
 !s85 0
 31
-R5
-!s107 C:/MyProjects/AsteroidGame/DrawPlanet.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/DrawPlanet.v|
-!i113 1
 R6
+!s107 C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch|C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/DrawPlanet.v|
+!i113 1
 R7
 R8
+R9
 n@draw@planet
 vHorizentalVerticalControl
-!s110 1638244697
+!s110 1638394942
 !i10b 1
 !s100 5aifTWh5>RMzQ=FQP6Ub[2
 R2
-IH_KMmghF=z^jDk=@MOFCH3
+IX6@Jn_DbY28dgmC5EcKH53
 R3
 R0
-w1637898951
-8C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v
-FC:/MyProjects/AsteroidGame/HorizentalVerticalControl.v
+R4
+8C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/HorizentalVerticalControl.v
+FC:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/HorizentalVerticalControl.v
 !i122 0
 L0 5 48
-R4
+R5
 r1
 !s85 0
 31
-Z12 !s108 1638244697.000000
-!s107 C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/HorizentalVerticalControl.v|
+!s108 1638394942.000000
+!s107 C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/HorizentalVerticalControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch|C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/HorizentalVerticalControl.v|
 !i113 1
-R6
 R7
 R8
+R9
 n@horizental@vertical@control
 vmovingSquare
-R11
+R1
 !i10b 1
-!s100 IfFDQ4h>^;c2>LnL0]SR62
+!s100 mCT4P9;SDcbUOa8ghW>3d0
 R2
-I3kFeozz?z^TNAdF0?GPX10
+IZOYfC3cWO=zW5LZB3DzIJ3
 R3
 R0
-w1638244309
-8C:/MyProjects/AsteroidGame/movingSquare.v
-FC:/MyProjects/AsteroidGame/movingSquare.v
+w1638393294
+8C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v
+FC:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v
 !i122 6
-L0 1 74
-R4
+L0 1 84
+R5
 r1
 !s85 0
 31
-R10
-!s107 C:/MyProjects/AsteroidGame/movingSquare.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/movingSquare.v|
-!i113 1
 R6
+!s107 C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch|C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/movingSquare.v|
+!i113 1
 R7
 R8
+R9
 nmoving@square
+vsegmentDisplay
+R10
+!i10b 1
+!s100 e7JQiNFA<:M41B@j:I[3X2
+R2
+Ih8VAY`:gAEiKC5^Z4dPm>0
+R3
+R0
+w1638390836
+8C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/segmentDisplay.v
+FC:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/segmentDisplay.v
+!i122 9
+L0 1 59
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/segmentDisplay.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch|C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/segmentDisplay.v|
+!i113 1
+R7
+R8
+R9
+nsegment@display
 vVGAControl
 R1
 !i10b 1
-!s100 ;zjzo>UoLmT6i46]QK9hA2
+!s100 @z1ThYHHHCW<SW>@1HaRG1
 R2
-IL?21RcLJ6CbgGNnH=]n<j1
+ITU?47OkN;azH9>XI>eo<z1
 R3
 R0
-w1638160039
-8C:/MyProjects/AsteroidGame/VGAControl.v
-FC:/MyProjects/AsteroidGame/VGAControl.v
+w1638394727
+8C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v
+FC:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v
 !i122 1
-L0 4 76
-R4
+L0 4 195
+R5
 r1
 !s85 0
 31
-R12
-!s107 C:/MyProjects/AsteroidGame/VGAControl.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/MyProjects/AsteroidGame|C:/MyProjects/AsteroidGame/VGAControl.v|
-!i113 1
 R6
+!s107 C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch|C:/Users/walid/Desktop/AsteroidGame-Faruq-s-Branch/AsteroidGame-Faruq-s-Branch/VGAControl.v|
+!i113 1
 R7
 R8
+R9
 n@v@g@a@control
