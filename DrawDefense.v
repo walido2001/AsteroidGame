@@ -6,6 +6,7 @@ output reg dR,
 output reg dG,
 output reg dB);
 
+//Drawing the shape of the defense sysstem based on the position of the pixel, i.e VCounter and HCounter
 always@(HCounter or VCounter) begin
 
 	if(VCounter >= 376 && VCounter <= 381) begin

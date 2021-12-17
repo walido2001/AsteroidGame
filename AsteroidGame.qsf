@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 10M50DAF484C6GES
 set_global_assignment -name TOP_LEVEL_ENTITY VGAControl
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:45:13 JUNE 17,2016"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 SP0.02i Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 484
@@ -264,7 +264,6 @@ set_location_assignment PIN_B11 -to clkPin
 set_global_assignment -name VERILOG_FILE DrawPlanet.v
 set_global_assignment -name VERILOG_FILE DrawDefense.v
 set_global_assignment -name VERILOG_FILE ClockDividerSixty.v
-set_global_assignment -name VERILOG_FILE groundTarget.v
 set_global_assignment -name VERILOG_FILE movingSquare.v
 set_location_assignment PIN_N14 -to clk2
 set_global_assignment -name VERILOG_FILE destroyAnimation.v
@@ -290,4 +289,28 @@ set_location_assignment PIN_C15 -to hexZero[2]
 set_location_assignment PIN_E15 -to hexZero[1]
 set_location_assignment PIN_C14 -to hexZero[0]
 set_global_assignment -name VERILOG_FILE scoreSet.v
+set_global_assignment -name VERILOG_FILE healthSetter.v
+set_location_assignment PIN_F20 -to hexFour[6]
+set_location_assignment PIN_F19 -to hexFour[5]
+set_location_assignment PIN_H19 -to hexFour[4]
+set_location_assignment PIN_J18 -to hexFour[3]
+set_location_assignment PIN_E19 -to hexFour[2]
+set_location_assignment PIN_E20 -to hexFour[1]
+set_location_assignment PIN_F18 -to hexFour[0]
+set_location_assignment PIN_E17 -to hexThree[6]
+set_location_assignment PIN_D19 -to hexThree[5]
+set_location_assignment PIN_C20 -to hexThree[4]
+set_location_assignment PIN_C19 -to hexThree[3]
+set_location_assignment PIN_E21 -to hexThree[2]
+set_location_assignment PIN_E22 -to hexThree[1]
+set_location_assignment PIN_F21 -to hexThree[0]
+set_location_assignment PIN_A7 -to reset
+set_global_assignment -name VERILOG_FILE displayL.v
+set_location_assignment PIN_N20 -to hexFive[6]
+set_location_assignment PIN_N19 -to hexFive[5]
+set_location_assignment PIN_M20 -to hexFive[4]
+set_location_assignment PIN_N18 -to hexFive[3]
+set_location_assignment PIN_L18 -to hexFive[2]
+set_location_assignment PIN_K20 -to hexFive[1]
+set_location_assignment PIN_J20 -to hexFive[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

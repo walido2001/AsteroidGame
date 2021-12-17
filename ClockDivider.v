@@ -1,12 +1,6 @@
 module ClockDivider(cin,cout);
 
-// Based on code from fpga4student.com
-// cin is the input clock; if from the DE10-Lite,
-// the input clock will be at 50 MHz
-// The clock divider toggles cout every 25 million cycles of the input clock
-
-
-//Taken from Allison's Slides, with a minor modification (Changed D's value from 25 to 50) given that the input clock is 50mhz
+//Taken from in course labs (50 Mhz Clock)
 
 input cin;
 output reg cout = 0;

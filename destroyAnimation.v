@@ -16,6 +16,9 @@ output reg dGreen);
 	reg [32:0] three = 33'd24;
 	reg [32:0] four = 33'd32;
 	
+	//Draws the destruction animation, around the center of the destroyed point, i.e dV and dH
+	//Also considers whether the asteroid has been destroyed or not according to the input "destroyed"
+	//Using the value of clk to decide how long we want the animation to stay up for =
 	always@(dV or dH) begin
 		if(clk == 0) begin
 			if(VCounter == (dV-vMax) || VCounter == (dV+vMax)) begin

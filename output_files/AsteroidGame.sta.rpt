@@ -1,5 +1,5 @@
 Timing Analyzer report for AsteroidGame
-Wed Dec 01 21:00:46 2021
+Tue Dec 07 17:19:53 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -92,15 +92,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 2.26        ;
+; Average used               ; 2.35        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  25.9%      ;
-;     Processor 3            ;  25.0%      ;
-;     Processor 4            ;  24.9%      ;
-;     Processors 5-6         ;  24.9%      ;
+;     Processor 2            ;  27.8%      ;
+;     Processor 3            ;  26.8%      ;
+;     Processors 4-6         ;  26.7%      ;
 +----------------------------+-------------+
 
 
@@ -112,7 +111,9 @@ https://fpgasoftware.intel.com/eula.
 ; clk                                             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                             ;
 ; ClockDivider:clkDiv|cout                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ClockDivider:clkDiv|cout }                        ;
 ; ClockDividerSixty:clockTwo|cout                 ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { ClockDividerSixty:clockTwo|cout }                 ;
+; healthSetter:healthyfood|Enable1                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { healthSetter:healthyfood|Enable1 }                ;
 ; HorizentalVerticalControl:HVControl|VControl[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { HorizentalVerticalControl:HVControl|VControl[0] } ;
+; movingSquare:squareMoving1|healthToggleTemp     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { movingSquare:squareMoving1|healthToggleTemp }     ;
 ; movingSquare:squareMoving1|scoreToggleTemp      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { movingSquare:squareMoving1|scoreToggleTemp }      ;
 +-------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------+
 
@@ -122,11 +123,12 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-------------------------------------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note                                           ;
 +------------+-----------------+-------------------------------------------------+------------------------------------------------+
-; 175.19 MHz ; 175.19 MHz      ; ClockDividerSixty:clockTwo|cout                 ;                                                ;
-; 213.77 MHz ; 213.77 MHz      ; clk                                             ;                                                ;
-; 218.34 MHz ; 218.34 MHz      ; HorizentalVerticalControl:HVControl|VControl[0] ;                                                ;
-; 296.12 MHz ; 296.12 MHz      ; ClockDivider:clkDiv|cout                        ;                                                ;
-; 542.01 MHz ; 450.05 MHz      ; movingSquare:squareMoving1|scoreToggleTemp      ; limit due to minimum period restriction (tmin) ;
+; 171.29 MHz ; 171.29 MHz      ; ClockDividerSixty:clockTwo|cout                 ;                                                ;
+; 212.13 MHz ; 212.13 MHz      ; clk                                             ;                                                ;
+; 240.96 MHz ; 240.96 MHz      ; HorizentalVerticalControl:HVControl|VControl[0] ;                                                ;
+; 259.88 MHz ; 259.88 MHz      ; movingSquare:squareMoving1|healthToggleTemp     ;                                                ;
+; 266.88 MHz ; 266.88 MHz      ; ClockDivider:clkDiv|cout                        ;                                                ;
+; 580.05 MHz ; 450.05 MHz      ; movingSquare:squareMoving1|scoreToggleTemp      ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+-------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -136,11 +138,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; ClockDividerSixty:clockTwo|cout                 ; -4.708 ; -1576.893     ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -3.979 ; -406.593      ;
-; clk                                             ; -3.678 ; -631.955      ;
-; ClockDivider:clkDiv|cout                        ; -2.494 ; -34.783       ;
-; movingSquare:squareMoving1|scoreToggleTemp      ; -0.845 ; -3.962        ;
+; healthSetter:healthyfood|Enable1                ; -5.017 ; -23.830       ;
+; ClockDividerSixty:clockTwo|cout                 ; -4.838 ; -1720.028     ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -4.172 ; -436.039      ;
+; clk                                             ; -3.714 ; -638.247      ;
+; movingSquare:squareMoving1|healthToggleTemp     ; -2.848 ; -8.343        ;
+; ClockDivider:clkDiv|cout                        ; -2.747 ; -39.971       ;
+; movingSquare:squareMoving1|scoreToggleTemp      ; -0.724 ; -4.398        ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -149,11 +153,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+-------+---------------+
 ; Clock                                           ; Slack ; End Point TNS ;
 +-------------------------------------------------+-------+---------------+
-; ClockDividerSixty:clockTwo|cout                 ; 0.310 ; 0.000         ;
-; clk                                             ; 0.326 ; 0.000         ;
-; movingSquare:squareMoving1|scoreToggleTemp      ; 0.331 ; 0.000         ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; 0.315 ; 0.000         ;
+; movingSquare:squareMoving1|scoreToggleTemp      ; 0.316 ; 0.000         ;
+; ClockDividerSixty:clockTwo|cout                 ; 0.324 ; 0.000         ;
+; movingSquare:squareMoving1|healthToggleTemp     ; 0.324 ; 0.000         ;
+; clk                                             ; 0.325 ; 0.000         ;
 ; ClockDivider:clkDiv|cout                        ; 0.398 ; 0.000         ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; 0.650 ; 0.000         ;
+; healthSetter:healthyfood|Enable1                ; 0.744 ; 0.000         ;
 +-------------------------------------------------+-------+---------------+
 
 
@@ -175,10 +181,12 @@ No paths to report.
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
 ; clk                                             ; -3.000 ; -246.178      ;
-; ClockDividerSixty:clockTwo|cout                 ; -1.222 ; -617.110      ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -1.222 ; -145.418      ;
+; ClockDividerSixty:clockTwo|cout                 ; -1.222 ; -623.220      ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -1.222 ; -151.528      ;
 ; ClockDivider:clkDiv|cout                        ; -1.222 ; -24.440       ;
+; movingSquare:squareMoving1|healthToggleTemp     ; -1.222 ; -9.776        ;
 ; movingSquare:squareMoving1|scoreToggleTemp      ; -1.222 ; -9.776        ;
+; healthSetter:healthyfood|Enable1                ; 0.350  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -193,11 +201,12 @@ No synchronizer chains to report.
 +------------+-----------------+-------------------------------------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                      ; Note                                           ;
 +------------+-----------------+-------------------------------------------------+------------------------------------------------+
-; 194.06 MHz ; 194.06 MHz      ; ClockDividerSixty:clockTwo|cout                 ;                                                ;
-; 231.75 MHz ; 231.75 MHz      ; clk                                             ;                                                ;
-; 252.4 MHz  ; 252.4 MHz       ; HorizentalVerticalControl:HVControl|VControl[0] ;                                                ;
-; 323.1 MHz  ; 323.1 MHz       ; ClockDivider:clkDiv|cout                        ;                                                ;
-; 591.37 MHz ; 450.05 MHz      ; movingSquare:squareMoving1|scoreToggleTemp      ; limit due to minimum period restriction (tmin) ;
+; 188.11 MHz ; 188.11 MHz      ; ClockDividerSixty:clockTwo|cout                 ;                                                ;
+; 231.11 MHz ; 231.11 MHz      ; clk                                             ;                                                ;
+; 276.85 MHz ; 276.85 MHz      ; HorizentalVerticalControl:HVControl|VControl[0] ;                                                ;
+; 286.62 MHz ; 286.62 MHz      ; movingSquare:squareMoving1|healthToggleTemp     ;                                                ;
+; 291.04 MHz ; 291.04 MHz      ; ClockDivider:clkDiv|cout                        ;                                                ;
+; 638.16 MHz ; 450.05 MHz      ; movingSquare:squareMoving1|scoreToggleTemp      ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+-------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -207,11 +216,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; ClockDividerSixty:clockTwo|cout                 ; -4.153 ; -1396.889     ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -3.546 ; -357.122      ;
-; clk                                             ; -3.315 ; -566.372      ;
-; ClockDivider:clkDiv|cout                        ; -2.151 ; -30.314       ;
-; movingSquare:squareMoving1|scoreToggleTemp      ; -0.691 ; -2.942        ;
+; healthSetter:healthyfood|Enable1                ; -4.512 ; -21.380       ;
+; ClockDividerSixty:clockTwo|cout                 ; -4.316 ; -1519.319     ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -3.736 ; -386.446      ;
+; clk                                             ; -3.327 ; -570.634      ;
+; movingSquare:squareMoving1|healthToggleTemp     ; -2.489 ; -6.944        ;
+; ClockDivider:clkDiv|cout                        ; -2.436 ; -34.959       ;
+; movingSquare:squareMoving1|scoreToggleTemp      ; -0.567 ; -3.438        ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -220,11 +231,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------+-------+---------------+
 ; Clock                                           ; Slack ; End Point TNS ;
 +-------------------------------------------------+-------+---------------+
-; ClockDividerSixty:clockTwo|cout                 ; 0.281 ; 0.000         ;
-; clk                                             ; 0.296 ; 0.000         ;
-; movingSquare:squareMoving1|scoreToggleTemp      ; 0.300 ; 0.000         ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; 0.239 ; 0.000         ;
+; movingSquare:squareMoving1|scoreToggleTemp      ; 0.287 ; 0.000         ;
+; movingSquare:squareMoving1|healthToggleTemp     ; 0.294 ; 0.000         ;
+; ClockDividerSixty:clockTwo|cout                 ; 0.295 ; 0.000         ;
+; clk                                             ; 0.295 ; 0.000         ;
 ; ClockDivider:clkDiv|cout                        ; 0.366 ; 0.000         ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; 0.539 ; 0.000         ;
+; healthSetter:healthyfood|Enable1                ; 0.628 ; 0.000         ;
 +-------------------------------------------------+-------+---------------+
 
 
@@ -246,10 +259,12 @@ No paths to report.
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
 ; clk                                             ; -3.000 ; -246.178      ;
-; ClockDividerSixty:clockTwo|cout                 ; -1.222 ; -617.110      ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -1.222 ; -145.418      ;
+; ClockDividerSixty:clockTwo|cout                 ; -1.222 ; -623.220      ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -1.222 ; -151.528      ;
 ; ClockDivider:clkDiv|cout                        ; -1.222 ; -24.440       ;
+; movingSquare:squareMoving1|healthToggleTemp     ; -1.222 ; -9.776        ;
 ; movingSquare:squareMoving1|scoreToggleTemp      ; -1.222 ; -9.776        ;
+; healthSetter:healthyfood|Enable1                ; 0.412  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -264,11 +279,13 @@ No synchronizer chains to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; ClockDividerSixty:clockTwo|cout                 ; -1.864 ; -495.735      ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -1.515 ; -144.387      ;
-; clk                                             ; -1.153 ; -185.145      ;
-; ClockDivider:clkDiv|cout                        ; -1.032 ; -7.863        ;
-; movingSquare:squareMoving1|scoreToggleTemp      ; 0.128  ; 0.000         ;
+; healthSetter:healthyfood|Enable1                ; -1.947 ; -8.994        ;
+; ClockDividerSixty:clockTwo|cout                 ; -1.829 ; -585.265      ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -1.554 ; -149.333      ;
+; clk                                             ; -1.196 ; -189.031      ;
+; movingSquare:squareMoving1|healthToggleTemp     ; -1.097 ; -1.260        ;
+; ClockDivider:clkDiv|cout                        ; -0.858 ; -8.750        ;
+; movingSquare:squareMoving1|scoreToggleTemp      ; 0.169  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -277,11 +294,13 @@ No synchronizer chains to report.
 +-------------------------------------------------+-------+---------------+
 ; Clock                                           ; Slack ; End Point TNS ;
 +-------------------------------------------------+-------+---------------+
-; ClockDividerSixty:clockTwo|cout                 ; 0.142 ; 0.000         ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; 0.035 ; 0.000         ;
+; movingSquare:squareMoving1|scoreToggleTemp      ; 0.144 ; 0.000         ;
+; ClockDividerSixty:clockTwo|cout                 ; 0.148 ; 0.000         ;
+; movingSquare:squareMoving1|healthToggleTemp     ; 0.148 ; 0.000         ;
 ; clk                                             ; 0.149 ; 0.000         ;
-; movingSquare:squareMoving1|scoreToggleTemp      ; 0.152 ; 0.000         ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; 0.170 ; 0.000         ;
-; ClockDivider:clkDiv|cout                        ; 0.183 ; 0.000         ;
+; ClockDivider:clkDiv|cout                        ; 0.180 ; 0.000         ;
+; healthSetter:healthyfood|Enable1                ; 0.216 ; 0.000         ;
 +-------------------------------------------------+-------+---------------+
 
 
@@ -302,11 +321,13 @@ No paths to report.
 +-------------------------------------------------+--------+---------------+
 ; Clock                                           ; Slack  ; End Point TNS ;
 +-------------------------------------------------+--------+---------------+
-; clk                                             ; -3.000 ; -210.137      ;
-; ClockDividerSixty:clockTwo|cout                 ; -1.000 ; -505.000      ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; -1.000 ; -119.000      ;
+; clk                                             ; -3.000 ; -210.040      ;
+; ClockDividerSixty:clockTwo|cout                 ; -1.000 ; -510.000      ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; -1.000 ; -124.000      ;
 ; ClockDivider:clkDiv|cout                        ; -1.000 ; -20.000       ;
+; movingSquare:squareMoving1|healthToggleTemp     ; -1.000 ; -8.000        ;
 ; movingSquare:squareMoving1|scoreToggleTemp      ; -1.000 ; -8.000        ;
+; healthSetter:healthyfood|Enable1                ; 0.332  ; 0.000         ;
 +-------------------------------------------------+--------+---------------+
 
 
@@ -321,18 +342,22 @@ No synchronizer chains to report.
 +--------------------------------------------------+-----------+-------+----------+---------+---------------------+
 ; Clock                                            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                 ; -4.708    ; 0.142 ; N/A      ; N/A     ; -3.000              ;
-;  ClockDivider:clkDiv|cout                        ; -2.494    ; 0.183 ; N/A      ; N/A     ; -1.222              ;
-;  ClockDividerSixty:clockTwo|cout                 ; -4.708    ; 0.142 ; N/A      ; N/A     ; -1.222              ;
-;  HorizentalVerticalControl:HVControl|VControl[0] ; -3.979    ; 0.170 ; N/A      ; N/A     ; -1.222              ;
-;  clk                                             ; -3.678    ; 0.149 ; N/A      ; N/A     ; -3.000              ;
-;  movingSquare:squareMoving1|scoreToggleTemp      ; -0.845    ; 0.152 ; N/A      ; N/A     ; -1.222              ;
-; Design-wide TNS                                  ; -2654.186 ; 0.0   ; 0.0      ; 0.0     ; -1042.922           ;
-;  ClockDivider:clkDiv|cout                        ; -34.783   ; 0.000 ; N/A      ; N/A     ; -24.440             ;
-;  ClockDividerSixty:clockTwo|cout                 ; -1576.893 ; 0.000 ; N/A      ; N/A     ; -617.110            ;
-;  HorizentalVerticalControl:HVControl|VControl[0] ; -406.593  ; 0.000 ; N/A      ; N/A     ; -145.418            ;
-;  clk                                             ; -631.955  ; 0.000 ; N/A      ; N/A     ; -246.178            ;
-;  movingSquare:squareMoving1|scoreToggleTemp      ; -3.962    ; 0.000 ; N/A      ; N/A     ; -9.776              ;
+; Worst-case Slack                                 ; -5.017    ; 0.035 ; N/A      ; N/A     ; -3.000              ;
+;  ClockDivider:clkDiv|cout                        ; -2.747    ; 0.180 ; N/A      ; N/A     ; -1.222              ;
+;  ClockDividerSixty:clockTwo|cout                 ; -4.838    ; 0.148 ; N/A      ; N/A     ; -1.222              ;
+;  HorizentalVerticalControl:HVControl|VControl[0] ; -4.172    ; 0.035 ; N/A      ; N/A     ; -1.222              ;
+;  clk                                             ; -3.714    ; 0.149 ; N/A      ; N/A     ; -3.000              ;
+;  healthSetter:healthyfood|Enable1                ; -5.017    ; 0.216 ; N/A      ; N/A     ; 0.332               ;
+;  movingSquare:squareMoving1|healthToggleTemp     ; -2.848    ; 0.148 ; N/A      ; N/A     ; -1.222              ;
+;  movingSquare:squareMoving1|scoreToggleTemp      ; -0.724    ; 0.144 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS                                  ; -2870.856 ; 0.0   ; 0.0      ; 0.0     ; -1064.918           ;
+;  ClockDivider:clkDiv|cout                        ; -39.971   ; 0.000 ; N/A      ; N/A     ; -24.440             ;
+;  ClockDividerSixty:clockTwo|cout                 ; -1720.028 ; 0.000 ; N/A      ; N/A     ; -623.220            ;
+;  HorizentalVerticalControl:HVControl|VControl[0] ; -436.039  ; 0.000 ; N/A      ; N/A     ; -151.528            ;
+;  clk                                             ; -638.247  ; 0.000 ; N/A      ; N/A     ; -246.178            ;
+;  healthSetter:healthyfood|Enable1                ; -23.830   ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  movingSquare:squareMoving1|healthToggleTemp     ; -8.343    ; 0.000 ; N/A      ; N/A     ; -9.776              ;
+;  movingSquare:squareMoving1|scoreToggleTemp      ; -4.398    ; 0.000 ; N/A      ; N/A     ; -9.776              ;
 +--------------------------------------------------+-----------+-------+----------+---------+---------------------+
 
 
@@ -369,6 +394,27 @@ No synchronizer chains to report.
 ; hexOne[4]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; hexOne[5]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; hexOne[6]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFour[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFour[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFour[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFour[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFour[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFour[5]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFour[6]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexThree[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexThree[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexThree[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexThree[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexThree[4]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexThree[5]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexThree[6]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFive[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFive[1]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFive[2]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFive[3]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFive[4]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFive[5]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; hexFive[6]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +--------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
@@ -380,6 +426,7 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; clk2                ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; clk                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; reset               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switch5             ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switch3             ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switch1             ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
@@ -428,6 +475,27 @@ No synchronizer chains to report.
 ; hexOne[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
 ; hexOne[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
 ; hexOne[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFour[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFour[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFour[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFour[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFour[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFour[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFour[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexThree[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexThree[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexThree[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexThree[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexThree[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexThree[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexThree[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFive[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFive[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFive[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFive[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFive[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0607 V           ; 0.271 V                              ; 0.095 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0607 V          ; 0.271 V                             ; 0.095 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFive[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
+; hexFive[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.17e-08 V                   ; 2.42 V              ; -0.0619 V           ; 0.272 V                              ; 0.096 V                              ; 2.93e-10 s                  ; 3.92e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.17e-08 V                  ; 2.42 V             ; -0.0619 V          ; 0.272 V                             ; 0.096 V                             ; 2.93e-10 s                 ; 3.92e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-08 V                   ; 2.4 V               ; -0.023 V            ; 0.201 V                              ; 0.081 V                              ; 4.59e-10 s                  ; 5.51e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-08 V                  ; 2.4 V              ; -0.023 V           ; 0.201 V                             ; 0.081 V                             ; 4.59e-10 s                 ; 5.51e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -465,6 +533,27 @@ No synchronizer chains to report.
 ; hexOne[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
 ; hexOne[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
 ; hexOne[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFour[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFour[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFour[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFour[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFour[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFour[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFour[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexThree[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexThree[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexThree[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexThree[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexThree[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexThree[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexThree[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFive[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFive[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFive[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFive[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFive[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.041 V            ; 0.145 V                              ; 0.14 V                               ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.041 V           ; 0.145 V                             ; 0.14 V                              ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFive[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
+; hexFive[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.79e-06 V                   ; 2.38 V              ; -0.0389 V           ; 0.145 V                              ; 0.139 V                              ; 4.54e-10 s                  ; 4.3e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.79e-06 V                  ; 2.38 V             ; -0.0389 V          ; 0.145 V                             ; 0.139 V                             ; 4.54e-10 s                 ; 4.3e-10 s                  ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.04e-06 V                   ; 2.37 V              ; -0.0108 V           ; 0.13 V                               ; 0.066 V                              ; 6.32e-10 s                  ; 6.45e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.04e-06 V                  ; 2.37 V             ; -0.0108 V          ; 0.13 V                              ; 0.066 V                             ; 6.32e-10 s                 ; 6.45e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -502,6 +591,27 @@ No synchronizer chains to report.
 ; hexOne[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; hexOne[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; hexOne[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFour[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFour[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFour[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFour[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFour[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFour[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFour[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexThree[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexThree[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexThree[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexThree[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexThree[4]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexThree[5]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexThree[6]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFive[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFive[1]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFive[2]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFive[3]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFive[4]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFive[5]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; hexFive[6]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -517,12 +627,18 @@ No synchronizer chains to report.
 ; ClockDivider:clkDiv|cout                        ; ClockDivider:clkDiv|cout                        ; 290      ; 0        ; 0        ; 0        ;
 ; HorizentalVerticalControl:HVControl|VControl[0] ; ClockDivider:clkDiv|cout                        ; 20       ; 20       ; 0        ; 0        ;
 ; clk                                             ; ClockDividerSixty:clockTwo|cout                 ; 5        ; 0        ; 0        ; 0        ;
-; ClockDividerSixty:clockTwo|cout                 ; ClockDividerSixty:clockTwo|cout                 ; 26299    ; 0        ; 0        ; 0        ;
-; movingSquare:squareMoving1|scoreToggleTemp      ; ClockDividerSixty:clockTwo|cout                 ; 1        ; 1        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; ClockDividerSixty:clockTwo|cout                 ; 26495    ; 0        ; 0        ; 0        ;
+; healthSetter:healthyfood|Enable1                ; ClockDividerSixty:clockTwo|cout                 ; 510      ; 510      ; 0        ; 0        ;
+; ClockDivider:clkDiv|cout                        ; healthSetter:healthyfood|Enable1                ; 190      ; 0        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; healthSetter:healthyfood|Enable1                ; 330      ; 0        ; 0        ; 0        ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; healthSetter:healthyfood|Enable1                ; 410      ; 10       ; 0        ; 0        ;
 ; ClockDivider:clkDiv|cout                        ; HorizentalVerticalControl:HVControl|VControl[0] ; 1971     ; 0        ; 0        ; 0        ;
-; ClockDividerSixty:clockTwo|cout                 ; HorizentalVerticalControl:HVControl|VControl[0] ; 6600     ; 0        ; 0        ; 0        ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; HorizentalVerticalControl:HVControl|VControl[0] ; 2419     ; 200      ; 0        ; 0        ;
-; movingSquare:squareMoving1|scoreToggleTemp      ; movingSquare:squareMoving1|scoreToggleTemp      ; 38       ; 0        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; HorizentalVerticalControl:HVControl|VControl[0] ; 6765     ; 0        ; 0        ; 0        ;
+; healthSetter:healthyfood|Enable1                ; HorizentalVerticalControl:HVControl|VControl[0] ; 105      ; 105      ; 0        ; 0        ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; HorizentalVerticalControl:HVControl|VControl[0] ; 2459     ; 200      ; 0        ; 0        ;
+; healthSetter:healthyfood|Enable1                ; movingSquare:squareMoving1|healthToggleTemp     ; 1        ; 1        ; 0        ; 0        ;
+; movingSquare:squareMoving1|healthToggleTemp     ; movingSquare:squareMoving1|healthToggleTemp     ; 85       ; 0        ; 0        ; 0        ;
+; movingSquare:squareMoving1|scoreToggleTemp      ; movingSquare:squareMoving1|scoreToggleTemp      ; 48       ; 0        ; 0        ; 0        ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -538,12 +654,18 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; ClockDivider:clkDiv|cout                        ; ClockDivider:clkDiv|cout                        ; 290      ; 0        ; 0        ; 0        ;
 ; HorizentalVerticalControl:HVControl|VControl[0] ; ClockDivider:clkDiv|cout                        ; 20       ; 20       ; 0        ; 0        ;
 ; clk                                             ; ClockDividerSixty:clockTwo|cout                 ; 5        ; 0        ; 0        ; 0        ;
-; ClockDividerSixty:clockTwo|cout                 ; ClockDividerSixty:clockTwo|cout                 ; 26299    ; 0        ; 0        ; 0        ;
-; movingSquare:squareMoving1|scoreToggleTemp      ; ClockDividerSixty:clockTwo|cout                 ; 1        ; 1        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; ClockDividerSixty:clockTwo|cout                 ; 26495    ; 0        ; 0        ; 0        ;
+; healthSetter:healthyfood|Enable1                ; ClockDividerSixty:clockTwo|cout                 ; 510      ; 510      ; 0        ; 0        ;
+; ClockDivider:clkDiv|cout                        ; healthSetter:healthyfood|Enable1                ; 190      ; 0        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; healthSetter:healthyfood|Enable1                ; 330      ; 0        ; 0        ; 0        ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; healthSetter:healthyfood|Enable1                ; 410      ; 10       ; 0        ; 0        ;
 ; ClockDivider:clkDiv|cout                        ; HorizentalVerticalControl:HVControl|VControl[0] ; 1971     ; 0        ; 0        ; 0        ;
-; ClockDividerSixty:clockTwo|cout                 ; HorizentalVerticalControl:HVControl|VControl[0] ; 6600     ; 0        ; 0        ; 0        ;
-; HorizentalVerticalControl:HVControl|VControl[0] ; HorizentalVerticalControl:HVControl|VControl[0] ; 2419     ; 200      ; 0        ; 0        ;
-; movingSquare:squareMoving1|scoreToggleTemp      ; movingSquare:squareMoving1|scoreToggleTemp      ; 38       ; 0        ; 0        ; 0        ;
+; ClockDividerSixty:clockTwo|cout                 ; HorizentalVerticalControl:HVControl|VControl[0] ; 6765     ; 0        ; 0        ; 0        ;
+; healthSetter:healthyfood|Enable1                ; HorizentalVerticalControl:HVControl|VControl[0] ; 105      ; 105      ; 0        ; 0        ;
+; HorizentalVerticalControl:HVControl|VControl[0] ; HorizentalVerticalControl:HVControl|VControl[0] ; 2459     ; 200      ; 0        ; 0        ;
+; healthSetter:healthyfood|Enable1                ; movingSquare:squareMoving1|healthToggleTemp     ; 1        ; 1        ; 0        ; 0        ;
+; movingSquare:squareMoving1|healthToggleTemp     ; movingSquare:squareMoving1|healthToggleTemp     ; 85       ; 0        ; 0        ; 0        ;
+; movingSquare:squareMoving1|scoreToggleTemp      ; movingSquare:squareMoving1|scoreToggleTemp      ; 48       ; 0        ; 0        ; 0        ;
 +-------------------------------------------------+-------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -567,10 +689,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 10    ; 10   ;
-; Unconstrained Output Ports      ; 28    ; 28   ;
-; Unconstrained Output Port Paths ; 6922  ; 6922 ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 541   ; 541  ;
+; Unconstrained Output Ports      ; 45    ; 45   ;
+; Unconstrained Output Port Paths ; 2534  ; 2534 ;
 +---------------------------------+-------+------+
 
 
@@ -583,6 +705,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ClockDividerSixty:clockTwo|cout                 ; ClockDividerSixty:clockTwo|cout                 ; Base ; Constrained ;
 ; HorizentalVerticalControl:HVControl|VControl[0] ; HorizentalVerticalControl:HVControl|VControl[0] ; Base ; Constrained ;
 ; clk                                             ; clk                                             ; Base ; Constrained ;
+; healthSetter:healthyfood|Enable1                ; healthSetter:healthyfood|Enable1                ; Base ; Constrained ;
+; movingSquare:squareMoving1|healthToggleTemp     ; movingSquare:squareMoving1|healthToggleTemp     ; Base ; Constrained ;
 ; movingSquare:squareMoving1|scoreToggleTemp      ; movingSquare:squareMoving1|scoreToggleTemp      ; Base ; Constrained ;
 +-------------------------------------------------+-------------------------------------------------+------+-------------+
 
@@ -592,6 +716,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switch1    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switch2    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switch3    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -619,6 +744,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Red[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; Red[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VSync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFive[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFive[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFive[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexOne[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexOne[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexOne[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -626,6 +761,13 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; hexOne[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexOne[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexOne[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexZero[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexZero[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexZero[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -641,6 +783,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
+; reset      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switch1    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switch2    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; switch3    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -668,6 +811,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Red[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; Red[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; VSync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFive[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFive[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFive[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexFour[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexOne[0]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexOne[1]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexOne[2]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -675,6 +828,13 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; hexOne[4]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexOne[5]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexOne[6]   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; hexThree[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexZero[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexZero[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hexZero[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -691,120 +851,141 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Dec 01 21:00:42 2021
+    Info: Processing started: Tue Dec 07 17:19:48 2021
 Info: Command: quartus_sta AsteroidGame -c AsteroidGame
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
+Warning (335093): The Timing Analyzer is analyzing 5 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'AsteroidGame.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name ClockDivider:clkDiv|cout ClockDivider:clkDiv|cout
     Info (332105): create_clock -period 1.000 -name clk clk
     Info (332105): create_clock -period 1.000 -name ClockDividerSixty:clockTwo|cout ClockDividerSixty:clockTwo|cout
+    Info (332105): create_clock -period 1.000 -name movingSquare:squareMoving1|healthToggleTemp movingSquare:squareMoving1|healthToggleTemp
     Info (332105): create_clock -period 1.000 -name HorizentalVerticalControl:HVControl|VControl[0] HorizentalVerticalControl:HVControl|VControl[0]
     Info (332105): create_clock -period 1.000 -name movingSquare:squareMoving1|scoreToggleTemp movingSquare:squareMoving1|scoreToggleTemp
+    Info (332105): create_clock -period 1.000 -name healthSetter:healthyfood|Enable1 healthSetter:healthyfood|Enable1
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.708
+Info (332146): Worst-case setup slack is -5.017
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.708           -1576.893 ClockDividerSixty:clockTwo|cout 
-    Info (332119):    -3.979            -406.593 HorizentalVerticalControl:HVControl|VControl[0] 
-    Info (332119):    -3.678            -631.955 clk 
-    Info (332119):    -2.494             -34.783 ClockDivider:clkDiv|cout 
-    Info (332119):    -0.845              -3.962 movingSquare:squareMoving1|scoreToggleTemp 
-Info (332146): Worst-case hold slack is 0.310
+    Info (332119):    -5.017             -23.830 healthSetter:healthyfood|Enable1 
+    Info (332119):    -4.838           -1720.028 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -4.172            -436.039 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):    -3.714            -638.247 clk 
+    Info (332119):    -2.848              -8.343 movingSquare:squareMoving1|healthToggleTemp 
+    Info (332119):    -2.747             -39.971 ClockDivider:clkDiv|cout 
+    Info (332119):    -0.724              -4.398 movingSquare:squareMoving1|scoreToggleTemp 
+Info (332146): Worst-case hold slack is 0.315
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.310               0.000 ClockDividerSixty:clockTwo|cout 
-    Info (332119):     0.326               0.000 clk 
-    Info (332119):     0.331               0.000 movingSquare:squareMoving1|scoreToggleTemp 
+    Info (332119):     0.315               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):     0.316               0.000 movingSquare:squareMoving1|scoreToggleTemp 
+    Info (332119):     0.324               0.000 ClockDividerSixty:clockTwo|cout 
+    Info (332119):     0.324               0.000 movingSquare:squareMoving1|healthToggleTemp 
+    Info (332119):     0.325               0.000 clk 
     Info (332119):     0.398               0.000 ClockDivider:clkDiv|cout 
-    Info (332119):     0.650               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):     0.744               0.000 healthSetter:healthyfood|Enable1 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000            -246.178 clk 
-    Info (332119):    -1.222            -617.110 ClockDividerSixty:clockTwo|cout 
-    Info (332119):    -1.222            -145.418 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):    -1.222            -623.220 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -1.222            -151.528 HorizentalVerticalControl:HVControl|VControl[0] 
     Info (332119):    -1.222             -24.440 ClockDivider:clkDiv|cout 
+    Info (332119):    -1.222              -9.776 movingSquare:squareMoving1|healthToggleTemp 
     Info (332119):    -1.222              -9.776 movingSquare:squareMoving1|scoreToggleTemp 
+    Info (332119):     0.350               0.000 healthSetter:healthyfood|Enable1 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.153
+Info (332146): Worst-case setup slack is -4.512
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.153           -1396.889 ClockDividerSixty:clockTwo|cout 
-    Info (332119):    -3.546            -357.122 HorizentalVerticalControl:HVControl|VControl[0] 
-    Info (332119):    -3.315            -566.372 clk 
-    Info (332119):    -2.151             -30.314 ClockDivider:clkDiv|cout 
-    Info (332119):    -0.691              -2.942 movingSquare:squareMoving1|scoreToggleTemp 
-Info (332146): Worst-case hold slack is 0.281
+    Info (332119):    -4.512             -21.380 healthSetter:healthyfood|Enable1 
+    Info (332119):    -4.316           -1519.319 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -3.736            -386.446 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):    -3.327            -570.634 clk 
+    Info (332119):    -2.489              -6.944 movingSquare:squareMoving1|healthToggleTemp 
+    Info (332119):    -2.436             -34.959 ClockDivider:clkDiv|cout 
+    Info (332119):    -0.567              -3.438 movingSquare:squareMoving1|scoreToggleTemp 
+Info (332146): Worst-case hold slack is 0.239
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.281               0.000 ClockDividerSixty:clockTwo|cout 
-    Info (332119):     0.296               0.000 clk 
-    Info (332119):     0.300               0.000 movingSquare:squareMoving1|scoreToggleTemp 
+    Info (332119):     0.239               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):     0.287               0.000 movingSquare:squareMoving1|scoreToggleTemp 
+    Info (332119):     0.294               0.000 movingSquare:squareMoving1|healthToggleTemp 
+    Info (332119):     0.295               0.000 ClockDividerSixty:clockTwo|cout 
+    Info (332119):     0.295               0.000 clk 
     Info (332119):     0.366               0.000 ClockDivider:clkDiv|cout 
-    Info (332119):     0.539               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):     0.628               0.000 healthSetter:healthyfood|Enable1 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000            -246.178 clk 
-    Info (332119):    -1.222            -617.110 ClockDividerSixty:clockTwo|cout 
-    Info (332119):    -1.222            -145.418 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):    -1.222            -623.220 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -1.222            -151.528 HorizentalVerticalControl:HVControl|VControl[0] 
     Info (332119):    -1.222             -24.440 ClockDivider:clkDiv|cout 
+    Info (332119):    -1.222              -9.776 movingSquare:squareMoving1|healthToggleTemp 
     Info (332119):    -1.222              -9.776 movingSquare:squareMoving1|scoreToggleTemp 
+    Info (332119):     0.412               0.000 healthSetter:healthyfood|Enable1 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.864
+Info (332146): Worst-case setup slack is -1.947
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.864            -495.735 ClockDividerSixty:clockTwo|cout 
-    Info (332119):    -1.515            -144.387 HorizentalVerticalControl:HVControl|VControl[0] 
-    Info (332119):    -1.153            -185.145 clk 
-    Info (332119):    -1.032              -7.863 ClockDivider:clkDiv|cout 
-    Info (332119):     0.128               0.000 movingSquare:squareMoving1|scoreToggleTemp 
-Info (332146): Worst-case hold slack is 0.142
+    Info (332119):    -1.947              -8.994 healthSetter:healthyfood|Enable1 
+    Info (332119):    -1.829            -585.265 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -1.554            -149.333 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):    -1.196            -189.031 clk 
+    Info (332119):    -1.097              -1.260 movingSquare:squareMoving1|healthToggleTemp 
+    Info (332119):    -0.858              -8.750 ClockDivider:clkDiv|cout 
+    Info (332119):     0.169               0.000 movingSquare:squareMoving1|scoreToggleTemp 
+Info (332146): Worst-case hold slack is 0.035
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.142               0.000 ClockDividerSixty:clockTwo|cout 
+    Info (332119):     0.035               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):     0.144               0.000 movingSquare:squareMoving1|scoreToggleTemp 
+    Info (332119):     0.148               0.000 ClockDividerSixty:clockTwo|cout 
+    Info (332119):     0.148               0.000 movingSquare:squareMoving1|healthToggleTemp 
     Info (332119):     0.149               0.000 clk 
-    Info (332119):     0.152               0.000 movingSquare:squareMoving1|scoreToggleTemp 
-    Info (332119):     0.170               0.000 HorizentalVerticalControl:HVControl|VControl[0] 
-    Info (332119):     0.183               0.000 ClockDivider:clkDiv|cout 
+    Info (332119):     0.180               0.000 ClockDivider:clkDiv|cout 
+    Info (332119):     0.216               0.000 healthSetter:healthyfood|Enable1 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -210.137 clk 
-    Info (332119):    -1.000            -505.000 ClockDividerSixty:clockTwo|cout 
-    Info (332119):    -1.000            -119.000 HorizentalVerticalControl:HVControl|VControl[0] 
+    Info (332119):    -3.000            -210.040 clk 
+    Info (332119):    -1.000            -510.000 ClockDividerSixty:clockTwo|cout 
+    Info (332119):    -1.000            -124.000 HorizentalVerticalControl:HVControl|VControl[0] 
     Info (332119):    -1.000             -20.000 ClockDivider:clkDiv|cout 
+    Info (332119):    -1.000              -8.000 movingSquare:squareMoving1|healthToggleTemp 
     Info (332119):    -1.000              -8.000 movingSquare:squareMoving1|scoreToggleTemp 
+    Info (332119):     0.332               0.000 healthSetter:healthyfood|Enable1 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Wed Dec 01 21:00:46 2021
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:08
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4876 megabytes
+    Info: Processing ended: Tue Dec 07 17:19:53 2021
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:10
 
 

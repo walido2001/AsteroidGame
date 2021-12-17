@@ -116,7 +116,79 @@
 					"strict" : false
 				},
 				{
+					"name" : "hexFour[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hexFour[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hexFour[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hexFour[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hexFour[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hexFour[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hexFour[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hexThree[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hexThree[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hexThree[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hexThree[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hexThree[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hexThree[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hexThree[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hexFive[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hexFive[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hexFive[5]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
 					"strict" : false
 				},
 				{
