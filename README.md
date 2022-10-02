@@ -1,4 +1,4 @@
-# AsteroidGame
+# AsteroidGame | Verilog HDL, DE-10 Lite FPGA
  Classic asteroid game with slight modifications in game mechanics. Created using a DE-10 Lite FPGA Board, VGA, a 640 by 480 monitor and Verilog HDL.
  
  Played using 5 switches on the DE-10 Lite board, where turning on a switch destroys an asteriod that collides with the corresponding defense system, trying to prevent the planet's health from reaching 0.
